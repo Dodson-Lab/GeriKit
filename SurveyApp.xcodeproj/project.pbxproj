@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5165A3024D041A6007474A1 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5165A2F24D041A6007474A1 /* StopWatchManager.swift */; };
+		D5803FDF2528CD8100E6A8E4 /* MiniCogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5803FDE2528CD8100E6A8E4 /* MiniCogView.swift */; };
+		D5803FE12528D23900E6A8E4 /* AD8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5803FE02528D23900E6A8E4 /* AD8View.swift */; };
 		D586EAF124AA289000572834 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586EAF024AA289000572834 /* AppDelegate.swift */; };
 		D586EAF324AA289000572834 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586EAF224AA289000572834 /* SceneDelegate.swift */; };
 		D586EAF524AA289000572834 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586EAF424AA289000572834 /* ContentView.swift */; };
 		D586EAF724AA289500572834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D586EAF624AA289500572834 /* Assets.xcassets */; };
 		D586EAFA24AA289500572834 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D586EAF924AA289500572834 /* Preview Assets.xcassets */; };
 		D586EAFD24AA289500572834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D586EAFB24AA289500572834 /* LaunchScreen.storyboard */; };
+		D5B418A825252F6500C73416 /* cognitionChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B418A725252F6500C73416 /* cognitionChoice.swift */; };
+		D5DB1BC424DAFF0C0016EA1A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB1BC324DAFF0C0016EA1A /* AboutView.swift */; };
+		D5DB59A024BD544700559C30 /* YesNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB599F24BD544700559C30 /* YesNo.swift */; };
+		D5DB59A224BD550B00559C30 /* fourButtonChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB59A124BD550B00559C30 /* fourButtonChoices.swift */; };
+		D5DB59A424BDF8B800559C30 /* YesNo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB59A324BDF8B700559C30 /* YesNo2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D5165A2F24D041A6007474A1 /* StopWatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchManager.swift; sourceTree = "<group>"; };
+		D5803FDE2528CD8100E6A8E4 /* MiniCogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCogView.swift; sourceTree = "<group>"; };
+		D5803FE02528D23900E6A8E4 /* AD8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AD8View.swift; sourceTree = "<group>"; };
 		D586EAED24AA289000572834 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D586EAF024AA289000572834 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D586EAF224AA289000572834 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +35,11 @@
 		D586EAF924AA289500572834 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D586EAFC24AA289500572834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D586EAFE24AA289500572834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5B418A725252F6500C73416 /* cognitionChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cognitionChoice.swift; sourceTree = "<group>"; };
+		D5DB1BC324DAFF0C0016EA1A /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		D5DB599F24BD544700559C30 /* YesNo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesNo.swift; sourceTree = "<group>"; };
+		D5DB59A124BD550B00559C30 /* fourButtonChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourButtonChoices.swift; sourceTree = "<group>"; };
+		D5DB59A324BDF8B700559C30 /* YesNo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesNo2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 		D586EAEF24AA289000572834 /* SurveyApp */ = {
 			isa = PBXGroup;
 			children = (
+				D5DB1BC324DAFF0C0016EA1A /* AboutView.swift */,
 				D586EAF024AA289000572834 /* AppDelegate.swift */,
 				D586EAF224AA289000572834 /* SceneDelegate.swift */,
 				D586EAF424AA289000572834 /* ContentView.swift */,
@@ -63,6 +80,13 @@
 				D586EAFB24AA289500572834 /* LaunchScreen.storyboard */,
 				D586EAFE24AA289500572834 /* Info.plist */,
 				D586EAF824AA289500572834 /* Preview Content */,
+				D5DB599F24BD544700559C30 /* YesNo.swift */,
+				D5DB59A124BD550B00559C30 /* fourButtonChoices.swift */,
+				D5DB59A324BDF8B700559C30 /* YesNo2.swift */,
+				D5165A2F24D041A6007474A1 /* StopWatchManager.swift */,
+				D5B418A725252F6500C73416 /* cognitionChoice.swift */,
+				D5803FDE2528CD8100E6A8E4 /* MiniCogView.swift */,
+				D5803FE02528D23900E6A8E4 /* AD8View.swift */,
 			);
 			path = SurveyApp;
 			sourceTree = "<group>";
@@ -146,9 +170,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5803FE12528D23900E6A8E4 /* AD8View.swift in Sources */,
+				D5DB1BC424DAFF0C0016EA1A /* AboutView.swift in Sources */,
+				D5B418A825252F6500C73416 /* cognitionChoice.swift in Sources */,
+				D5DB59A024BD544700559C30 /* YesNo.swift in Sources */,
+				D5DB59A224BD550B00559C30 /* fourButtonChoices.swift in Sources */,
 				D586EAF124AA289000572834 /* AppDelegate.swift in Sources */,
+				D5803FDF2528CD8100E6A8E4 /* MiniCogView.swift in Sources */,
+				D5165A3024D041A6007474A1 /* StopWatchManager.swift in Sources */,
 				D586EAF324AA289000572834 /* SceneDelegate.swift in Sources */,
 				D586EAF524AA289000572834 /* ContentView.swift in Sources */,
+				D5DB59A424BDF8B800559C30 /* YesNo2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
