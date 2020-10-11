@@ -30,7 +30,7 @@ struct fourButtonChoices: View {
 //            return(3)
 //        }
 //        else{
-//            return(0)
+//            return(0) 
 //        }
 //    }
 

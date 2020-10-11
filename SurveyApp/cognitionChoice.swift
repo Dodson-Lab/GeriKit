@@ -1,15 +1,14 @@
 //
-//  cognitionChoice.swift
+//  CognitionChoice.swift
 //  SurveyApp
 //
-//  Created by Ambika Viswanathan on 9/30/20.
+//  Created by Ambika Viswanathan on 10/10/20.
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
 
 import SwiftUI
 
-struct cognitionChoice: View{
-    
+struct CognitionChoice: View{
     var body: some View{
         VStack(alignment: .center){
             NavigationLink(destination: MiniCogView()){
@@ -37,8 +36,8 @@ struct cognitionChoice: View{
     }
 }
 
-struct cognitionChoice_Previews: PreviewProvider {
+struct CognitionChoice_Previews: PreviewProvider {
     static var previews: some View {
-        cognitionChoice()
+        CognitionChoice()
     }
 }
