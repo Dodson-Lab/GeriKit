@@ -11,6 +11,7 @@ import SwiftUI
 //Yes No Button Function + Logic for counting number of yeses
 struct fourButtonChoices: View {
     @Binding var questionScore: Int
+    @Binding var isAlert: Bool
     @State private var buttonOne:Bool = false
     @State private var buttonTwo:Bool = false
     @State private var buttonThree:Bool = false
@@ -39,14 +40,15 @@ struct fourButtonChoices: View {
             //button one
             Button(action: {
                 if(self.buttonPressed != 0){self.questionScore -= self.toBeAdded
-                    self.toBeAdded = 1;
+                    self.toBeAdded = 0;
                 }
+                self.isAlert = false;
                 self.buttonOne = true
                 self.buttonTwo = false
                 self.buttonThree = false
                 self.buttonFour = false
-                self.buttonPressed = 1
-            }, label: {Text("Not at all")}).frame(maxWidth: .infinity)
+                self.buttonPressed = 0
+            }, label: {Text("Not at all")}) //buttonPressed: \(buttonPressed)")})
             .padding(10)
             .buttonStyle(BorderlessButtonStyle())
             .background(buttonOne ? Color.blue : Color.gray)
@@ -56,15 +58,16 @@ struct fourButtonChoices: View {
 
             //button two
             Button(action: {
-                if(self.buttonPressed != 2){self.questionScore -= self.toBeAdded;
+                if(self.buttonPressed != 1){self.questionScore -= self.toBeAdded;
                     self.toBeAdded = 1;
-                    self.questionScore += self.toBeAdded
+                    self.questionScore += self.toBeAdded;
                 }
+                self.isAlert = true;
                 self.buttonOne = false
                 self.buttonTwo = true
                 self.buttonThree = false
                 self.buttonFour = false
-                self.buttonPressed = 2
+                self.buttonPressed = 1
             },label: {
                 Text("Several days")}).frame(maxWidth: .infinity)
                 .padding(10)
@@ -76,15 +79,16 @@ struct fourButtonChoices: View {
 //
 //            //button three
             Button(action: {
-                if(self.buttonPressed != 3){self.questionScore -= self.toBeAdded;
+                if(self.buttonPressed != 2){self.questionScore -= self.toBeAdded;
                     self.toBeAdded = 2;
-                    self.questionScore += self.toBeAdded
+                    self.questionScore += self.toBeAdded;
                 }
+                self.isAlert = true;
                 self.buttonOne = false
                 self.buttonTwo = false
                 self.buttonThree = true
                 self.buttonFour = false
-                self.buttonPressed = 3;
+                self.buttonPressed = 2;
 
                 }, label: {
                 Text("More than half the days")}).frame(maxWidth: .infinity)
@@ -99,10 +103,11 @@ struct fourButtonChoices: View {
 //
 //            //button four
             Button(action: {
-                if(self.buttonPressed != 4){self.questionScore -= self.toBeAdded;
-                    self.toBeAdded = 4;
+                if(self.buttonPressed != 3){self.questionScore -= self.toBeAdded;
+                    self.toBeAdded = 3;
                     self.questionScore += self.toBeAdded
                 }
+                self.isAlert = true;
                 self.buttonOne = false
                 self.buttonTwo = false
                 self.buttonThree = false
@@ -115,7 +120,9 @@ struct fourButtonChoices: View {
                 .background(buttonFour ? Color.blue : Color.gray)
                 .foregroundColor(Color.white)
                 .cornerRadius(10)
-        }.padding()
+        }
+        .contentShape(Rectangle())
+        .padding()
     }
 }
 
