@@ -26,6 +26,7 @@ struct NutritionView: View{
                     Text("1 = moderate decrease in food intake")
                     Text("2 = no decrease in food intake")
                 }.padding()
+                
         }.navigationBarTitle(("Mini Nutrition Assessment"))
 
     }

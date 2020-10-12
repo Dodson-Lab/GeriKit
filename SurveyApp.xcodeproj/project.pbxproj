@@ -31,6 +31,7 @@
 		D586EAF724AA289500572834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D586EAF624AA289500572834 /* Assets.xcassets */; };
 		D586EAFA24AA289500572834 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D586EAF924AA289500572834 /* Preview Assets.xcassets */; };
 		D586EAFD24AA289500572834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D586EAFB24AA289500572834 /* LaunchScreen.storyboard */; };
+		D5D462DA2533F467001EEBA7 /* MiniNutritional.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D462D92533F467001EEBA7 /* MiniNutritional.json */; };
 		D5DB1BC424DAFF0C0016EA1A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB1BC324DAFF0C0016EA1A /* AboutView.swift */; };
 		D5DB59A024BD544700559C30 /* YesNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB599F24BD544700559C30 /* YesNo.swift */; };
 		D5DB59A224BD550B00559C30 /* fourButtonChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB59A124BD550B00559C30 /* fourButtonChoices.swift */; };
@@ -64,6 +65,7 @@
 		D586EAF924AA289500572834 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D586EAFC24AA289500572834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D586EAFE24AA289500572834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5D462D92533F467001EEBA7 /* MiniNutritional.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MiniNutritional.json; sourceTree = "<group>"; };
 		D5DB1BC324DAFF0C0016EA1A /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		D5DB599F24BD544700559C30 /* YesNo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesNo.swift; sourceTree = "<group>"; };
 		D5DB59A124BD550B00559C30 /* fourButtonChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourButtonChoices.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				D573B9CA25327ABB00516542 /* NutritionView.swift */,
 				D573B9CC25327B0200516542 /* NutritionResults.swift */,
 				D573B9CE25327B3200516542 /* MedicineView.swift */,
+				D5D462D92533F467001EEBA7 /* MiniNutritional.json */,
 			);
 			path = SurveyApp;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			files = (
 				D586EAFD24AA289500572834 /* LaunchScreen.storyboard in Resources */,
 				D586EAFA24AA289500572834 /* Preview Assets.xcassets in Resources */,
+				D5D462DA2533F467001EEBA7 /* MiniNutritional.json in Resources */,
 				D586EAF724AA289500572834 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

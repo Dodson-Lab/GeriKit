@@ -1,0 +1,10 @@
+{"question": {
+    "text": "How has food intake declined over the past 3 months due to loss of appetite, digestive problems, chewing, or swallowing difficulties?"
+        {answers: [
+            {"score": 0, "ans_text": "severe decrease in food intake"},
+            {"score": 1, "ans_text": "moderate decrease in food intake"},
+            {"score": 2, "ans_text": "no decrease in food intake"}
+            ]
+        }
+    }
+}
