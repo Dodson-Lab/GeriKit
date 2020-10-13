@@ -23,6 +23,7 @@ struct Question: Decodable, Identifiable {
 struct QuestionView: View {
     @Binding var fetcher: [Question]
     @Binding var scores: [Int]
+    @Binding var sum: Int
     @State var isPressed: Array<Array<Bool>> = Array(repeating: Array(repeating: false, count: 10), count: 10)
 
 
@@ -39,6 +40,7 @@ struct QuestionView: View {
                             self.scores[question.id] = result.score
                             self.isPressed[question.id][result.id] = true
                             }
+                        self.sum = (self.scores.reduce(0, +))
                     }, label: {
                     Text("\(result.text)")
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -57,5 +59,11 @@ struct QuestionView: View {
             }
         }
 
+    }
+}
+
+struct Question_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

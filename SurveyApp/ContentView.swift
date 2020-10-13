@@ -60,15 +60,15 @@ struct ContentView: View {
                           .padding()
                       Text("Falls")
                       }}
-                NavigationLink(destination: NutritionView())
-                  {HStack{
-                      Image("kitchen")
-                          .resizable()
-                          .aspectRatio(contentMode: .fit)
-                          .frame(width:80)
-                          .padding()
-                      Text("Nutrition")
-                      }}
+//                NavigationLink(destination: NutritionView())
+//                  {HStack{
+//                      Image("kitchen")
+//                          .resizable()
+//                          .aspectRatio(contentMode: .fit)
+//                          .frame(width:80)
+//                          .padding()
+//                      Text("Nutrition")
+//                      }}
                 NavigationLink(destination: MedicineView())
                   {HStack{
                       Image("drugs")
