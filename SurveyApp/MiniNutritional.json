@@ -1,24 +1,63 @@
 [
     {
-    "id": 1,
-    "text": "Has food intake declined over the past 3 months due to loss of appetite, digestive problems, chewing or swallowing difficulties?",
+    "id": 0,
+    "text": "A. Has food intake declined over the past 3 months due to loss of appetite, digestive problems, chewing or swallowing difficulties?",
     "answers":
         [
-            { "id": "1", "score": 0, "text": "Severe decrease in food intake" },
-            { "id": "2", "score": 1, "text": "Moderate decrease in food intake" },
-            { "id": "3", "score": 2, "text": "No decrease in food intake" }
+            { "id": 0, "score": 0, "text": "Severe decrease in food intake" },
+            { "id": 1, "score": 1, "text": "Moderate decrease in food intake" },
+            { "id": 2, "score": 2, "text": "No decrease in food intake" }
         ]
     },
     {
-        "id": 2,
-        "text": "Weight loss during the last 3 months",
+        "id": 1,
+        "text": "B. Weight loss during the last 3 months",
             "answers":
                 [
-                    { "id": "1", "score": 0, "text": "Weight loss greater than 3kg (6.6lbs)" },
-                    { "id": "2", "score": 1, "text": "Does not know" },
-                    { "id": "3", "score": 2, "text": "Weight loss between 1 and 3 kg (2.2 and 6.6 lbs)" },
-                    { "id": "4", "score": 3, "text": "No weight loss" }
+                    { "id": 0, "score": 0, "text": "Weight loss greater than 3kg (6.6lbs)" },
+                    { "id": 1, "score": 1, "text": "Does not know" },
+                    { "id": 2, "score": 2, "text": "Weight loss between 1 and 3 kg (2.2 and 6.6 lbs)" },
+                    { "id": 3, "score": 3, "text": "No weight loss" }
                 ]
-            }
-            
+    },
+    {
+        "id": 2,
+        "text": "C. Mobility",
+            "answers":
+                [
+                    { "id": 0, "score": 0, "text": "Bed or chair bound" },
+                    { "id": 1, "score": 1, "text": "Able to get out of bed or chair but does not go out" },
+                    { "id": 2, "score": 2, "text": "Goes out" },
+                ]
+    },
+    {
+        "id": 3,
+        "text": "D. Has suffered psychological stress or acute disese in the past 3 months?",
+            "answers":
+                [
+                    { "id": 0, "score": 0, "text": "Yes" },
+                    { "id": 1, "score": 1, "text": "No" }
+                ]
+    },
+    {
+        "id": 4,
+        "text": "E. Neuropsychological problems",
+            "answers":
+                [
+                    { "id": 0, "score": 0, "text": "Severe dementia or depression" },
+                    { "id": 1, "score": 1, "text": "Mild dementia" },
+                    { "id": 2, "score": 2, "text": "No pyschological problems" },
+                ]
+    },
+    {
+        "id": 5,
+        "text": "F. Body Mass Index (BMI) \n (weight in kg)/(height in m)",
+            "answers":
+                [
+                    { "id": 0, "score": 0, "text": "BMI less than 19" },
+                    { "id": 1, "score": 1, "text": "BMI 19 to less than 21" },
+                    { "id": 2, "score": 2, "text": "BMI 21 to less than 23" },
+                    { "id": 3, "score": 3, "text": "BMI 23 or greater" }
+                ]
+    },
 ]
