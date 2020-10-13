@@ -1,85 +1,65 @@
-//
-//  NutritionView.swift
+
+//  testJSON.swift
 //  SurveyApp
 //
-//  Created by Ambika Viswanathan on 10/10/20.
+//  Created by Ambika Viswanathan on 10/12/20.
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
 
 import SwiftUI
 
-struct NutritionView: View{
-    @State var numNutritionYes = ""
-    @State var quantity: Int = 0
-    @State var quantity2: Int = 0
-    @State var weight = ""
-    @State var height = ""
+struct Question: Decodable, Identifiable {
+    let id: Int
+    let text: String
+    let answers: [Answers]
 
-
-    var question1 = ["severe decrease in food intake", "moderate decrease in food intake", "no decrease in food intake"]
-
-    var body: some View {
-            List{
-                VStack(alignment: .leading){
-                    Text("1. Has food intake declined over the past 3 months due to loss of appetite, digestive problems, or swallowing difficulties?\n")
-                    Text("0 = severe decrease in food intake")
-                    Text("1 = moderate decrease in food intake")
-                    Text("2 = no decrease in food intake")
-                }.padding()
-                
-        }.navigationBarTitle(("Mini Nutrition Assessment"))
-
+    struct Answers: Decodable{
+        let id: String
+        let score: Int
+        let text : String
     }
 }
 
-//                VStack(alignment: .leading){
-//                    Text("2. Weight loss during the last 3 months? \n")
-//                    Text("0 = weight loss greater than 3kg (6.6lbs)")
-//                    Text("1 = does not know")
-//                    Text("2 = weight loss between 1 and 3kg (2.2 and 6.6lbs)")
-//                    Text("3 = no weight loss")
-//                    }.padding()
-//                VStack(alignment: .leading){
-//                    Text("3. Mobility\n")
-//                    Text("0 = bed or chair bound")
-//                    Text("1 = able to get out of bed/ chair but does not go out")
-//                    Text("2 = goes out")
-//                    }.padding()
-//                VStack(alignment: .leading){
-//                    Text("4. Has suffered psychological stress or acute disease in the past 3 months?\n")
-//                    Text("0 = yes")
-//                    Text("2 = no")
-//                    }.padding()
-//                VStack(alignment: .leading){
-//                    Text("5. Neuropsychological problems\n")
-//                    Text("0 = sivere dementia or depression")
-//                    Text("1 = mild dementia")
-//                    Text("2 = no psychological problems")
-//                    }.padding()
-//                HStack{
-//                    Text("6. Patient height?")
-//                    Spacer()
-//                   // TextField("Patient weight: ", text: $height)
-//                    }.padding()
-//                HStack{
-//                    Text("7. Patient weight?")
-//                    Spacer()
-//                    TextField("Patient weight: ", text: $weight)
-//                    }.padding()
-//                HStack{
-//                    Text("Score: ")
-//                    Spacer()
-//                    //TextField("Score", text: $numNutritionYes)
-//
-//                }
-//                //NavigationLink(destination: NutritionResults(numberFallYes: $numNutritionYes))
-//                //{Text("Nutrition Screening Result:").bold()
-//                //}
-////            }
-//    }
-//}
 
-struct NutritionView_Previews: PreviewProvider {
+struct NutritionView: View {
+    var fetcher = Bundle.main.decode("MiniNutritional.json")
+    @State var scores: Array<Int> = Array(repeating: 0, count: 100)
+
+
+    var body: some View {
+        List(fetcher) { question in
+                VStack (alignment: .leading){
+                    Text(question.text)
+                    .padding(5)
+                    ForEach(question.answers, id: \.id) {result in
+                        Button(action: {
+                            if(result.score != self.scores[question.id]){
+                                self.scores[question.id] = result.score
+                                }
+                        }, label: {
+                        Text("\(result.text)")})
+                        .contentShape(Rectangle())
+                        .buttonStyle(BorderlessButtonStyle())
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .multilineTextAlignment(.center)
+                        .padding(10)
+                        .background(Color.blue)
+                        .foregroundColor(Color.white)
+                        .cornerRadius(10)
+
+                }
+                .padding(5)
+
+            }
+            Text("\(self.scores.reduce(0, +))")
+
+        }
+    }
+}
+
+
+
+struct testJSON_Previews: PreviewProvider {
     static var previews: some View {
         NutritionView()
     }

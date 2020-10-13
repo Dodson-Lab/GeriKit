@@ -49,6 +49,7 @@ struct fourButtonChoices: View {
                 self.buttonFour = false
                 self.buttonPressed = 0
             }, label: {Text("Not at all")}) //buttonPressed: \(buttonPressed)")})
+            .frame(maxWidth: .infinity)
             .padding(10)
             .buttonStyle(BorderlessButtonStyle())
             .background(buttonOne ? Color.blue : Color.gray)

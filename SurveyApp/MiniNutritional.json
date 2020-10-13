@@ -1,10 +1,24 @@
-{"question": {
-    "text": "How has food intake declined over the past 3 months due to loss of appetite, digestive problems, chewing, or swallowing difficulties?"
-        {answers: [
-            {"score": 0, "ans_text": "severe decrease in food intake"},
-            {"score": 1, "ans_text": "moderate decrease in food intake"},
-            {"score": 2, "ans_text": "no decrease in food intake"}
-            ]
-        }
-    }
-}
+[
+    {
+    "id": 1,
+    "text": "Has food intake declined over the past 3 months due to loss of appetite, digestive problems, chewing or swallowing difficulties?",
+    "answers":
+        [
+            { "id": "1", "score": 0, "text": "Severe decrease in food intake" },
+            { "id": "2", "score": 1, "text": "Moderate decrease in food intake" },
+            { "id": "3", "score": 2, "text": "No decrease in food intake" }
+        ]
+    },
+    {
+        "id": 2,
+        "text": "Weight loss during the last 3 months",
+            "answers":
+                [
+                    { "id": "1", "score": 0, "text": "Weight loss greater than 3kg (6.6lbs)" },
+                    { "id": "2", "score": 1, "text": "Does not know" },
+                    { "id": "3", "score": 2, "text": "Weight loss between 1 and 3 kg (2.2 and 6.6 lbs)" },
+                    { "id": "4", "score": 3, "text": "No weight loss" }
+                ]
+            }
+            
+]
