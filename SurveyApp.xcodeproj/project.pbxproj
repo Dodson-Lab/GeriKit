@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D5165A3024D041A6007474A1 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5165A2F24D041A6007474A1 /* StopWatchManager.swift */; };
-		D534D3AF253531980008713F /* testJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534D3AE253531980008713F /* testJSON.swift */; };
 		D534D3B12535349A0008713F /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534D3B02535349A0008713F /* Bundle-Decodable.swift */; };
 		D573B9B5253276F300516542 /* AD8ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573B9B4253276F300516542 /* AD8ResultsView.swift */; };
 		D573B9B72532774F00516542 /* PHQ2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573B9B62532774F00516542 /* PHQ2View.swift */; };
@@ -33,6 +32,7 @@
 		D586EAF724AA289500572834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D586EAF624AA289500572834 /* Assets.xcassets */; };
 		D586EAFA24AA289500572834 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D586EAF924AA289500572834 /* Preview Assets.xcassets */; };
 		D586EAFD24AA289500572834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D586EAFB24AA289500572834 /* LaunchScreen.storyboard */; };
+		D5C2202125357B5600427AE1 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2202025357B5600427AE1 /* Question.swift */; };
 		D5D462DA2533F467001EEBA7 /* MiniNutritional.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D462D92533F467001EEBA7 /* MiniNutritional.json */; };
 		D5DB1BC424DAFF0C0016EA1A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB1BC324DAFF0C0016EA1A /* AboutView.swift */; };
 		D5DB59A024BD544700559C30 /* YesNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB599F24BD544700559C30 /* YesNo.swift */; };
@@ -42,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		D5165A2F24D041A6007474A1 /* StopWatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchManager.swift; sourceTree = "<group>"; };
-		D534D3AE253531980008713F /* testJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testJSON.swift; sourceTree = "<group>"; };
 		D534D3B02535349A0008713F /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		D573B9B4253276F300516542 /* AD8ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AD8ResultsView.swift; sourceTree = "<group>"; };
 		D573B9B62532774F00516542 /* PHQ2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHQ2View.swift; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		D586EAF924AA289500572834 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D586EAFC24AA289500572834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D586EAFE24AA289500572834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5C2202025357B5600427AE1 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D5D462D92533F467001EEBA7 /* MiniNutritional.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MiniNutritional.json; sourceTree = "<group>"; };
 		D5DB1BC324DAFF0C0016EA1A /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		D5DB599F24BD544700559C30 /* YesNo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesNo.swift; sourceTree = "<group>"; };
@@ -133,9 +133,9 @@
 				D573B9C625327A5A00516542 /* FallView.swift */,
 				D573B9C825327A7B00516542 /* FallResults.swift */,
 				D573B9CA25327ABB00516542 /* NutritionView.swift */,
-				D534D3AE253531980008713F /* testJSON.swift */,
 				D534D3B02535349A0008713F /* Bundle-Decodable.swift */,
 				D573B9CC25327B0200516542 /* NutritionResults.swift */,
+				D5C2202025357B5600427AE1 /* Question.swift */,
 				D573B9CE25327B3200516542 /* MedicineView.swift */,
 				D5D462D92533F467001EEBA7 /* MiniNutritional.json */,
 			);
@@ -225,8 +225,8 @@
 				D573B9BD2532785500516542 /* PHQ9Results.swift in Sources */,
 				D5803FE12528D23900E6A8E4 /* AD8View.swift in Sources */,
 				D573B9B5253276F300516542 /* AD8ResultsView.swift in Sources */,
-				D534D3AF253531980008713F /* testJSON.swift in Sources */,
 				D573B9BB253277FC00516542 /* PHQ2Results.swift in Sources */,
+				D5C2202125357B5600427AE1 /* Question.swift in Sources */,
 				D534D3B12535349A0008713F /* Bundle-Decodable.swift in Sources */,
 				D573B9CF25327B3200516542 /* MedicineView.swift in Sources */,
 				D5DB1BC424DAFF0C0016EA1A /* AboutView.swift in Sources */,
