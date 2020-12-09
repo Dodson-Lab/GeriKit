@@ -60,7 +60,7 @@
 		D573B9D025327B7500516542 /* CognitionChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitionChoice.swift; sourceTree = "<group>"; };
 		D5803FDE2528CD8100E6A8E4 /* MiniCogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCogView.swift; sourceTree = "<group>"; };
 		D5803FE02528D23900E6A8E4 /* AD8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AD8View.swift; sourceTree = "<group>"; };
-		D586EAED24AA289000572834 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D586EAED24AA289000572834 /* GeriKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeriKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D586EAF024AA289000572834 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D586EAF224AA289000572834 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D586EAF424AA289000572834 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		D586EAEE24AA289000572834 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D586EAED24AA289000572834 /* SurveyApp.app */,
+				D586EAED24AA289000572834 /* GeriKit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 			);
 			name = SurveyApp;
 			productName = SurveyApp;
-			productReference = D586EAED24AA289000572834 /* SurveyApp.app */;
+			productReference = D586EAED24AA289000572834 /* GeriKit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -395,7 +395,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.unc.med-viswanathan-ambika.SurveyApp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GeriKit;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -416,7 +416,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.unc.med-viswanathan-ambika.SurveyApp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GeriKit;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
