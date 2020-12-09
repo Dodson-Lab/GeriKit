@@ -1,10 +1,10 @@
-// //
-// //  ChairView.swift
-// //  SurveyApp
-// //
-// //  Created by Ambika Viswanathan on 10/10/20.
-// //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
-// //
+//
+//  ChairView.swift
+//  SurveyApp
+//
+//  Created by Ambika Viswanathan on 10/10/20.
+//  Copyright © 2020 Ambika Viswanathan. All rights reserved.
+//
 
 import SwiftUI
 
@@ -47,8 +47,6 @@ struct ChairView: View{
                 .font(.system(size: 20)).padding()
                 //Text("Count number of times patient comes to full standing position")
                 // Text(String(format: "%.1f", stopWatchManager.secondsElapsed))
-                // Text(String(format: "%.1f", self.stopWatchManager.secondsElapsed))
-                //     //.font(.system(size: 30))
                 Text("\(String(format: "%.1f", stopWatchManager.secondsElapsed as Double))")
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -80,7 +78,6 @@ struct ChairView: View{
                             TimerButton(label: "Reset", buttonColor: .red)
                         }.padding()
                     }
-                    // .infinity
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
                 
