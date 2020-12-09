@@ -70,7 +70,7 @@ struct PHQ9View: View{
                             .contentShape(Rectangle())
                             .frame(minWidth: 0, maxWidth: .infinity)
                         }
-                        Text("numPHQ9Yes: \(numPHQ9Yes), redAlert: \(redAlert9 ? "hello" : "goodbye")")
+//                        Text("numPHQ9Yes: \(numPHQ9Yes), redAlert: \(redAlert9 ? "hello" : "goodbye")")
                     }
                 }
                 Section{
