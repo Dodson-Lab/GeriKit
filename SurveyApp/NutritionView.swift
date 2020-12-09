@@ -17,7 +17,7 @@ struct NutritionView: View {
         List{
             QuestionView(fetcher: $MNA, scores: $MNAScore, sum: $MNASum)
             Section {
-                NavigationLink(destination: NutritionResults()){
+                NavigationLink(destination: NutritionResults(score: $MNASum)){
                     Text("Click here for your MNA®️ Results \(MNAScore.reduce(0, +))").bold()
                 }
             }

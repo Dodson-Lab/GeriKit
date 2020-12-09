@@ -60,15 +60,15 @@ struct ContentView: View {
                           .padding()
                       Text("Falls")
                       }}
-//                NavigationLink(destination: NutritionView())
-//                  {HStack{
-//                      Image("kitchen")
-//                          .resizable()
-//                          .aspectRatio(contentMode: .fit)
-//                          .frame(width:80)
-//                          .padding()
-//                      Text("Nutrition")
-//                      }}
+                NavigationLink(destination: NutritionView())
+                  {HStack{
+                      Image("kitchen")
+                          .resizable()
+                          .aspectRatio(contentMode: .fit)
+                          .frame(width:80)
+                          .padding()
+                      Text("Nutrition")
+                      }}
                 NavigationLink(destination: MedicineView())
                   {HStack{
                       Image("drugs")
@@ -77,6 +77,15 @@ struct ContentView: View {
                           .frame(width:80)
                           .padding()
                       Text("Medications")
+                      }}
+                NavigationLink(destination: AdvancedCareView())
+                  {HStack{
+                      Image("plan")
+                          .resizable()
+                          .aspectRatio(contentMode: .fit)
+                          .frame(width:80)
+                          .padding()
+                      Text("Advanced Care Planning")
                       }}
                 HStack{
 //                        Image("survey")
@@ -96,7 +105,6 @@ struct ContentView: View {
             .navigationBarItems(trailing:
                 HStack {
                     NavigationLink(destination:AboutView()){Text("About")}
-
                 })
             }
         }

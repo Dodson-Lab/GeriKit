@@ -14,7 +14,7 @@ struct AD8ResultsView: View {
     
     func ad8Results(number: Int)-> String {
         if number > 1{
-            self.isNavigation = true;
+            //self.isNavigation = true;
             return("suggests that cognitive impairment is likely to be present.")
         }
         else {

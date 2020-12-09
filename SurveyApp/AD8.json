@@ -4,17 +4,17 @@
         "text": "Problems with judgment (e.g. problems making decisions, bad financial decisions, problems with thinking)",
         "answers":
                 [
-                    { "id": 0, "score": 0, "text": "Yes", "color": "red" },
-                    { "id": 1, "score": 1, "text": "No", "color": "green"}
+                    { "id": 0, "score": 1, "text": "Yes", "color": "red" },
+                    { "id": 1, "score": 0, "text": "No", "color": "green"}
                 ]
     },
     {
         "id": 1,
         "text": "Less interest in hobbies/activities",
         "answers":
-                [
-                    { "id": 0, "score": 0, "text": "Yes", "color": "red" },
-                    { "id": 1, "score": 1, "text": "No", "color": "green"}
+                  [
+                    { "id": 0, "score": 1, "text": "Yes", "color": "red" },
+                    { "id": 1, "score": 0, "text": "No", "color": "green"}
                 ]
     },
     {
@@ -22,8 +22,8 @@
         "text": "Repeats the same things over and over (questions, stories, or statements)",
         "answers":
                 [
-                    { "id": 0, "score": 0, "text": "Yes", "color": "red" },
-                    { "id": 1, "score": 1, "text": "No", "color": "green"}
+                    { "id": 0, "score": 1, "text": "Yes", "color": "red" },
+                    { "id": 1, "score": 0, "text": "No", "color": "green"}
                 ]
     },
     {
@@ -31,8 +31,8 @@
         "text": "Trouble learning how to use a tool, appliance, or gadget (e.g. VCR, computer, microwave, remote control)",
             "answers":
                 [
-                    { "id": 0, "score": 0, "text": "Yes", "color": "red" },
-                    { "id": 1, "score": 1, "text": "No", "color": "green"}
+                    { "id": 0, "score": 1, "text": "Yes", "color": "red" },
+                    { "id": 1, "score": 0, "text": "No", "color": "green"}
                 ]
     },
     {
@@ -40,8 +40,8 @@
         "text": "Forgets correct month or year",
             "answers":
                 [
-                    { "id": 0, "score": 0, "text": "Yes", "color": "red" },
-                    { "id": 1, "score": 1, "text": "No", "color": "green"}
+                    { "id": 0, "score": 1, "text": "Yes", "color": "red" },
+                    { "id": 1, "score": 0, "text": "No", "color": "green"}
                 ]
     },
     {
@@ -49,8 +49,8 @@
         "text": "Trouble handling complicated financial affairs (e.g. balancing checkbook, income taxes, paying bills)",
             "answers":
                 [
-                    { "id": 0, "score": 0, "text": "Yes", "color": ".red" },
-                    { "id": 1, "score": 1, "text": "No", "color": ".green"}
+                    { "id": 0, "score": 1, "text": "Yes", "color": "red" },
+                    { "id": 1, "score": 0, "text": "No", "color": "green"}
                 ]
     },
     {
@@ -58,8 +58,8 @@
         "text": "Trouble remembering appointments",
             "answers":
                 [
-                    { "id": 0, "score": 0, "text": "Yes", "color": ".red" },
-                    { "id": 1, "score": 1, "text": "No", "color": ".green"}
+                    { "id": 0, "score": 1, "text": "Yes", "color": "red" },
+                    { "id": 1, "score": 0, "text": "No", "color": "green"}
                 ]
     },
     {
@@ -67,8 +67,8 @@
         "text": "Daily problems with thinking and/or memory",
             "answers":
                 [
-                    { "id": 0, "score": 0, "text": "Yes", "color": "red" },
-                    { "id": 1, "score": 1, "text": "No", "color": "green"}
+                    { "id": 0, "score": 1, "text": "Yes", "color": "red" },
+                    { "id": 1, "score": 0, "text": "No", "color": "green"}
                 ]
     }
 ]

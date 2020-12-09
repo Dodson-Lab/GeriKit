@@ -39,8 +39,8 @@ struct QuestionView: View {
                             self.isPressed[question.id][self.scores[question.id]] = false
                             self.scores[question.id] = result.score
                             self.isPressed[question.id][result.id] = true
+                            self.sum = (self.scores.reduce(0, +))
                             }
-                        self.sum = (self.scores.reduce(0, +))
                     }, label: {
                     Text("\(result.text)")
                         .frame(maxWidth: .infinity, alignment: .center)

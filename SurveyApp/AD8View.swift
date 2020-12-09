@@ -18,7 +18,7 @@ struct AD8View: View {
             QuestionView(fetcher: $AD8, scores: $AD8Score, sum: $AD8Sum)
             Section {
                 NavigationLink(destination: AD8ResultsView(numberAD8Yes: $AD8Sum))
-                {Text("Click here for your AD8 Results \(AD8Score.reduce(0, +))").bold()
+                {Text("Click here for your AD8 Results \(AD8Sum)").bold()
                 }
             }
             .navigationBarTitle("AD8")
