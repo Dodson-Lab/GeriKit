@@ -5,17 +5,26 @@
 //  Created by Ambika Viswanathan on 10/3/20.
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
-
 import SwiftUI
 
 struct MiniCogView: View {
-  //  @State private var selection = false
-//    @State private var name: String = "Tim"
-    @State private var numAD8Yes: Int = 0
+    @State var selection = false
+    @State private var name: String = ""
+    @State private var name1: String = ""
+    @State private var name2: String = ""
+    @State private var list: String = ""
+
+    
+
+
+    @State private var numWordsCorrect: Int = 0
+    @State private var value: CGFloat = 0
+    @ObservedObject private var keyboardHandler = KeyboardHandler()
+
 
     
     var body: some View {
-        ScrollView{
+        Form{
         VStack(alignment:.leading){
             Text("Part 1: Three Word Recognition").font(.system(size: 20)).bold().foregroundColor(.red)
             Divider().frame(height: 3).background(Color.red)
@@ -51,26 +60,50 @@ struct MiniCogView: View {
                 Divider().frame(height: 3).background(Color.red)
                 Text("Ask the person to recall the three words you stated in Step 1. Say: \"What were the three words I asked you to remember?\" Record the word list version number and the person’s answers below.")
             }
+            }
 //            Picker("World List Version", selection: $selection) {
 //                Text("1").tag(1)
 //                Text("2").tag(2)
 //                Text("3").tag(3)
 //                Text("4").tag(4)
+//            }
+            VStack{
+                TextField("Word List", text: $list)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("Word 1", text: $name)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("Word 2", text: $name1)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("Word 3", text: $name2)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            }.frame(maxHeight: .infinity)
+            .padding(.bottom, keyboardHandler.keyboardHeight)
+            .animation(.default)
+            
+        
+            
+            //.offset(y:-self.value)
+//                .animation(.spring())
+//                .onAppear {
+//                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) {(noti) in
+//                    let value = noti.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+//                    let height = value.height
+//                    self.value = height
+//                }
+//                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) {(noti) in
+//
+//                    self.value = 0
 //                }
 //
-//            HStack{
-//                Text("Word 1")
-//                TextField("Word 1", text: $name)
 //            }
-            NavigationLink(destination: AD8ResultsView(numberAD8Yes: $numAD8Yes))
-            {Text("Click here for MiniCog result").bold()
-            }
-            }
+            
+            NavigationLink(destination: MiniCogResults())
+            {Text("Click here for MiniCogⒸ result").bold()}
             
             }.padding()
-        .navigationBarTitle("MiniCog")
-
+        .navigationBarTitle("MiniCogⒸ")
     }
+    
 }
 
 struct MiniCogView_Previews: PreviewProvider {
@@ -78,5 +111,3 @@ struct MiniCogView_Previews: PreviewProvider {
         MiniCogView()
     }
 }
-
-

@@ -32,6 +32,8 @@
 		D586EAF724AA289500572834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D586EAF624AA289500572834 /* Assets.xcassets */; };
 		D586EAFA24AA289500572834 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D586EAF924AA289500572834 /* Preview Assets.xcassets */; };
 		D586EAFD24AA289500572834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D586EAFB24AA289500572834 /* LaunchScreen.storyboard */; };
+		D5891AB1258184890019FD20 /* MiniCogResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5891AB0258184890019FD20 /* MiniCogResults.swift */; };
+		D5891AB3258184C40019FD20 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5891AB2258184C40019FD20 /* KeyboardHandler.swift */; };
 		D5C2202325357F3F00427AE1 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2202225357F3F00427AE1 /* Question.swift */; };
 		D5D462DA2533F467001EEBA7 /* MiniNutritional.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D462D92533F467001EEBA7 /* MiniNutritional.json */; };
 		D5DB1BC424DAFF0C0016EA1A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB1BC324DAFF0C0016EA1A /* AboutView.swift */; };
@@ -68,6 +70,8 @@
 		D586EAF924AA289500572834 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D586EAFC24AA289500572834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D586EAFE24AA289500572834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5891AB0258184890019FD20 /* MiniCogResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCogResults.swift; sourceTree = "<group>"; };
+		D5891AB2258184C40019FD20 /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		D5C2202225357F3F00427AE1 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D5D462D92533F467001EEBA7 /* MiniNutritional.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MiniNutritional.json; sourceTree = "<group>"; };
 		D5DB1BC324DAFF0C0016EA1A /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				D5165A2F24D041A6007474A1 /* StopWatchManager.swift */,
 				D573B9D025327B7500516542 /* CognitionChoice.swift */,
 				D5803FDE2528CD8100E6A8E4 /* MiniCogView.swift */,
+				D5891AB0258184890019FD20 /* MiniCogResults.swift */,
+				D5891AB2258184C40019FD20 /* KeyboardHandler.swift */,
 				D5803FE02528D23900E6A8E4 /* AD8View.swift */,
 				D573B9B4253276F300516542 /* AD8ResultsView.swift */,
 				D573B9B62532774F00516542 /* PHQ2View.swift */,
@@ -233,6 +239,8 @@
 				D5DB59A024BD544700559C30 /* YesNo.swift in Sources */,
 				D573B9B72532774F00516542 /* PHQ2View.swift in Sources */,
 				D573B9C925327A7B00516542 /* FallResults.swift in Sources */,
+				D5891AB1258184890019FD20 /* MiniCogResults.swift in Sources */,
+				D5891AB3258184C40019FD20 /* KeyboardHandler.swift in Sources */,
 				D573B9B9253277AE00516542 /* PHQ9View.swift in Sources */,
 				D573B9C32532793F00516542 /* ChairView.swift in Sources */,
 				D573B9D125327B7500516542 /* CognitionChoice.swift in Sources */,
