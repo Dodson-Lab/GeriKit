@@ -39,13 +39,15 @@ struct ChairView: View{
             List{
                 TextField("Patient age: ", text: $age)
                 
-                Text("Instruct the patient:").font(.system(size: 20, weight: .heavy))
-                Text("1. Sit in the middle of the chair \n \n2. Place your hands on the opposite shoulder crossed, at the wrists. \n\n3. Keep your feet flat on the floor. \n\n4. Keep your back straight, and keep your arms against your chest. \n\n5. On Go, rise to a full standing position, then sit back down again. \n\n6. Repeat this for 30 seconds")
+                Text("Instruct the patient:")
+                    .font(.system(size: 20, weight: .heavy))
+                Text("1. Sit in the middle of the chair. \n \n2. Place your hands on the opposite shoulder crossed, at the wrists. \n\n3. Keep your feet flat on the floor. \n\n4. Keep your back straight, and keep your arms against your chest. \n\n5. On Go, rise to a full standing position, then sit back down again. \n\n6. Repeat this for 30 seconds.")
                     .padding()
-                Text("On go, start timing and count the number of times the patient comes to a full standing position in 30 seconds:").font(.system(size: 20)).padding()
+                Text("On go, start timing and count the number of times the patient comes to a full standing position in 30 seconds:")
+                .font(.system(size: 20)).padding()
                 //Text("Count number of times patient comes to full standing position")
-                Text(String(format: "%.1f", stopWatchManager.secondsElapsed))
-                    //.font(.system(size: 30))
+                // Text(String(format: "%.1f", stopWatchManager.secondsElapsed))
+                Text("\(String(format: "%.1f", stopWatchManager.secondsElapsed as Double))")
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color.green)
@@ -76,12 +78,12 @@ struct ChairView: View{
                             TimerButton(label: "Reset", buttonColor: .red)
                         }.padding()
                     }
-                }.frame(maxWidth: .infinity, alignment: .center)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
                 
                 TextField("Number of Chair Stands", text: $numChairStands)
                 //NavigationLink(destination: ChairResults){Text("Test")}
                 
-                    
             }.padding()
             .navigationBarTitle(("Chair Stands"))
     }
