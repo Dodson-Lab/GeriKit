@@ -11,13 +11,13 @@ import SwiftUI
 struct NutritionView: View {
     @State var MNA = Bundle.main.decode("MiniNutritional.json")
     @State var MNAScore: Array<Int> = Array(repeating: 0, count: 100)
-    @State var isPressed: Array<Array<Bool>> = Array(repeating: Array(repeating: false, count: 10), count: 10)
-    
+    @State var MNASum = 0
+
     var body: some View {
         List{
-            QuestionView(fetcher: $MNA, scores: $MNAScore)
+            QuestionView(fetcher: $MNA, scores: $MNAScore, sum: $MNASum)
             Section {
-                NavigationLink(destination: NutritionResults()){
+                NavigationLink(destination: NutritionResults(score: $MNASum)){
                     Text("Click here for your MNA®️ Results \(MNAScore.reduce(0, +))").bold()
                 }
             }

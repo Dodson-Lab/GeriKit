@@ -5,7 +5,6 @@
 //  Created by Ambika Viswanathan on 10/13/20.
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
-
 import SwiftUI
 
 struct Question: Decodable, Identifiable {
@@ -23,6 +22,7 @@ struct Question: Decodable, Identifiable {
 struct QuestionView: View {
     @Binding var fetcher: [Question]
     @Binding var scores: [Int]
+    @Binding var sum: Int
     @State var isPressed: Array<Array<Bool>> = Array(repeating: Array(repeating: false, count: 10), count: 10)
 
 
@@ -38,6 +38,7 @@ struct QuestionView: View {
                             self.isPressed[question.id][self.scores[question.id]] = false
                             self.scores[question.id] = result.score
                             self.isPressed[question.id][result.id] = true
+                            self.sum = (self.scores.reduce(0, +))
                             }
                     }, label: {
                     Text("\(result.text)")
@@ -57,5 +58,11 @@ struct QuestionView: View {
             }
         }
 
+    }
+}
+
+struct Question_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
