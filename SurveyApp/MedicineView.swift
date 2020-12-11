@@ -16,13 +16,18 @@ struct MedicineView: View{
                 Section {
                     HStack {
                         Text("How many medications, if any, is the patient on?")
-                        Spacer()
+                        Spacer().frame(width: 40)
                         Stepper(value: $quantity, in: 0...10, label: { Text("\(quantity)")})
                     }
                 }
                 if quantity > 4{
                 Section {
                     Text("The patient has screened positive for polypharmacy. Consider reducing the number of pills or frequency of pills. Refer to the following resources:")
+                    .font(.system(size: 18))
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
                     }
                 }
                 Section{

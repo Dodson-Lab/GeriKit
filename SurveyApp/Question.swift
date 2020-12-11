@@ -42,14 +42,16 @@ struct QuestionView: View {
                             }
                     }, label: {
                     Text("\(result.text)")
-                        .frame(maxWidth: .infinity, alignment: .center)
+                        .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity, alignment: .center)
                         .padding(10)
                         .foregroundColor(Color.white)
                         .background(self.isPressed[question.id][result.id] ? Color.blue : Color.gray)
                     }
 
                     )
+                    .lineLimit(nil)
                     .cornerRadius(10)
                     .buttonStyle(BorderlessButtonStyle())
                     }
