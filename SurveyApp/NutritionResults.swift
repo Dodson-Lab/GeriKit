@@ -31,10 +31,8 @@ struct NutritionResults: View {
     }
        var body: some View {
         List{
-            Text("The score of \(score) suggests the patient has a:\n\n\n \(nutritionResults(number: score).1)").bold().font(.system(size: 30)).multilineTextAlignment(.center)
-             
-            Spacer().frame(height: 60)
-            
+            Text("The score of \(score) suggests the patient has a:\n\n\n \(nutritionResults(number: score).1)\n\n").bold().font(.system(size: 30)).multilineTextAlignment(.center)
+                         
             HStack{
                 Button(action: {
                     self.isNavigation = true
@@ -58,7 +56,9 @@ struct NutritionResults: View {
             if(isNavigation){
                 VStack(alignment: .leading){
                     Text("\(nutritionResults(number: score).0)").multilineTextAlignment(.leading)
-                }.background(Color(.systemGray6))
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
             }
             else{
@@ -71,10 +71,12 @@ struct NutritionResults: View {
                         guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
                         UIApplication.shared.open(phq9URL)}
                     Text("\n® Société des Produits Nestlé SA, Trademark Owners.\n\n")
-                    Image("nestle")
-                }.background(Color(.systemGray6))
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
             }
+            Image("nestle")
         }.padding()
         .navigationBarTitle("MNA®️ Results")
     }
