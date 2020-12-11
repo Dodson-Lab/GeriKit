@@ -34,6 +34,7 @@
 		D586EAFD24AA289500572834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D586EAFB24AA289500572834 /* LaunchScreen.storyboard */; };
 		D5891AB1258184890019FD20 /* MiniCogResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5891AB0258184890019FD20 /* MiniCogResults.swift */; };
 		D5891AB3258184C40019FD20 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5891AB2258184C40019FD20 /* KeyboardHandler.swift */; };
+		D5AF53882583004B0004F2F1 /* AdvancedCareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF53872583004B0004F2F1 /* AdvancedCareView.swift */; };
 		D5C2202325357F3F00427AE1 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2202225357F3F00427AE1 /* Question.swift */; };
 		D5D462DA2533F467001EEBA7 /* MiniNutritional.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D462D92533F467001EEBA7 /* MiniNutritional.json */; };
 		D5DB1BC424DAFF0C0016EA1A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB1BC324DAFF0C0016EA1A /* AboutView.swift */; };
@@ -72,6 +73,7 @@
 		D586EAFE24AA289500572834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5891AB0258184890019FD20 /* MiniCogResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCogResults.swift; sourceTree = "<group>"; };
 		D5891AB2258184C40019FD20 /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		D5AF53872583004B0004F2F1 /* AdvancedCareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCareView.swift; sourceTree = "<group>"; };
 		D5C2202225357F3F00427AE1 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D5D462D92533F467001EEBA7 /* MiniNutritional.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MiniNutritional.json; sourceTree = "<group>"; };
 		D5DB1BC324DAFF0C0016EA1A /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				D573B9B4253276F300516542 /* AD8ResultsView.swift */,
 				D573B9B62532774F00516542 /* PHQ2View.swift */,
 				D573B9BA253277FC00516542 /* PHQ2Results.swift */,
+				D5AF53872583004B0004F2F1 /* AdvancedCareView.swift */,
 				D573B9B8253277AE00516542 /* PHQ9View.swift */,
 				D573B9BC2532785500516542 /* PHQ9Results.swift */,
 				D573B9BE2532789E00516542 /* ADLView.swift */,
@@ -253,6 +256,7 @@
 				D5165A3024D041A6007474A1 /* StopWatchManager.swift in Sources */,
 				D5C2202325357F3F00427AE1 /* Question.swift in Sources */,
 				D586EAF324AA289000572834 /* SceneDelegate.swift in Sources */,
+				D5AF53882583004B0004F2F1 /* AdvancedCareView.swift in Sources */,
 				D573B9CB25327ABB00516542 /* NutritionView.swift in Sources */,
 				D586EAF524AA289000572834 /* ContentView.swift in Sources */,
 				D5DB59A424BDF8B800559C30 /* YesNo2.swift in Sources */,
