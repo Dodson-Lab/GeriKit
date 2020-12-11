@@ -55,16 +55,13 @@ struct NutritionResults: View {
                     .cornerRadius(10)
             }
             
-            
             if(isNavigation){
-                Spacer().frame(height: 10)
                 VStack(alignment: .leading){
                     Text("\(nutritionResults(number: score).0)").multilineTextAlignment(.leading)
                 }.background(Color(.systemGray6))
                 .cornerRadius(10)
             }
             else{
-                Spacer().frame(height: 10)
                 VStack(alignment: .leading){
                     Text("1. MNA® ")
                     .foregroundColor(.blue)
@@ -73,20 +70,12 @@ struct NutritionResults: View {
                         let url = URL.init(string: "https://www.mna-elderly.com/forms/mini/mna_mini_english.pdf")
                         guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
                         UIApplication.shared.open(phq9URL)}
-                    Text("\n® Société des Produits Nestlé SA, Trademark Owners.")
+                    Text("\n® Société des Produits Nestlé SA, Trademark Owners.\n\n")
+                    Image("nestle")
                 }.background(Color(.systemGray6))
                 .cornerRadius(10)
             }
-            Image("Nestle")
         }.padding()
         .navigationBarTitle("MNA®️ Results")
     }
 }
-
-
-
-//struct NutritionResults_Previews: PreviewProvider {
-//    static var previews: some View {
-//        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-//    }
-//}

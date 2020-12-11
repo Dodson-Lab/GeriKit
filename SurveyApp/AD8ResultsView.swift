@@ -23,7 +23,7 @@ struct AD8ResultsView: View {
     }
        var body: some View {
         VStack(alignment: .center){
-            Text("AD8 Result").font(.system(size: 60))
+            Text("AD8 Result").font(.system(size: 40))
                 
             Spacer().frame(height: 30)
              
