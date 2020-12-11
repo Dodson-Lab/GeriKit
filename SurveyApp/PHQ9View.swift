@@ -20,7 +20,7 @@ struct PHQ9View: View{
 
     var body: some View {
             ScrollView{
-                Section(header: Text("Over the last 2 weeks, how often have you been bothered by the following problems?")) {
+                Section(header: Text("Ask the patient: how often have they been bothered by the following over the past 2 weeks?")) {
                     HStack {
                         Text("1. Little interest or pleasure in doing things")
                         Spacer()
@@ -28,7 +28,7 @@ struct PHQ9View: View{
                     }
                         
                     HStack{
-                        Text("2. Feeling down, depressed or hopeless")
+                        Text("2. Feeling down, depressed, or hopeless")
                         Spacer()
                         fourButtonChoices(questionScore: $numPHQ9Yes, isAlert: $redAlert)
                     }

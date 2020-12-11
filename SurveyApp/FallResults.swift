@@ -15,7 +15,7 @@ struct FallResults: View {
     func fallResults(numberFalls: Int)-> String {
         if numberFalls > 0{
             self.isNavigation = true;
-            return("The patient screened positive for fall risk:")
+            return("The patient screened positive for fall risk.")
         }
         else {
             return("Based on this questionnaire, the patient is not high risk for falls at this time.")

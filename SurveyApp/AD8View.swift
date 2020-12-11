@@ -12,7 +12,7 @@ struct AD8View: View {
     @State var numAD8Yes = 0
     var body: some View {
             List{
-                Section(header: Text("As the caregiver, has the patient had...")) {
+                Section(header: Text("Ask the caregiver if the patient has had...")) {
                 HStack {Text("Problems with judgment (e.g. problems making decisions, bad financial decisions, problems with thinking)")
                     Spacer()
                     YesNo(numberOfYeses: $numAD8Yes)
