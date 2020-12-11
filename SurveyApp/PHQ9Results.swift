@@ -42,10 +42,9 @@ struct PHQ9Results: View {
        var body: some View {
         VStack(alignment: .center){
             Text("PHQ9 Results").font(.system(size: 60))
-            
             Spacer().frame(height: 30)
             if(alert){
-                VStack(alignment: .leading){
+                VStack(alignment: .center){
 
                 Text("The patient scored positively for suicidal ideation, urgent psychiatric evaluation is warranted.")
                 Spacer().frame(height: 10)
@@ -56,13 +55,12 @@ struct PHQ9Results: View {
                         let url = URL.init(string: "https://cssrs.columbia.edu/the-columbia-scale-c-ssrs/risk-identification/")
                         guard let suicideRiskAssessment = url, UIApplication.shared.canOpenURL(suicideRiskAssessment) else { return }
                         UIApplication.shared.open(suicideRiskAssessment)}
-                    //Text("Suicide Hotline: ")
-                }.background(Color.red).font(.system(size: 26)).multilineTextAlignment(.center)
+                }.background(Color.red).font(.system(size: 36)).multilineTextAlignment(.center)
             }
             else{
-            Text("The score of \(numberPHQ9Yes) suggests the patient has \(phq9Results(number: numberPHQ9Yes).0)").bold().font(.system(size: 30)).multilineTextAlignment(.center)
+            Text("The score of \(numberPHQ9Yes) suggests the patient has \(phq9Results(number: numberPHQ9Yes).0)").bold().font(.system(size: 36)).multilineTextAlignment(.center)
              
-            Spacer().frame(height: 60)
+            Spacer().frame(height: 30)
             
             HStack{
                 Button(action: {
@@ -89,7 +87,9 @@ struct PHQ9Results: View {
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
                     Text("\(phq9Results(number: numberPHQ9Yes).1)").multilineTextAlignment(.leading)
-                }.background(Color(.systemGray6))
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
             }
             else{
@@ -102,11 +102,13 @@ struct PHQ9Results: View {
                         let url = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/11556941/")
                         guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
                         UIApplication.shared.open(phq9URL)}
-                }.background(Color(.systemGray6))
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
+                }
             }
-            }
-          //  }
+        Spacer()
         }.padding()
     }
 }
