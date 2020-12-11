@@ -30,9 +30,14 @@ struct NutritionResults: View {
         return(result, next)
     }
        var body: some View {
-        List{
-            Text("The score of \(score) suggests the patient has a:\n\n\n \(nutritionResults(number: score).1)\n\n").bold().font(.system(size: 30)).multilineTextAlignment(.center)
-                         
+        ScrollView{
+            Text("MNA®️ Results").font(.system(size: 60)).multilineTextAlignment(.center)
+            Spacer().frame(height: 30)
+
+            Text("The score of \(score) suggests the patient has a: \(nutritionResults(number: score).1)").font(.system(size: 36)).multilineTextAlignment(.center)
+            
+            Spacer().frame(height: 30)
+
             HStack{
                 Button(action: {
                     self.isNavigation = true
@@ -54,6 +59,7 @@ struct NutritionResults: View {
             }
             
             if(isNavigation){
+                Spacer().frame(height: 10)
                 VStack(alignment: .leading){
                     Text("\(nutritionResults(number: score).0)").multilineTextAlignment(.leading)
                 }
@@ -62,6 +68,7 @@ struct NutritionResults: View {
                 .cornerRadius(10)
             }
             else{
+                Spacer().frame(height: 10)
                 VStack(alignment: .leading){
                     Text("1. MNA® ")
                     .foregroundColor(.blue)
@@ -70,14 +77,14 @@ struct NutritionResults: View {
                         let url = URL.init(string: "https://www.mna-elderly.com/forms/mini/mna_mini_english.pdf")
                         guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
                         UIApplication.shared.open(phq9URL)}
-                    Text("\n® Société des Produits Nestlé SA, Trademark Owners.\n\n")
+                    Text("\n® Société des Produits Nestlé SA, Trademark Owners.")
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color(.systemGray6))
                 .cornerRadius(10)
             }
+            Spacer().frame(height: 30)
             Image("nestle")
         }.padding()
-        .navigationBarTitle("MNA®️ Results")
     }
 }
