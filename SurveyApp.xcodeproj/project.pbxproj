@@ -34,6 +34,7 @@
 		D586EAFD24AA289500572834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D586EAFB24AA289500572834 /* LaunchScreen.storyboard */; };
 		D5891AB1258184890019FD20 /* MiniCogResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5891AB0258184890019FD20 /* MiniCogResults.swift */; };
 		D5891AB3258184C40019FD20 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5891AB2258184C40019FD20 /* KeyboardHandler.swift */; };
+		D58A87D825834981005E96F4 /* PHQ2.json in Resources */ = {isa = PBXBuildFile; fileRef = D58A87D725834981005E96F4 /* PHQ2.json */; };
 		D5AF53882583004B0004F2F1 /* AdvancedCareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF53872583004B0004F2F1 /* AdvancedCareView.swift */; };
 		D5C2202325357F3F00427AE1 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2202225357F3F00427AE1 /* Question.swift */; };
 		D5D462DA2533F467001EEBA7 /* MiniNutritional.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D462D92533F467001EEBA7 /* MiniNutritional.json */; };
@@ -73,6 +74,7 @@
 		D586EAFE24AA289500572834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5891AB0258184890019FD20 /* MiniCogResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCogResults.swift; sourceTree = "<group>"; };
 		D5891AB2258184C40019FD20 /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		D58A87D725834981005E96F4 /* PHQ2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PHQ2.json; sourceTree = "<group>"; };
 		D5AF53872583004B0004F2F1 /* AdvancedCareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCareView.swift; sourceTree = "<group>"; };
 		D5C2202225357F3F00427AE1 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D5D462D92533F467001EEBA7 /* MiniNutritional.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MiniNutritional.json; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				D573B9CE25327B3200516542 /* MedicineView.swift */,
 				D5C2202225357F3F00427AE1 /* Question.swift */,
 				D5D462D92533F467001EEBA7 /* MiniNutritional.json */,
+				D58A87D725834981005E96F4 /* PHQ2.json */,
 			);
 			path = SurveyApp;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				D586EAFD24AA289500572834 /* LaunchScreen.storyboard in Resources */,
 				D586EAFA24AA289500572834 /* Preview Assets.xcassets in Resources */,
 				D5D462DA2533F467001EEBA7 /* MiniNutritional.json in Resources */,
+				D58A87D825834981005E96F4 /* PHQ2.json in Resources */,
 				D586EAF724AA289500572834 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
