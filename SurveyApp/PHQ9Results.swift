@@ -58,7 +58,7 @@ struct PHQ9Results: View {
                 }.background(Color.red).font(.system(size: 36)).multilineTextAlignment(.center)
             }
             else{
-            Text("The score of \(numberPHQ9Yes) suggests the patient has \(phq9Results(number: numberPHQ9Yes).0)").bold().font(.system(size: 36)).multilineTextAlignment(.center)
+            Text("The score of \(numberPHQ9Yes) suggests the patient has \(phq9Results(number: numberPHQ9Yes).0)").font(.system(size: 36)).multilineTextAlignment(.center)
              
             Spacer().frame(height: 30)
             
@@ -88,6 +88,7 @@ struct PHQ9Results: View {
                 VStack(alignment: .leading){
                     Text("\(phq9Results(number: numberPHQ9Yes).1)").multilineTextAlignment(.leading)
                 }
+                .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color(.systemGray6))
                 .cornerRadius(10)
@@ -103,6 +104,7 @@ struct PHQ9Results: View {
                         guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
                         UIApplication.shared.open(phq9URL)}
                 }
+                .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color(.systemGray6))
                 .cornerRadius(10)

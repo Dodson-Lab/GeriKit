@@ -27,7 +27,7 @@ struct AD8ResultsView: View {
                 
             Spacer().frame(height: 30)
              
-            Text("The score of \(numberAD8Yes)/8 \(ad8Results(number: numberAD8Yes))").bold().font(.system(size: 36)).multilineTextAlignment(.center)
+            Text("The score of \(numberAD8Yes)/8 \(ad8Results(number: numberAD8Yes))").font(.system(size: 36)).multilineTextAlignment(.center)
 
             Spacer().frame(height: 30)
             
@@ -55,9 +55,10 @@ struct AD8ResultsView: View {
             if(isNavigation){
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    Text("1. Check for reversible causes of cognitive impairment").multilineTextAlignment(.leading)
+                    Text("1. Check for reversible causes of cognitive impairment\n").multilineTextAlignment(.leading)
                     Text("2. Consider further neuropsychological testing")
                 }
+                .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color(.systemGray6))
                 .cornerRadius(10)
@@ -83,6 +84,7 @@ struct AD8ResultsView: View {
                             guard let ad8URL2 = url2, UIApplication.shared.canOpenURL(ad8URL2) else { return }
                             UIApplication.shared.open(ad8URL2)}.multilineTextAlignment(.leading)
                 }
+                .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color(.systemGray6))
                 .cornerRadius(10)
