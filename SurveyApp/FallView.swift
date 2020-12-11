@@ -37,7 +37,7 @@ struct FallView: View{
                     }
                 
                 NavigationLink(destination: FallResults(numberFallYes: $numFallYes))
-                        {Text("Fall Screening Result:").bold()
+                        {Text("Click here for fall screening result:").bold()
                         }
             }
             .navigationBarTitle(("Fall History"))

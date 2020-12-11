@@ -28,10 +28,8 @@ struct FallResults: View {
             Spacer().frame(height: 30)
 
             //
-            Text(fallResults(numberFalls: numberFallYes)).bold().font(.system(size: 30)).multilineTextAlignment(.center)
-//
-//            Spacer().frame(height: 60)
-//
+            Text(fallResults(numberFalls: numberFallYes)).font(.system(size: 36)).multilineTextAlignment(.center)
+
             Spacer().frame(height: 30)
             
             HStack{
@@ -64,7 +62,10 @@ struct FallResults: View {
                     Text("3. Consider a cane or walker")
                     Text("4. Home safety evaluation")
                     Text("4. Consider screening for low vision")
-                }.background(Color(.systemGray6))
+                }
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
             }
             else{
@@ -100,11 +101,14 @@ struct FallResults: View {
                         let url = URL.init(string: "https://www.cdc.gov/steadi/pdf/STEADI-Algorithm-508.pdf")
                         guard let fallURL = url, UIApplication.shared.canOpenURL(fallURL) else { return }
                         UIApplication.shared.open(fallURL)}
-                }.background(Color(.systemGray6))
+                }
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
                 
-                //
             }
+            Spacer()
 
         }.padding()
     }
