@@ -39,11 +39,11 @@ struct ADLResultsView: View {
            var result = ""
            if numberOfADL > 0{
                next = "Because the patient answered yes to one or more ADL, they likely require home services."
-               result = "Follow up with a care management team and refer to the resources tab for more information."
+               result = "Follow up with the care management team."
                }
            else if (numberOfIADL > 0){
             next = "Because the patient answered yes to one or more of the IADLs, they will need follow-up regarding the item(s) where there is help needed."
-            result = "If necessary, follow up with the care management team and refer to the resources tab for more information."
+            result = "If necessary, follow up with the care management team."
            }
            else {
                next = "The patient appears to be independent in all ADLs and IADLs."

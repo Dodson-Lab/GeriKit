@@ -16,7 +16,7 @@ struct FallView: View{
 
     var body: some View {
             List{
-                Section{
+                Section(header: Text("Ask the patient...")) {
                     HStack {
                         Text("Do you feel unsteady when standing or walking?")
                         Spacer()
@@ -37,7 +37,7 @@ struct FallView: View{
                     }
                 
                 NavigationLink(destination: FallResults(numberFallYes: $numFallYes))
-                        {Text("Fall Screening Result:").bold()
+                        {Text("Click here for fall screening result:").bold()
                         }
             }
             .navigationBarTitle(("Fall History"))

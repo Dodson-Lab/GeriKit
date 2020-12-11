@@ -33,7 +33,7 @@ struct ADLView: View {
     var body: some View {
             List{
                 Section(header: Text("Activities of Daily Living (ADL)")) {
-                Text("Do you require help with...")
+                Text("Does the patient require help with...")
                 HStack {Text("Bathing")
                     Spacer()
                     YesNo2(numberOfYeses: $numADL, thingsTappedYes: $arrayOfAdl, item: $ADLBathing)
@@ -68,7 +68,7 @@ struct ADLView: View {
                 
                 
                 Section(header: Text("Independent Activities of Daily Living (IADL)")) {
-                    Text("Do you require help with...")
+                    Text("Does the patient require help with...")
                     HStack {Text("Using the telephone")
                          Spacer()
                          YesNo2(numberOfYeses: $numIADL, thingsTappedYes: $arrayOfIadl, item: $IADLTelephoning)

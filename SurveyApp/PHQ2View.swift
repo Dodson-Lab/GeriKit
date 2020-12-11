@@ -13,7 +13,7 @@ struct PHQ2View: View{
     @State var numPHQ2Yes = 0
     var body: some View {
             List{
-                Section(header: Text("Over the last 2 weeks, how often have you felt:")) {
+                Section(header: Text("Ask the patient: how often have they been bothered by the following over the past 2 weeks?")) {
                     HStack {
                         Text("1. Little interest or pleasure in doing things")
                         Spacer()
