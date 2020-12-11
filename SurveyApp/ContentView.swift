@@ -5,11 +5,9 @@
 //  Created by Ambika Viswanathan on 6/29/20.
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
-
 import SwiftUI
 
 //form just in case
-
 // -- main
 struct ContentView: View {
     var body: some View {
@@ -78,6 +76,15 @@ struct ContentView: View {
                           .padding()
                       Text("Medications")
                       }}
+                NavigationLink(destination: AdvancedCareView())
+                  {HStack{
+                      Image("plan")
+                          .resizable()
+                          .aspectRatio(contentMode: .fit)
+                          .frame(width:80)
+                          .padding()
+                      Text("Advanced Care Planning")
+                      }}
                 HStack{
 //                        Image("survey")
 //                        .resizable()
@@ -96,7 +103,6 @@ struct ContentView: View {
             .navigationBarItems(trailing:
                 HStack {
                     NavigationLink(destination:AboutView()){Text("About")}
-
                 })
             }
         }
