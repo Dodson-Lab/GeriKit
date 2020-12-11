@@ -17,7 +17,7 @@ struct CognitionChoice: View{
                 .background(Color.blue)
                 .foregroundColor(Color.white)
                 .cornerRadius(10)
-                .font(.system(size: 40))
+                .font(.system(size: 36))
                 .multilineTextAlignment(.center)
             }
 
@@ -28,7 +28,7 @@ struct CognitionChoice: View{
                 .background(Color.blue)
                 .foregroundColor(Color.white)
                 .cornerRadius(10)
-                .font(.system(size: 40))
+                .font(.system(size: 36))
                 .multilineTextAlignment(.center)
             }
 

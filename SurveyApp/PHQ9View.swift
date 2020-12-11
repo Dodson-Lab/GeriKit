@@ -75,7 +75,7 @@ struct PHQ9View: View{
                 }
                 Section{
                     NavigationLink(destination: PHQ9Results(numberPHQ9Yes: $numPHQ9Yes, alert: $redAlert9))
-                            {Text("Click here for PHQ9 result: \(numPHQ9Yes)").bold()
+                            {Text("Click here for PHQ9 result:").bold()
                             }
                     }
             }.padding()

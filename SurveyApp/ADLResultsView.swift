@@ -17,11 +17,18 @@ struct ADLResultsView: View {
 
     func printArray(array: Array<String>)-> String{
         var oneString = ""
+//        for item in array{
+//            if(array.firstIndex(of: item) == array.count - 1){
+//                oneString = oneString + " " + item}
+//            else{
+//                oneString = oneString + " " + item + ","}
+//
+//            }
         for item in array{
-            if(array.firstIndex(of: item) == array.count - 1){
-                oneString = oneString + " " + item}
+            if(array.firstIndex(of: item) == 0){
+                oneString = oneString + "\n -" + item}
             else{
-                oneString = oneString + " " + item + ","}
+                oneString = oneString + "\n -" + item}
 
             }
         return(oneString)
@@ -48,33 +55,38 @@ struct ADLResultsView: View {
 
     
        var body: some View {
-        VStack{
+        ScrollView{
             Text("ADL and IADL Summary").font(.system(size: 60)).multilineTextAlignment(.center)
                     
             Spacer().frame(height: 30)
 
             if(arrayADL.count == 0 && arrayIADL.count == 0){
                 Text("The patient did not meet screening criteria for functional impairment.")
+                .bold().font(.system(size: 24)).multilineTextAlignment(.center)
             }
             else{
-            Text("The patient answered that they require help with: ")
+            Text("The patient answered that they require help with:").font(.system(size: 24)).multilineTextAlignment(.leading)
+            HStack(alignment: .top) {
             if(arrayADL.count != 0){
-                Spacer().frame(height:10)
-                Text("ADLS: \(printArray(array: arrayADL))")
+                Text("ADLs: \(printArray(array: arrayADL))").font(.system(size: 24))                .frame(minWidth: 0, maxWidth: .infinity)
+
                 }
             if(arrayIADL.count != 0){
-                Spacer().frame(height:10)
-                Text("IADLS: \(printArray(array: arrayIADL))").multilineTextAlignment(.center)
+                //Spacer().frame(height:2)
+                Text("IADLs: \(printArray(array: arrayIADL))").font(.system(size: 24))                .frame(minWidth: 0, maxWidth: .infinity)
                 }
+            }.frame(minWidth: 0, maxWidth: .infinity)
+            .padding()
+            
             Spacer().frame(height: 10)
-                Text(adlResults(numberOfADL: numberADLYes, numberOfIADL: numberIADLYes).0)
+                Text(adlResults(numberOfADL: numberADLYes, numberOfIADL: numberIADLYes).0).font(.system(size: 24)).multilineTextAlignment(.center)
             }
 
             
 
 //            Text("\(adlResults(numberOfADL: numberADLYes, numberOfIADL: numberIADLYes))").bold().font(.system(size: 20)).multilineTextAlignment(.center)
             
-        Spacer().frame(height: 60)
+        Spacer().frame(height: 30)
             
             HStack{
                 if(numberADLYes > 0 || numberIADLYes > 0){
@@ -104,7 +116,10 @@ struct ADLResultsView: View {
                     Text(adlResults(numberOfADL: numberADLYes, numberOfIADL: numberIADLYes).1)
 //                    Text("2. If trouble with managing medications, might be more urget. Perform medical reconciliation")
 //                    Text("3. If trouble preparing food, refer to meal delivery service i.e. Meals on Wheels")
-                }.background(Color(.systemGray6))
+                }
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
             }
             else{
@@ -127,10 +142,13 @@ struct ADLResultsView: View {
                         let url2 = URL.init(string: "https://psycnet.apa.org/record/2011-21299-001")
                         guard let iadlURL = url2, UIApplication.shared.canOpenURL(iadlURL) else { return }
                         UIApplication.shared.open(iadlURL)}
-                }.background(Color(.systemGray6))
+                }
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
             }
-                          
+        Spacer()
         }
     }
 }

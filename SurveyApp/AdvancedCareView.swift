@@ -10,7 +10,7 @@ import SwiftUI
 struct AdvancedCareView: View {
     var body: some View {
         List{
-            Section(header: Text("Resources for Advanced Care Planning:")) {
+            Section(header: Text("Some resources:")) {
             VStack(alignment: .leading){
                 Text("1. PrepareⒸ for your care")
                 .foregroundColor(.blue)
@@ -31,6 +31,7 @@ struct AdvancedCareView: View {
 //                }
             }
         }
+        .navigationBarTitle("Advanced Care Planning")
     }
 }
 

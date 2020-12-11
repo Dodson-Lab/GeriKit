@@ -13,7 +13,7 @@ struct PHQ2Results: View {
     
     func PHQ2Results(number: Int)-> String{
         if number > 0{
-            return("Given the patient answered yes to one or more of these questions, the patient should be further evaluated with the PHQ-9")
+            return("Given the patient answered yes to one or more of these questions, the patient should be further evaluated with the PHQ-9:")
         }
         else {
             return("The patient did not meet screening criteria for depression.")
@@ -29,10 +29,22 @@ struct PHQ2Results: View {
              
             Text("\(PHQ2Results(number:numberPHQ2Yes))").bold().font(.system(size: 30)).multilineTextAlignment(.center)
            
+            Spacer().frame(height: 30)
+
             if(self.numberPHQ2Yes > 0) {
-                NavigationLink(destination: PHQ9View()) {Text("\nPHQ9").bold().font(.system(size: 30))}
+                NavigationLink(destination: PHQ9View()) {Text("Click here for PHQ9")}
+                    .padding(10)
+                    .background(Color.blue)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(10)
+                    .font(.system(size: 36))
+                    .multilineTextAlignment(.center)
+
+
             }
+        Spacer()
         }.padding()
+        //.navigationBarTitle(("PHQ2 Results"))
     }
 }
 

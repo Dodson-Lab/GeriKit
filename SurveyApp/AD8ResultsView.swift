@@ -27,12 +27,8 @@ struct AD8ResultsView: View {
                 
             Spacer().frame(height: 30)
              
-            Text("The score of \(numberAD8Yes)/8 \(ad8Results(number: numberAD8Yes))").bold().font(.system(size: 30)).multilineTextAlignment(.center)
+            Text("The score of \(numberAD8Yes)/8 \(ad8Results(number: numberAD8Yes))").font(.system(size: 36)).multilineTextAlignment(.center)
 
-            Spacer().frame(height: 40)
-
-//            Text("Based on clinical research findings from 995 individuals included in the development and validation samples, the following cut off points are provided: \n\n0 – 1: Normal cognition \n\n2 or greater: Cognitive impairment is likely to be present ").multilineTextAlignment(.center)
-//
             Spacer().frame(height: 30)
             
             HStack{
@@ -59,10 +55,12 @@ struct AD8ResultsView: View {
             if(isNavigation){
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    Text("1. Check for reversible causes of cognitive impairment").multilineTextAlignment(.leading)
+                    Text("1. Check for reversible causes of cognitive impairment\n").multilineTextAlignment(.leading)
                     Text("2. Consider further neuropsychological testing")
-                }.background(Color(.systemGray6))
-                .padding(10)
+                }
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
             }
             else{
@@ -85,11 +83,13 @@ struct AD8ResultsView: View {
                             let url2 = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/16116116/")
                             guard let ad8URL2 = url2, UIApplication.shared.canOpenURL(ad8URL2) else { return }
                             UIApplication.shared.open(ad8URL2)}.multilineTextAlignment(.leading)
-                }.background(Color(.systemGray6))
-                .padding(10)
+                }
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
             }
-
+            Spacer()
         }.padding()
     }
 }

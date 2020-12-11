@@ -31,10 +31,8 @@ struct NutritionResults: View {
     }
        var body: some View {
         List{
-            Text("The score of \(score) suggests the patient has a:\n\n\n \(nutritionResults(number: score).1)").bold().font(.system(size: 30)).multilineTextAlignment(.center)
-             
-            Spacer().frame(height: 60)
-            
+            Text("The score of \(score) suggests the patient has a:\n\n\n \(nutritionResults(number: score).1)\n\n").bold().font(.system(size: 30)).multilineTextAlignment(.center)
+                         
             HStack{
                 Button(action: {
                     self.isNavigation = true
@@ -55,16 +53,15 @@ struct NutritionResults: View {
                     .cornerRadius(10)
             }
             
-            
             if(isNavigation){
-                Spacer().frame(height: 10)
                 VStack(alignment: .leading){
                     Text("\(nutritionResults(number: score).0)").multilineTextAlignment(.leading)
-                }.background(Color(.systemGray6))
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
             }
             else{
-                Spacer().frame(height: 10)
                 VStack(alignment: .leading){
                     Text("1. MNA® ")
                     .foregroundColor(.blue)
@@ -73,20 +70,14 @@ struct NutritionResults: View {
                         let url = URL.init(string: "https://www.mna-elderly.com/forms/mini/mna_mini_english.pdf")
                         guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
                         UIApplication.shared.open(phq9URL)}
-                    Text("\n® Société des Produits Nestlé SA, Trademark Owners.")
-                }.background(Color(.systemGray6))
+                    Text("\n® Société des Produits Nestlé SA, Trademark Owners.\n\n")
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
             }
-            Image("Nestle")
+            Image("nestle")
         }.padding()
         .navigationBarTitle("MNA®️ Results")
     }
 }
-
-
-
-//struct NutritionResults_Previews: PreviewProvider {
-//    static var previews: some View {
-//        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-//    }
-//}
