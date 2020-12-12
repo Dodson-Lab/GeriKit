@@ -1,0 +1,27 @@
+[
+    {
+    "id": 0,
+    "text": "1. Little interest or pleasure in doing things",
+    "answers":
+        [
+            { "id": 0, "score": 0, "text": "Not at all" },
+            { "id": 1, "score": 1, "text": "Several days" },
+            { "id": 2, "score": 2, "text": "More than half the days" },
+            { "id": 3, "score": 3, "text": "Nearly every day" }
+
+        ]
+    },
+    {
+        "id": 1,
+        "text": "2. Feeling down, depressed, or hopeless",
+            "answers":
+                [
+                    { "id": 0, "score": 0, "text": "Not at all" },
+                    { "id": 1, "score": 1, "text": "Several days" },
+                    { "id": 2, "score": 2, "text": "More than half the days" },
+                    { "id": 3, "score": 3, "text": "Nearly every day" }
+
+                ]
+    },
+]
+
