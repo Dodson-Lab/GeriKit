@@ -52,6 +52,8 @@ struct ChairView: View{
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color.green)
                     .cornerRadius(20)
+                    .onAppear{self.stopWatchManager.stop()}
+
 
                 HStack(alignment: .center){
                     if stopWatchManager.mode == .stopped {
