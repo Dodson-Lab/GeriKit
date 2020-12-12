@@ -26,9 +26,9 @@ struct ADLResultsView: View {
 //            }
         for item in array{
             if(array.firstIndex(of: item) == 0){
-                oneString = oneString + "\n -" + item}
+                oneString = oneString + "\n \t- " + item}
             else{
-                oneString = oneString + "\n -" + item}
+                oneString = oneString + "\n \t- " + item}
 
             }
         return(oneString)
@@ -62,18 +62,17 @@ struct ADLResultsView: View {
 
             if(arrayADL.count == 0 && arrayIADL.count == 0){
                 Text("The patient did not meet screening criteria for functional impairment.")
-                .bold().font(.system(size: 24)).multilineTextAlignment(.center)
+                .font(.system(size: 24)).multilineTextAlignment(.center)
             }
             else{
             Text("The patient answered that they require help with:").font(.system(size: 24)).multilineTextAlignment(.leading)
-            HStack(alignment: .top) {
+            VStack(alignment: .leading) {
             if(arrayADL.count != 0){
-                Text("ADLs: \(printArray(array: arrayADL))").font(.system(size: 24))                .frame(minWidth: 0, maxWidth: .infinity)
-
+                Text("ADLs: \(printArray(array: arrayADL))").font(.system(size: 24))                //.frame(minWidth: 0, maxWidth: .infinity)
                 }
             if(arrayIADL.count != 0){
-                //Spacer().frame(height:2)
-                Text("IADLs: \(printArray(array: arrayIADL))").font(.system(size: 24))                .frame(minWidth: 0, maxWidth: .infinity)
+                Spacer().frame(height:20)
+                Text("IADLs: \(printArray(array: arrayIADL))").font(.system(size: 24))                //.frame(minWidth: 0, maxWidth: .infinity)
                 }
             }.frame(minWidth: 0, maxWidth: .infinity)
             .padding()
@@ -149,7 +148,7 @@ struct ADLResultsView: View {
                 .cornerRadius(10)
             }
         Spacer()
-        }
+        }.padding()
     }
 }
 //
