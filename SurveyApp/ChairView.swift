@@ -36,7 +36,7 @@ struct ChairView: View{
 
     var body: some View {
                    
-            List{
+            VStack{
                 TextField("Patient age: ", text: $age)
                 
                 Text("Instruct the patient:")
@@ -57,13 +57,13 @@ struct ChairView: View{
                     if stopWatchManager.mode == .stopped {
                         Button(action: {self.stopWatchManager.start()}) {
                             TimerButton(label: "Start", buttonColor: .blue)
-                        }.padding()
-                        Button(action: {self.stopWatchManager.pause()}) {
+                            }.padding()
+                        Button(action: {}) {
                             TimerButton(label: "Pause", buttonColor: .red)
                         }.padding()
                     }
                     if stopWatchManager.mode == .running {
-                        Button(action: {self.stopWatchManager.start()}) {
+                        Button(action: {}) {
                             TimerButton(label: "Start", buttonColor: .blue)
                         }.padding()
                         Button(action: {self.stopWatchManager.pause()}) {
