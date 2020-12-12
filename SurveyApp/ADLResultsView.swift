@@ -148,7 +148,7 @@ struct ADLResultsView: View {
                 .cornerRadius(10)
             }
         Spacer()
-        }
+        }.padding()
     }
 }
 //
