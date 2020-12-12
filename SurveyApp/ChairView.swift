@@ -19,9 +19,9 @@ struct TimerButton: View {
         .padding()
            // .padding(.vertical, 20)
             // .padding(.horizontal, 90)
+            .buttonStyle(PlainButtonStyle())
             .background(buttonColor)
             .cornerRadius(10)
-            .buttonStyle(BorderlessButtonStyle())
 
     }
 }
@@ -36,7 +36,7 @@ struct ChairView: View{
 
     var body: some View {
                    
-            VStack{
+            Form{
                 TextField("Patient age: ", text: $age)
                 
                 Text("Instruct the patient:")
@@ -59,26 +59,31 @@ struct ChairView: View{
                     if stopWatchManager.mode == .stopped {
                         Button(action: {self.stopWatchManager.start()}) {
                             TimerButton(label: "Start", buttonColor: .blue)
-                            }.padding()
+                            }.buttonStyle(PlainButtonStyle()).padding()
+
                         Button(action: {}) {
                             TimerButton(label: "Pause", buttonColor: .red)
-                        }.padding()
+                            }.buttonStyle(PlainButtonStyle()).padding()
+
                     }
                     if stopWatchManager.mode == .running {
                         Button(action: {}) {
                             TimerButton(label: "Start", buttonColor: .blue)
-                        }.padding()
+                            }.buttonStyle(PlainButtonStyle()).padding()
+
                         Button(action: {self.stopWatchManager.pause()}) {
                             TimerButton(label: "Pause", buttonColor: .red)
-                        }.padding()
+                            }.buttonStyle(PlainButtonStyle()).padding()
+
                     }
                     if stopWatchManager.mode == .paused {
                         Button(action: {self.stopWatchManager.start()}) {
                             TimerButton(label: "Start", buttonColor: .blue)
-                        }.padding()
+                            }.buttonStyle(PlainButtonStyle()).padding()
+
                         Button(action: {self.stopWatchManager.stop()}) {
                             TimerButton(label: "Reset", buttonColor: .red)
-                        }.padding()
+                            }.buttonStyle(PlainButtonStyle()).padding()
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
