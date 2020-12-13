@@ -56,11 +56,11 @@ struct AD8View: View {
                 
                 Section {
                     NavigationLink(destination: AD8ResultsView(numberAD8Yes: $numAD8Yes))
-                            {Text("Click here for AD8 result:").bold()
+                            {Text("Click here for AD8® result:").bold()
                             }.foregroundColor(.blue)
                     }
             }
-            .navigationBarTitle("AD8")
+            .navigationBarTitle("AD8®")
     }
 }
 
