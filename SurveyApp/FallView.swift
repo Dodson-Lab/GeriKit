@@ -40,7 +40,7 @@ struct FallView: View{
                         {Text("Click here for fall screening result:").bold()
                         }.foregroundColor(.blue)
             }
-            .navigationBarTitle(("Fall History"))
+            .navigationBarTitle(("Fall Screening"))
     }
 }
 

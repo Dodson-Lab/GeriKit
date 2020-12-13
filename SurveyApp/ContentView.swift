@@ -56,7 +56,7 @@ struct ContentView: View {
                           .aspectRatio(contentMode: .fit)
                           .frame(width:80)
                           .padding()
-                      Text("Falls")
+                      Text("Fall Risk")
                       }}
                 NavigationLink(destination: NutritionView())
                   {HStack{
