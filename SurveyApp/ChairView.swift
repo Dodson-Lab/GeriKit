@@ -93,15 +93,11 @@ struct ChairView: View{
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.numberPad)
 
-
-//                .padding(.bottom, keyboard.currentHeight)
-//                .edgesIgnoringSafeArea(.bottom)
-               // .animation(.easeOut(duration: 0.16))
                 //NavigationLink(destination: ChairResults){Text("Test")}
                 
             }
             .padding()
-            .modifier(AdaptsToKeyboard())
+            .modifier(AdaptsToKeyboard()) // allows for bottom keyboard to move accordingly, see specific file for details
             .navigationBarTitle(("Chair Stands"))
     }
 }

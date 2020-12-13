@@ -75,32 +75,17 @@ struct MiniCogView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Word 3", text: $name2)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+           
             }.frame(maxHeight: .infinity)
-           // .padding(.bottom, keyboardHandler.keyboardHeight)
-            .animation(.default)
-            
-        
-            
-            //.offset(y:-self.value)
-//                .animation(.spring())
-//                .onAppear {
-//                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) {(noti) in
-//                    let value = noti.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
-//                    let height = value.height
-//                    self.value = height
-//                }
-//                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) {(noti) in
-//
-//                    self.value = 0
-//                }
-//
-//            }
+
             
             NavigationLink(destination: MiniCogResults())
             {Text("Click here for MiniCogⒸ result").bold()}
             
             }.padding()
         .navigationBarTitle("MiniCogⒸ")
+        . modifier(AdaptsToKeyboard())
+
     }
     
 }
