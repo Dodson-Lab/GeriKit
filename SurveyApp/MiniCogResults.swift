@@ -14,21 +14,21 @@ struct MiniCogResults: View {
     //private var sum = numberOfWords + clock
     var body: some View {
        Form {
-        Section(footer: Text("Number of words spontaneously recalled")){
+        Section(footer: Text("1 point for each word spontaneously recalled")){
             Picker("Word recall", selection: $numberOfWords) {
                  ForEach(0 ..< 4) {
                      Text("\($0) words")
                  }
              }
          }
-        Section(footer: Text("Normal clock = 2 points. A normal clock has all numbers placed in the correct sequence and approximately correct position (e.g. 12, 3, 6, and 9 are in anchor positions) with no missing or duplicate numbers. Hands are points to the 11 and 2 (11:10). Hand length is not scored.  \n\nInability or refusal to draw a clock (abnormal) = 0 points")){
+        Section(footer: Text("Normal clock = 2 points. A normal clock has all numbers placed in the correct sequence and approximately correct position (e.g. 12, 3, 6, and 9 are in anchor positions) with no missing or duplicate numbers. Hands are pointing to the 11 and 2 (11:10). Hand length is not scored.  \n\nInability or refusal to draw a clock (abnormal) = 0 points")){
             Picker("Clock draw", selection: $clock) {
                  ForEach(0 ..< 3) {
                      Text("\($0) points")
                  }
              }
          }
-        Section(footer: Text("A cut off point of <3 on the Mini-CogTM has been validated for dementia screening, but many individuals with clinically meaningful cognitive impairment with score higher. When greater sensitivity is desired, a cut point of <4 is recommended as it may indicate a need for further evaluation of cognitive status.")){
+        Section(footer: Text("A cut off point of <3 on the Mini-CogTM has been validated for dementia screening, but many individuals with clinically meaningful cognitive impairment will score higher. When greater sensitivity is desired, a cut point of <4 is recommended as it may indicate a need for further evaluation of cognitive status.")){
             Text("Total Score: \(self.numberOfWords + self.clock)").bold()
         }
         

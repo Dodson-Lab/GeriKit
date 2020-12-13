@@ -42,7 +42,7 @@ struct ChairView: View{
                 Section(header: Text("1) Instruct the patient:")
                         .font(.headline)
                         .foregroundColor(.black)) {
-                Text("1. Sit in the middle of the chair. \n \n2. Place your hands on the opposite shoulder crossed, at the wrists. \n\n3. Keep your feet flat on the floor. \n\n4. Keep your back straight, and keep your arms against your chest. \n\n5. On Go, rise to a full standing position, then sit back down again. \n\n6. Repeat this for 30 seconds.")
+                Text("1. Sit in the middle of the chair. \n \n2. Place your hands on the opposite shoulder crossed, at the wrists. \n\n3. Keep your feet flat on the floor. \n\n4. Keep your back straight, and keep your arms against your chest. \n\n5. On \"Go\", rise to a full standing position, then sit back down again. \n\n6. Repeat this for 30 seconds.")
                     .frame(maxWidth: .infinity).padding()
                     //.background(Color(.systemGray6))
                     .cornerRadius(10)
