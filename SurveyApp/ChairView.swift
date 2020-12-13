@@ -30,6 +30,9 @@ struct TimerButton: View {
 struct ChairView: View{
     @State var numChairStands = ""
     @State var age = ""
+    @State var selectedGender = 0
+    let genders = ["Male", "Female"]
+    
     @State private var enableLogging = false
     @ObservedObject var stopWatchManager = StopWatchManager()
 
@@ -102,12 +105,28 @@ struct ChairView: View{
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
-                
+               
+                HStack {
+                    Text("Select Gender:").bold()
+                    Picker("", selection: $selectedGender) {
+
+                        ForEach(0..<genders.count) { index in
+                            Text(self.genders[index]).tag(index).font(.title)
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                }
+
                 HStack{
                     Text("Patient age:").bold()
                     TextField("age", text: $age)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
+                    .onReceive(Just(age)) { newValue in
+                            let filtered = newValue.filter { "0123456789".contains($0) }
+                            if filtered != newValue {
+                                self.age = filtered
+                            }
+                        }
                     }
 
 
@@ -116,9 +135,15 @@ struct ChairView: View{
                      TextField("# chair stands", text: $numChairStands)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
+                    .onReceive(Just(numChairStands)) { newValue in
+                            let filtered = newValue.filter { "0123456789".contains($0) }
+                            if filtered != newValue {
+                                self.numChairStands = filtered
+                            }
+                        }
                     }
                 }
-                NavigationLink(destination: ChairResults(patAge: $age, numStands: $numChairStands)){
+                NavigationLink(destination: ChairResults(patAge: $age, numStands: $numChairStands, gender: $selectedGender)){
                 Text("Click here for 30-second chair stand result:").bold()
                 }.foregroundColor(.blue)
 
@@ -131,28 +156,3 @@ struct ChairView: View{
             .navigationBarTitle(("30-Second Chair Stand"))
     }
 }
-    
-
-
-//struct ChairView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ChairView()
-//    }
-//}
-
-
-//struct NumberEntryField : View {
-//    @State private var enteredValue : String = ""
-//    @Binding var value : Int
-//    @Binding var textBox : String
-//
-//    var body: some View {
-//        return TextField(self.textBox, text: $enteredValue)
-//            .onReceive(Just(enteredValue)) { typedValue in
-//                if let newValue = Int(typedValue) {
-//                    self.value = newValue
-//                }
-//        }.onTapGesture(perform:{self.enteredValue = "\(self.value)"})
-//    }
-//}
-
