@@ -45,7 +45,7 @@ struct MedicineView: View{
                         let url = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/30693946/")
                         guard let beersListUrl = url, UIApplication.shared.canOpenURL(beersListUrl) else { return }
                         UIApplication.shared.open(beersListUrl)}
-                    Text("Stop/Start Criteria")
+                    Text("STOPP/START Criteria")
                     .foregroundColor(.blue)
                     .underline()
                     .onTapGesture {

@@ -16,15 +16,15 @@ struct NutritionResults: View {
         var next = ""
         var result = ""
         if number >= 12{
-            next = "Normal Nutritional Status"
+            next = "has a normal nutritional status"
             result = "Rescreen yearly or after an acute event"
             }
         else if (number >= 8 && number <= 11){
-            next = "At Risk of Malnutrition"
-            result = "If no weight loss: monitor, rescreen every 3 months. \nIf weight loss: treat with diet enhancements, oral nutritional supplementation, and weight monitoring."
+            next = "is at risk of malnutrition"
+            result = "If no weight loss: monitor, rescreen every 3 months. \n\nIf weight loss: treat with diet enhancements, oral nutritional supplementation, and weight monitoring."
         }
         else {
-            next = "Malnourished Nutritional Status"
+            next = "has a malnourished nutritional status"
             result = "Treat with nutritional supplementation, diet enhancement, and close weight monitoring."
         }
         return(result, next)
@@ -34,7 +34,7 @@ struct NutritionResults: View {
             Text("MNA®️ Results").font(.system(size: 60)).multilineTextAlignment(.center)
             Spacer().frame(height: 30)
 
-            Text("The score of \(score) suggests the patient has a: \(nutritionResults(number: score).1)").font(.system(size: 36)).multilineTextAlignment(.center)
+            Text("The score of \(score) suggests the patient \(nutritionResults(number: score).1)").font(.system(size: 30)).multilineTextAlignment(.center)
             
             Spacer().frame(height: 30)
 
@@ -77,7 +77,6 @@ struct NutritionResults: View {
                         let url = URL.init(string: "https://www.mna-elderly.com/forms/mini/mna_mini_english.pdf")
                         guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
                         UIApplication.shared.open(phq9URL)}
-                    Text("\n® Société des Produits Nestlé SA, Trademark Owners.")
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color(.systemGray6))
@@ -85,6 +84,8 @@ struct NutritionResults: View {
             }
             Spacer().frame(height: 30)
             Image("nestle")
+            Text("® Société des Produits Nestlé SA, Trademark Owners.")
+
         }.padding()
     }
 }

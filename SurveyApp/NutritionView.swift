@@ -21,7 +21,7 @@ struct NutritionView: View {
             Section {
                 NavigationLink(destination: NutritionResults(score: $MNASum)){
                     Text("Click here for MNA®️ result:").bold()
-                }
+                }.foregroundColor(.blue)
             }
         }
         .navigationBarTitle("Mini Nutrition Assessment")

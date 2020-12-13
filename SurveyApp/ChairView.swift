@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TimerButton: View {
     
@@ -29,6 +30,9 @@ struct TimerButton: View {
 struct ChairView: View{
     @State var numChairStands = ""
     @State var age = ""
+    @State var selectedGender = 0
+    let genders = ["Male", "Female"]
+    
     @State private var enableLogging = false
     @ObservedObject var stopWatchManager = StopWatchManager()
 
@@ -38,7 +42,7 @@ struct ChairView: View{
                 Section(header: Text("1) Instruct the patient:")
                         .font(.headline)
                         .foregroundColor(.black)) {
-                Text("1. Sit in the middle of the chair. \n \n2. Place your hands on the opposite shoulder crossed, at the wrists. \n\n3. Keep your feet flat on the floor. \n\n4. Keep your back straight, and keep your arms against your chest. \n\n5. On Go, rise to a full standing position, then sit back down again. \n\n6. Repeat this for 30 seconds.")
+                Text("1. Sit in the middle of the chair. \n \n2. Place your hands on the opposite shoulder crossed, at the wrists. \n\n3. Keep your feet flat on the floor. \n\n4. Keep your back straight, and keep your arms against your chest. \n\n5. On \"Go\", rise to a full standing position, then sit back down again. \n\n6. Repeat this for 30 seconds.")
                     .frame(maxWidth: .infinity).padding()
                     //.background(Color(.systemGray6))
                     .cornerRadius(10)
@@ -97,38 +101,58 @@ struct ChairView: View{
                         Button(action: {self.stopWatchManager.stop()}) {
                             TimerButton(label: "Reset", buttonColor: .red)
                             }.buttonStyle(PlainButtonStyle()).padding()
-                    }
+                        }
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
-                HStack
-                    {Text("Patient age:")
+               
+                HStack {
+                    Text("Select Gender:").bold()
+                    Picker("", selection: $selectedGender) {
+
+                        ForEach(0..<genders.count) { index in
+                            Text(self.genders[index]).tag(index).font(.title)
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                }
+
+                HStack{
+                    Text("Patient age:").bold()
                     TextField("age", text: $age)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
+                    .onReceive(Just(age)) { newValue in
+                            let filtered = newValue.filter { "0123456789".contains($0) }
+                            if filtered != newValue {
+                                self.age = filtered
+                            }
+                        }
                     }
+
+
                 HStack
-                    {Text("Number chair stands:")
+                    {Text("Number chair stands:").bold()
                      TextField("# chair stands", text: $numChairStands)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
+                    .onReceive(Just(numChairStands)) { newValue in
+                            let filtered = newValue.filter { "0123456789".contains($0) }
+                            if filtered != newValue {
+                                self.numChairStands = filtered
+                            }
+                        }
                     }
-                NavigationLink(destination: ChairResults()){
-                Text("Click here for 30 second chair stand results").bold()
+                }
+                NavigationLink(destination: ChairResults(patAge: $age, numStands: $numChairStands, gender: $selectedGender)){
+                Text("Click here for 30-second chair stand result:").bold()
                 }.foregroundColor(.blue)
 
                 }
                 
 
-            }
+            //}
             .padding()
             .modifier(AdaptsToKeyboard()) // allows for bottom keyboard to move accordingly, see specific file for details
             .navigationBarTitle(("30-Second Chair Stand"))
-    }
-}
-
-struct ChairView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChairView()
     }
 }

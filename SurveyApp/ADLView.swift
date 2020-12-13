@@ -112,7 +112,7 @@ struct ADLView: View {
                 Section {
                     NavigationLink(destination: ADLResultsView(numberADLYes: $numADL, numberIADLYes: $numIADL, arrayADL: $arrayOfAdl, arrayIADL: $arrayOfIadl))
                             {Text("Click here for ADL and IADL result:").bold()}
-                        }
+                        }.foregroundColor(.blue)
             }
             .navigationBarTitle("ADL and IADL")
     }

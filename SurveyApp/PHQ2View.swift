@@ -22,7 +22,7 @@ struct PHQ2View: View{
                 Section {
                     NavigationLink(destination: PHQ2Results(numberPHQ2Yes: $PHQ2Sum)){
                         Text("Click here for PHQ2 result:").bold()
-                    }
+                    }.foregroundColor(.blue)
                 }
             }
             .navigationBarTitle("PHQ2")

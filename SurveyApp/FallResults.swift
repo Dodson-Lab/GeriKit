@@ -23,7 +23,7 @@ struct FallResults: View {
     }
        var body: some View {
         VStack(alignment: .center){
-            Text("Fall History Results").font(.system(size: 60)).multilineTextAlignment(.center)
+            Text("Fall Screening Results").font(.system(size: 60)).multilineTextAlignment(.center)
                 
             Spacer().frame(height: 30)
 

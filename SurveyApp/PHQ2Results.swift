@@ -43,6 +43,7 @@ struct PHQ2Results: View {
 
             }
         Spacer()
+        Text("PHQ2 Copyright © Pfizer Inc. All rights reserved.")
         }.padding()
         //.navigationBarTitle(("PHQ2 Results"))
     }

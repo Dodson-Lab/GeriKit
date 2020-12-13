@@ -23,7 +23,7 @@ struct AD8ResultsView: View {
     }
        var body: some View {
         VStack(alignment: .center){
-            Text("AD8 Result").font(.system(size: 60))
+            Text("AD8® Result").font(.system(size: 60))
                 
             Spacer().frame(height: 30)
              
@@ -90,6 +90,7 @@ struct AD8ResultsView: View {
                 .cornerRadius(10)
             }
             Spacer()
+            Text("\nCopyright © 2005 Washington University, St. Louis, Missouri. All Rights Reserved")
         }.padding()
     }
 }
