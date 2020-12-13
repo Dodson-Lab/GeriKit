@@ -19,7 +19,6 @@ struct MiniCogView: View {
 
     @State private var numWordsCorrect: Int = 0
     @State private var value: CGFloat = 0
-    @ObservedObject private var keyboardHandler = KeyboardHandler()
 
 
     
@@ -77,7 +76,7 @@ struct MiniCogView: View {
                 TextField("Word 3", text: $name2)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             }.frame(maxHeight: .infinity)
-            .padding(.bottom, keyboardHandler.keyboardHeight)
+           // .padding(.bottom, keyboardHandler.keyboardHeight)
             .animation(.default)
             
         

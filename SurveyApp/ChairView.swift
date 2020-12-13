@@ -29,15 +29,16 @@ struct TimerButton: View {
 struct ChairView: View{
     @State var numChairStands = ""
     @State var age = ""
-
     @State private var enableLogging = false
-
     @ObservedObject var stopWatchManager = StopWatchManager()
 
     var body: some View {
                    
             Form{
                 TextField("Patient age: ", text: $age)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .keyboardType(.numberPad)
+
                 
                 Text("Instruct the patient:")
                     .font(.system(size: 20, weight: .heavy))
@@ -89,9 +90,18 @@ struct ChairView: View{
                 .frame(maxWidth: .infinity, alignment: .center)
                 
                 TextField("Number of Chair Stands", text: $numChairStands)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .keyboardType(.numberPad)
+
+
+//                .padding(.bottom, keyboard.currentHeight)
+//                .edgesIgnoringSafeArea(.bottom)
+               // .animation(.easeOut(duration: 0.16))
                 //NavigationLink(destination: ChairResults){Text("Test")}
                 
-            }.padding()
+            }
+            .padding()
+            .modifier(AdaptsToKeyboard())
             .navigationBarTitle(("Chair Stands"))
     }
 }
