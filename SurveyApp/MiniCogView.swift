@@ -81,7 +81,7 @@ struct MiniCogView: View {
 
             
             NavigationLink(destination: MiniCogResults())
-            {Text("Click here for MiniCogⒸ result").bold()}
+            {Text("Click here for MiniCogⒸ result").bold()}.foregroundColor(.blue)
             
             }.padding()
         .navigationBarTitle("MiniCogⒸ")

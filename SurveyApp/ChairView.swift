@@ -114,7 +114,7 @@ struct ChairView: View{
                     .keyboardType(.numberPad)
                     }
                 NavigationLink(destination: ChairResults()){
-                Text("Click here for 30 second chair stand results").bold()
+                Text("Click here for 30-second chair stand result:").bold()
                 }.foregroundColor(.blue)
 
                 }
