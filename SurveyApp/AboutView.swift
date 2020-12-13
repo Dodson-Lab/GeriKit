@@ -23,6 +23,12 @@ struct AboutView: View {
             }
             Section(header: Text("Developer")){
                 Text("Ambika V. Viswanathan")
+                HStack{
+                    Spacer()
+                    Image("SmallGeriKit").frame(alignment: .center)
+                    Spacer()
+
+                }
             }
         }.navigationBarTitle("About GeriKit")
     }

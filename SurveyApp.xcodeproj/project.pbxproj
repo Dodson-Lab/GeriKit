@@ -43,6 +43,7 @@
 		D5DB59A024BD544700559C30 /* YesNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB599F24BD544700559C30 /* YesNo.swift */; };
 		D5DB59A224BD550B00559C30 /* fourButtonChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB59A124BD550B00559C30 /* fourButtonChoices.swift */; };
 		D5DB59A424BDF8B800559C30 /* YesNo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB59A324BDF8B700559C30 /* YesNo2.swift */; };
+		D5E016452585D64100E81E8E /* ChairLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E016442585D64100E81E8E /* ChairLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		D5DB599F24BD544700559C30 /* YesNo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesNo.swift; sourceTree = "<group>"; };
 		D5DB59A124BD550B00559C30 /* fourButtonChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourButtonChoices.swift; sourceTree = "<group>"; };
 		D5DB59A324BDF8B700559C30 /* YesNo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesNo2.swift; sourceTree = "<group>"; };
+		D5E016442585D64100E81E8E /* ChairLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChairLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				D573B9C0253278C600516542 /* ADLResultsView.swift */,
 				D573B9C22532793F00516542 /* ChairView.swift */,
 				D573B9C425327A2100516542 /* ChairResults.swift */,
+				D5E016442585D64100E81E8E /* ChairLogic.swift */,
 				D573B9C625327A5A00516542 /* FallView.swift */,
 				D573B9C825327A7B00516542 /* FallResults.swift */,
 				D573B9CA25327ABB00516542 /* NutritionView.swift */,
@@ -252,6 +255,7 @@
 				D573B9C925327A7B00516542 /* FallResults.swift in Sources */,
 				D5891AB1258184890019FD20 /* MiniCogResults.swift in Sources */,
 				D573B9B9253277AE00516542 /* PHQ9View.swift in Sources */,
+				D5E016452585D64100E81E8E /* ChairLogic.swift in Sources */,
 				D573B9C32532793F00516542 /* ChairView.swift in Sources */,
 				D573B9D125327B7500516542 /* CognitionChoice.swift in Sources */,
 				D5DB59A224BD550B00559C30 /* fourButtonChoices.swift in Sources */,
