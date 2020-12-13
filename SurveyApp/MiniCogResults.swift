@@ -42,16 +42,9 @@ struct MiniCogResults: View {
                     let url = URL.init(string: "http://mini-cog.com/wp-content/uploads/2018/03/Standardized-English-Mini-Cog-1-19-16-EN_v1-low-1.pdf")
                     guard let ad8URL = url, UIApplication.shared.canOpenURL(ad8URL) else { return }
                     UIApplication.shared.open(ad8URL)}
+                
+                Text("\nMini-Cog © S. Borson. All rights reserved. ")
 
-//                Spacer().frame(height: 10)
-//
-//                Text("2. AD8 Original Manuscript")
-//                    .foregroundColor(.blue)
-//                    .underline()
-//                    .onTapGesture {
-//                        let url2 = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/16116116/")
-//                        guard let ad8URL2 = url2, UIApplication.shared.canOpenURL(ad8URL2) else { return }
-//                        UIApplication.shared.open(ad8URL2)}.multilineTextAlignment(.leading)
             }
             .padding(10)
             .cornerRadius(10)        }

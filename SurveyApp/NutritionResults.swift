@@ -77,7 +77,6 @@ struct NutritionResults: View {
                         let url = URL.init(string: "https://www.mna-elderly.com/forms/mini/mna_mini_english.pdf")
                         guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
                         UIApplication.shared.open(phq9URL)}
-                    Text("\n® Société des Produits Nestlé SA, Trademark Owners.")
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color(.systemGray6))
@@ -85,6 +84,8 @@ struct NutritionResults: View {
             }
             Spacer().frame(height: 30)
             Image("nestle")
+            Text("® Société des Produits Nestlé SA, Trademark Owners.")
+
         }.padding()
     }
 }

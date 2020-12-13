@@ -83,7 +83,6 @@ struct AD8ResultsView: View {
                             let url2 = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/16116116/")
                             guard let ad8URL2 = url2, UIApplication.shared.canOpenURL(ad8URL2) else { return }
                             UIApplication.shared.open(ad8URL2)}.multilineTextAlignment(.leading)
-                    Text("\nCopyright © 2005 Washington University, St. Louis, Missouri. All Rights Reserved")
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -91,6 +90,7 @@ struct AD8ResultsView: View {
                 .cornerRadius(10)
             }
             Spacer()
+            Text("\nCopyright © 2005 Washington University, St. Louis, Missouri. All Rights Reserved")
         }.padding()
     }
 }
