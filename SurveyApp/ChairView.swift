@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TimerButton: View {
     
@@ -97,38 +98,61 @@ struct ChairView: View{
                         Button(action: {self.stopWatchManager.stop()}) {
                             TimerButton(label: "Reset", buttonColor: .red)
                             }.buttonStyle(PlainButtonStyle()).padding()
-                    }
+                        }
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
-                HStack
-                    {Text("Patient age:")
+                
+                HStack{
+                    Text("Patient age:").bold()
                     TextField("age", text: $age)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
                     }
+
+
                 HStack
-                    {Text("Number chair stands:")
+                    {Text("Number chair stands:").bold()
                      TextField("# chair stands", text: $numChairStands)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
                     }
-                NavigationLink(destination: ChairResults()){
+                }
+                NavigationLink(destination: ChairResults(patAge: $age, numStands: $numChairStands)){
                 Text("Click here for 30-second chair stand result:").bold()
                 }.foregroundColor(.blue)
 
                 }
                 
 
-            }
+            //}
             .padding()
             .modifier(AdaptsToKeyboard()) // allows for bottom keyboard to move accordingly, see specific file for details
             .navigationBarTitle(("30-Second Chair Stand"))
     }
 }
+    
 
-struct ChairView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChairView()
-    }
-}
+
+//struct ChairView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ChairView()
+//    }
+//}
+
+
+//struct NumberEntryField : View {
+//    @State private var enteredValue : String = ""
+//    @Binding var value : Int
+//    @Binding var textBox : String
+//
+//    var body: some View {
+//        return TextField(self.textBox, text: $enteredValue)
+//            .onReceive(Just(enteredValue)) { typedValue in
+//                if let newValue = Int(typedValue) {
+//                    self.value = newValue
+//                }
+//        }.onTapGesture(perform:{self.enteredValue = "\(self.value)"})
+//    }
+//}
+
