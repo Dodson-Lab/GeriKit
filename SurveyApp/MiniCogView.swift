@@ -69,6 +69,7 @@ struct MiniCogView: View {
             VStack{
                 TextField("Word List", text: $list)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numberPad)
                 TextField("Word 1", text: $name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Word 2", text: $name1)

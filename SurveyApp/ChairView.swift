@@ -35,27 +35,39 @@ struct ChairView: View{
     var body: some View {
                    
             Form{
-                TextField("Patient age: ", text: $age)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .keyboardType(.numberPad)
-
-                
-                Text("Instruct the patient:")
-                    .font(.system(size: 20, weight: .heavy))
+                Section(header: Text("1) Instruct the patient:")
+                        .font(.headline)
+                        .foregroundColor(.black)) {
                 Text("1. Sit in the middle of the chair. \n \n2. Place your hands on the opposite shoulder crossed, at the wrists. \n\n3. Keep your feet flat on the floor. \n\n4. Keep your back straight, and keep your arms against your chest. \n\n5. On Go, rise to a full standing position, then sit back down again. \n\n6. Repeat this for 30 seconds.")
-                    .padding()
-                Text("On go, start timing and count the number of times the patient comes to a full standing position in 30 seconds:")
-                .font(.system(size: 20)).padding()
-                //Text("Count number of times patient comes to full standing position")
-                // Text(String(format: "%.1f", stopWatchManager.secondsElapsed))
+                    .frame(maxWidth: .infinity).padding()
+                    //.background(Color(.systemGray6))
+                    .cornerRadius(10)
+                }
+                Section(header: Text("2) On the word \"go\", begin timing.")
+                    .font(.headline)
+                    .foregroundColor(.black)) {
+                Text("If the patient must use his/her arms to stand, stop the test. Record \"0\" for the number and score.").padding()
+                }
+                Section(header: Text("3) Count the number of times the patient comes to a full standing position in 30 seconds.")
+                    .font(.headline)
+                    .foregroundColor(.black)) {
+                Text("If the patient is over halfway to a standing postition when the 30 seconds have elapsed, count it as a stand.").padding()
+                }
+                
+                Section(header: Text("4)Record the number of times the patient stands in 30 seconds.")
+                    .font(.headline)
+                    .foregroundColor(.black)) {
+                //Spacer()
+                //Text("Timer:").font(.title)
+                VStack{
+                Text("\n")
                 Text("\(String(format: "%.1f", stopWatchManager.secondsElapsed as Double))")
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color.green)
                     .cornerRadius(20)
                     .onAppear{self.stopWatchManager.stop()}
-
-
+                
                 HStack(alignment: .center){
                     if stopWatchManager.mode == .stopped {
                         Button(action: {self.stopWatchManager.start()}) {
@@ -86,19 +98,32 @@ struct ChairView: View{
                             TimerButton(label: "Reset", buttonColor: .red)
                             }.buttonStyle(PlainButtonStyle()).padding()
                     }
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
-                
-                TextField("Number of Chair Stands", text: $numChairStands)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .keyboardType(.numberPad)
+                HStack
+                    {Text("Patient age:")
+                    TextField("age", text: $age)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numberPad)
+                    }
+                HStack
+                    {Text("Number chair stands:")
+                     TextField("# chair stands", text: $numChairStands)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numberPad)
+                    }
+                NavigationLink(destination: ChairResults()){
+                Text("Click here for 30 second chair stand results").bold()
+                }.foregroundColor(.blue)
 
-                //NavigationLink(destination: ChairResults){Text("Test")}
+                }
                 
+
             }
             .padding()
             .modifier(AdaptsToKeyboard()) // allows for bottom keyboard to move accordingly, see specific file for details
-            .navigationBarTitle(("Chair Stands"))
+            .navigationBarTitle(("30-Second Chair Stand"))
     }
 }
 
