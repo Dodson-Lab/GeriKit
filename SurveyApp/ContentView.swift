@@ -83,7 +83,7 @@ struct ContentView: View {
                           .aspectRatio(contentMode: .fit)
                           .frame(width:80)
                           .padding()
-                      Text("Advanced Care Planning")
+                      Text("Advance Care Planning")
                       }}
                 HStack{
 //                        Image("survey")
