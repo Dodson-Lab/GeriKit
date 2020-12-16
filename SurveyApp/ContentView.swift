@@ -5,9 +5,11 @@
 //  Created by Ambika Viswanathan on 6/29/20.
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
+
 import SwiftUI
 
 //form just in case
+
 // -- main
 struct ContentView: View {
     var body: some View {
@@ -56,7 +58,7 @@ struct ContentView: View {
                           .aspectRatio(contentMode: .fit)
                           .frame(width:80)
                           .padding()
-                      Text("Fall Risk")
+                      Text("Falls")
                       }}
                 NavigationLink(destination: NutritionView())
                   {HStack{
@@ -99,10 +101,21 @@ struct ContentView: View {
                             UIApplication.shared.open(survey)}
                     
                     }
+                HStack{
+                        Text("© NYU Grossman School of Medicine 2020")
+                          .frame(maxWidth: .infinity, alignment: .center)
+                        // .foregroundColor(.blue)
+                        // .onTapGesture {
+                        //     let url = URL.init(string: "https://unc.az1.qualtrics.com/jfe/form/SV_0PScJUobnquCRa5")
+                        //     guard let survey = url, UIApplication.shared.canOpenURL(survey) else { return }
+                        //     UIApplication.shared.open(survey)}
+                    
+                    }
             }.navigationBarTitle("GeriKit", displayMode: .automatic)
             .navigationBarItems(trailing:
                 HStack {
                     NavigationLink(destination:AboutView()){Text("About")}
+
                 })
             }
         }
