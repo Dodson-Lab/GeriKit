@@ -31,7 +31,7 @@ struct AdvancedCareView: View {
 //                }
             }
         }
-        .navigationBarTitle("Advanced Care Planning")
+        .navigationBarTitle("Advance Care Planning")
     }
 }
 

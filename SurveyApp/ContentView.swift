@@ -85,7 +85,7 @@ struct ContentView: View {
                           .aspectRatio(contentMode: .fit)
                           .frame(width:80)
                           .padding()
-                      Text("Advanced Care Planning")
+                      Text("Advance Care Planning")
                       }}
                 HStack{
 //                        Image("survey")
@@ -93,7 +93,7 @@ struct ContentView: View {
 //                        .aspectRatio(contentMode: .fit)
 //                        .frame(width:80)
 //                        .padding()
-                        Text("Click here to take a survey about GeriKit once you’ve finished your rotation.")
+                        Text("Click here to take a survey about GeriKit.")
                         .foregroundColor(.blue)
                         .onTapGesture {
                             let url = URL.init(string: "https://unc.az1.qualtrics.com/jfe/form/SV_0PScJUobnquCRa5")
