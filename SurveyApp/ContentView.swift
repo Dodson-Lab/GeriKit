@@ -94,7 +94,7 @@ struct ContentView: View {
                         Text("Click here to take a survey about GeriKit.")
                         .foregroundColor(.blue)
                         .onTapGesture {
-                            let url = URL.init(string: "https://unc.az1.qualtrics.com/jfe/form/SV_0PScJUobnquCRa5")
+                            let url = URL.init(string: "https://nyumc.qualtrics.com/jfe/form/SV_9NrUEStP5yiGbXL")
                             guard let survey = url, UIApplication.shared.canOpenURL(survey) else { return }
                             UIApplication.shared.open(survey)}
                     
