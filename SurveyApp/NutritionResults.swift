@@ -32,9 +32,9 @@ struct NutritionResults: View {
        var body: some View {
         ScrollView{
             Text("MNA®️ Results").font(.system(size: 60)).multilineTextAlignment(.center)
-            Spacer().frame(height: 30)
+            Spacer().frame(height: 30).fixedSize(horizontal: false, vertical: true)
 
-            Text("The score of \(score) suggests the patient \(nutritionResults(number: score).1)").font(.system(size: 30)).multilineTextAlignment(.center)
+            Text("The score of \(score) suggests the patient \(nutritionResults(number: score).1)").font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             
             Spacer().frame(height: 30)
 
