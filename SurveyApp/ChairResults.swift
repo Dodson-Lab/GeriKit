@@ -20,7 +20,7 @@ struct ChairResults: View {
     var body: some View {
         ScrollView{
         VStack{
-            Text("Fall Screening Results").font(.system(size: 60)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+            Text("30-Second Chair Stand Results").font(.system(size: 60)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             
             Spacer().frame(height: 30)
             
