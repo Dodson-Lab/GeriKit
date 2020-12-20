@@ -40,13 +40,14 @@ struct PHQ9Results: View {
         return(result, next)
     }
        var body: some View {
+        ScrollView{
         VStack(alignment: .center){
-            Text("PHQ9 Results").font(.system(size: 60))
+            Text("PHQ9 Results").font(.system(size: 60)).fixedSize(horizontal: false, vertical: true)
             Spacer().frame(height: 30)
             if(alert){
                 VStack(alignment: .center){
 
-                Text("The patient scored positively for suicidal ideation, urgent psychiatric evaluation is warranted.")
+                Text("The patient scored positively for suicidal ideation, urgent psychiatric evaluation is warranted.").fixedSize(horizontal: false, vertical: true)
                 Spacer().frame(height: 10)
                 Text("Suicide Risk Assessment: The Columbia-Suicide Severity Rating Scale")
                     .foregroundColor(.blue)
@@ -55,6 +56,7 @@ struct PHQ9Results: View {
                         let url = URL.init(string: "https://cssrs.columbia.edu/the-columbia-scale-c-ssrs/risk-identification/")
                         guard let suicideRiskAssessment = url, UIApplication.shared.canOpenURL(suicideRiskAssessment) else { return }
                         UIApplication.shared.open(suicideRiskAssessment)}
+                    .fixedSize(horizontal: false, vertical: true)
                 }.background(Color.red).font(.system(size: 36)).multilineTextAlignment(.center)
             }
             else{
@@ -113,6 +115,7 @@ struct PHQ9Results: View {
         Spacer()
         Text("PHQ9 Copyright © Pfizer Inc. All rights reserved.")
         }.padding()
+    }
     }
 }
 
