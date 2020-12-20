@@ -21,6 +21,7 @@ struct PHQ2Results: View {
     }
     
        var body: some View {
+        ScrollView{
         
         VStack(alignment: .center){
             Text("PHQ2 Results").font(.system(size: 60))
@@ -43,9 +44,26 @@ struct PHQ2Results: View {
 
             }
         Spacer()
+        VStack(alignment: .leading){
+            Text("PHQ2 Detail")
+            .foregroundColor(.blue)
+            .underline()
+            .onTapGesture {
+                let url = URL.init(string: "https://www.apa.org/pi/about/publications/caregivers/practice-settings/assessment/tools/patient-health")
+                guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
+                UIApplication.shared.open(phq9URL)}
+        }
+        .frame(maxWidth: .infinity, alignment: .center)
+        .padding()
+        .background(Color(.systemGray6))
+        .cornerRadius(10)
+        .padding()
+        
         Text("PHQ2 Copyright © Pfizer Inc. All rights reserved.")
         }.padding()
+
         //.navigationBarTitle(("PHQ2 Results"))
+    }
     }
 }
 
