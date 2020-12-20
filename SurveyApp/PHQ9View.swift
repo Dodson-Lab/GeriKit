@@ -22,9 +22,10 @@ struct PHQ9View: View{
 
     var body: some View {
         ScrollView(Axis.Set.vertical, showsIndicators: true){
-            Section(header: Text("Ask the patient: how often have they been bothered by the following over the past 2 weeks?").bold().background(Color(.systemGray5)))
+            Section(header: Text("Ask the patient: how often have they been bothered by the following over the past 2 weeks?").bold().padding(.trailing)
+                .background(Color(.systemGray5)))
  {
-                    Spacer()
+                   // Spacer()
                     VStack {
                         Text("1. Little interest or pleasure in doing things")
                         fourButtonChoices(questionScore: $numPHQ9Yes, isAlert: $redAlert)
@@ -40,7 +41,7 @@ struct PHQ9View: View{
 
                         Text("5. Poor appetite or overeating?")
                         fourButtonChoices(questionScore: $numPHQ9Yes, isAlert: $redAlert)
-                    }
+                    }.padding()
                     VStack{
                         Text("6. Feeling bad about yourself — or that you are a failure or have let yourself or your family down?")
                         fourButtonChoices(questionScore: $numPHQ9Yes, isAlert: $redAlert)
@@ -50,11 +51,11 @@ struct PHQ9View: View{
 
                         Text("8. Moving or speaking so slowly that other people could have noticed? Or so fidgety or restless that you have been moving a lot more than usual?")
                         fourButtonChoices(questionScore: $numPHQ9Yes, isAlert: $redAlert)
-                    }
+                    }.padding()
                     VStack{
                         Text("9. Thoughts that you would be better off dead, or thoughts of hurting yourself in some way?")
                             fourButtonChoices(questionScore: $numPHQ9Yes, isAlert: $redAlert9)
-                    }
+                    }.padding()
                 }
 
                 Section{
@@ -65,9 +66,9 @@ struct PHQ9View: View{
 
 
             }
+        //.padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarTitle(("PHQ9"))
-        .padding()
 
             
     }
