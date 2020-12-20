@@ -22,13 +22,14 @@ struct FallResults: View {
         }
     }
        var body: some View {
+        ScrollView{
         VStack(alignment: .center){
-            Text("Fall Screening Results").font(.system(size: 60)).multilineTextAlignment(.center)
-                
+            Text("Fall Screening Results").font(.system(size: 60)).multilineTextAlignment(.center)    .fixedSize(horizontal: false, vertical: true)
+
             Spacer().frame(height: 30)
 
             //
-            Text(fallResults(numberFalls: numberFallYes)).font(.system(size: 36)).multilineTextAlignment(.center)
+            Text(fallResults(numberFalls: numberFallYes)).font(.system(size: 36)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
 
             Spacer().frame(height: 30)
             
@@ -111,6 +112,7 @@ struct FallResults: View {
             Spacer()
 
         }.padding()
+        }
     }
 }
 
