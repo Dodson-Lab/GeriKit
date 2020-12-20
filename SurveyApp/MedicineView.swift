@@ -17,7 +17,7 @@ struct MedicineView: View{
                     HStack {
                         Text("How many medications, if any, is the patient on?")
                         Spacer().frame(width: 40)
-                        Stepper(value: $quantity, in: 0...10, label: { Text("\(quantity)")})
+                        Stepper(value: $quantity, in: 0...30, label: { Text("\(quantity)")})
                     }
                 }
                 if quantity > 4{
