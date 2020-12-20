@@ -58,7 +58,7 @@ struct ChairView: View{
                 Text("If the patient is over halfway to a standing postition when the 30 seconds have elapsed, count it as a stand.").padding()
                 }
                 
-                Section(header: Text("4)Record the number of times the patient stands in 30 seconds.")
+                Section(header: Text("4) Record the number of times the patient stands in 30 seconds.")
                     .font(.headline)
                     .foregroundColor(.black)) {
                 //Spacer()
@@ -142,17 +142,19 @@ struct ChairView: View{
                             }
                         }
                     }
-                }
+                }.padding()
+
                 NavigationLink(destination: ChairResults(patAge: $age, numStands: $numChairStands, gender: $selectedGender)){
                 Text("Click here for 30-second chair stand result:").bold()
-                }.foregroundColor(.blue)
+                }.foregroundColor(.blue).padding()
+
 
                 }
                 
 
-            //}
-            .padding()
+
             .modifier(AdaptsToKeyboard()) // allows for bottom keyboard to move accordingly, see specific file for details
-            .navigationBarTitle(("30-Second Chair Stand"))
+        .navigationBarTitle(("30-Second Chair Stand"))
+
     }
 }
