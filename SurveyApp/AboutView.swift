@@ -30,6 +30,16 @@ struct AboutView: View {
 
                 }
             }
+            Section(header: Text("Icons")){
+                Text("Icon made by Freepik from www.flaticon.com")
+               // .foregroundColor(.blue)
+                .underline()
+                .onTapGesture {
+                    let url2 = URL.init(string: "https://www.flaticon.com/authors/freepik")
+                    guard let flaticon = url2, UIApplication.shared.canOpenURL(flaticon) else { return }
+                    UIApplication.shared.open(flaticon)}.multilineTextAlignment(.leading)
+            }
+            
         }.navigationBarTitle("About GeriKit")
     }
 }
