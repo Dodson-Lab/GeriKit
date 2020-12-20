@@ -22,12 +22,13 @@ struct AD8ResultsView: View {
         }
     }
        var body: some View {
+        ScrollView{
         VStack(alignment: .center){
-            Text("AD8® Result").font(.system(size: 60))
+            Text("AD8® Result").font(.system(size: 60)).fixedSize(horizontal: false, vertical: true)
                 
             Spacer().frame(height: 30)
              
-            Text("The score of \(numberAD8Yes)/8 \(ad8Results(number: numberAD8Yes))").font(.system(size: 36)).multilineTextAlignment(.center)
+            Text("The score of \(numberAD8Yes)/8 \(ad8Results(number: numberAD8Yes))").font(.system(size: 36)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
 
             Spacer().frame(height: 30)
             
@@ -92,6 +93,7 @@ struct AD8ResultsView: View {
             Spacer()
             Text("\nCopyright © 2005 Washington University, St. Louis, Missouri. All Rights Reserved")
         }.padding()
+    }
     }
 }
 
