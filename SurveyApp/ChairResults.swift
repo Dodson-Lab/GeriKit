@@ -18,12 +18,13 @@ struct ChairResults: View {
     @State private var intStands = 0
 
     var body: some View {
+        ScrollView{
         VStack{
-            Text("Fall Screening Results").font(.system(size: 60)).multilineTextAlignment(.center)
+            Text("Fall Screening Results").font(.system(size: 60)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             
             Spacer().frame(height: 30)
             
-            Text("The patient is \(self.intAge) years old and completed \(self.intStands) chair stands. \(chairLogic(age: intAge, stands: intStands, gen: self.gender))").font(.system(size: 36)).multilineTextAlignment(.center)
+            Text("The patient is \(self.intAge) years old and completed \(self.intStands) chair stands. \(chairLogic(age: intAge, stands: intStands, gen: self.gender))").font(.system(size: 36)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             
            Spacer().frame(height: 30)
             
@@ -82,6 +83,7 @@ struct ChairResults: View {
             if self.patAge != "" {self.intAge = Int(self.patAge)!}
             if self.numStands != "" {self.intStands = Int(self.numStands)!}
         })
+    }
     }
 }
         
