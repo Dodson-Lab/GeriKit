@@ -22,7 +22,8 @@ struct PHQ9View: View{
 
     var body: some View {
         ScrollView(Axis.Set.vertical, showsIndicators: true){
-                Section(header: Text("Ask the patient: how often have they been bothered by the following over the past 2 weeks?")) {
+            Section(header: Text("Ask the patient: how often have they been bothered by the following over the past 2 weeks?").bold().background(Color(.systemGray5)))
+ {
                     Spacer()
                     VStack {
                         Text("1. Little interest or pleasure in doing things")
@@ -55,16 +56,19 @@ struct PHQ9View: View{
                             fourButtonChoices(questionScore: $numPHQ9Yes, isAlert: $redAlert9)
                     }
                 }
+
                 Section{
                     NavigationLink(destination: PHQ9Results(numberPHQ9Yes: $numPHQ9Yes, alert: $redAlert9))
                             {Text("Click here for PHQ9 result:").bold()
                     }.foregroundColor(.blue).multilineTextAlignment(.leading)
                     }
 
+
             }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding()
         .navigationBarTitle(("PHQ9"))
+        .padding()
+
             
     }
 }
