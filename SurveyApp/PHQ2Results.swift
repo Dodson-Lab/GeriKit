@@ -21,6 +21,7 @@ struct PHQ2Results: View {
     }
     
        var body: some View {
+        ScrollView{
         
         VStack(alignment: .center){
             Text("PHQ2 Results").font(.system(size: 60))
@@ -62,6 +63,7 @@ struct PHQ2Results: View {
         }.padding()
 
         //.navigationBarTitle(("PHQ2 Results"))
+    }
     }
 }
 

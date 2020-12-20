@@ -56,13 +56,13 @@ struct ADLResultsView: View {
     
        var body: some View {
         ScrollView{
-            Text("ADL and IADL Summary").font(.system(size: 60)).multilineTextAlignment(.center)
+            Text("ADL and IADL Summary").font(.system(size: 60)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
                     
             Spacer().frame(height: 30)
 
             if(arrayADL.count == 0 && arrayIADL.count == 0){
                 Text("The patient did not meet screening criteria for functional impairment.")
-                .font(.system(size: 24)).multilineTextAlignment(.center)
+                .font(.system(size: 24)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             }
             else{
             Text("The patient answered that they require help with:").font(.system(size: 24)).multilineTextAlignment(.leading)
