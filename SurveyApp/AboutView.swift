@@ -16,7 +16,7 @@ struct AboutView: View {
                 
             }
             Section(header: Text("Funding")) {
-                Text("GeriKit was supported by the MSTAR program, which was funded by the National Institute on Aging of the National Institutes of Health to NYU Grossman School of Medicine (2T35AG050998-06), and a gift from the Gerald Weissman Young Scholars Society. The content is solely the responsibility of the authors and does not necessairly represent the official views of the National Institutes of Health.")
+                Text("GeriKit was supported by the MSTAR program, which was funded by the National Institute on Aging of the National Institutes of Health to NYU Grossman School of Medicine (2T35AG050998-06), and a gift from the Gerald Weissmann Young Scholars Society. The content is solely the responsibility of the authors and does not necessairly represent the official views of the National Institutes of Health.")
             }
             Section(header: Text("Credits")){
                 Text("Nina L. Blachman, MD \nJohn A. Dodson, MD \nAmbika V. Viswanathan")
