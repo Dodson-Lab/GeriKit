@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5B05A92297E6AF50019A322 /* FrailtyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B05A91297E6AF50019A322 /* FrailtyView.swift */; };
 		D5165A3024D041A6007474A1 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5165A2F24D041A6007474A1 /* StopWatchManager.swift */; };
 		D534D3B12535349A0008713F /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534D3B02535349A0008713F /* Bundle-Decodable.swift */; };
 		D54483F42585A1D900214D93 /* AdaptsToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54483F32585A1D900214D93 /* AdaptsToKeyboard.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5B05A91297E6AF50019A322 /* FrailtyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyView.swift; sourceTree = "<group>"; };
 		D5165A2F24D041A6007474A1 /* StopWatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchManager.swift; sourceTree = "<group>"; };
 		D534D3B02535349A0008713F /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		D54483F32585A1D900214D93 /* AdaptsToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptsToKeyboard.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				D573B9B62532774F00516542 /* PHQ2View.swift */,
 				D573B9BA253277FC00516542 /* PHQ2Results.swift */,
 				D5AF53872583004B0004F2F1 /* AdvancedCareView.swift */,
+				A5B05A91297E6AF50019A322 /* FrailtyView.swift */,
 				D573B9B8253277AE00516542 /* PHQ9View.swift */,
 				D573B9BC2532785500516542 /* PHQ9Results.swift */,
 				D573B9BE2532789E00516542 /* ADLView.swift */,
@@ -244,6 +247,7 @@
 			files = (
 				D573B9BD2532785500516542 /* PHQ9Results.swift in Sources */,
 				D5803FE12528D23900E6A8E4 /* AD8View.swift in Sources */,
+				A5B05A92297E6AF50019A322 /* FrailtyView.swift in Sources */,
 				D573B9B5253276F300516542 /* AD8ResultsView.swift in Sources */,
 				D573B9BB253277FC00516542 /* PHQ2Results.swift in Sources */,
 				D534D3B12535349A0008713F /* Bundle-Decodable.swift in Sources */,

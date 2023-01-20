@@ -30,6 +30,9 @@ struct AboutView: View {
 
                 }
             }
+            Section(header: Text("Version")){
+                Text("1.1")
+            }
             Section(header: Text("Icons")){
                 Text("Icon made by Freepik from www.flaticon.com")
                // .foregroundColor(.blue)

@@ -19,6 +19,13 @@ struct AdvancedCareView: View {
                     let url = URL.init(string: "https://prepareforyourcare.org/advance-directive")
                     guard let ad8URL = url, UIApplication.shared.canOpenURL(ad8URL) else { return }
                     UIApplication.shared.open(ad8URL)}
+                Text("2. E-Prognosis")
+                .foregroundColor(.blue)
+                .underline()
+                .onTapGesture {
+                    let url = URL.init(string: "https://eprognosis.ucsf.edu/index.php")
+                    guard let ad8URL = url, UIApplication.shared.canOpenURL(ad8URL) else { return }
+                    UIApplication.shared.open(ad8URL)}
                 }
 //            VStack(alignment: .leading){
 //                Text("1. PrepareⒸ for your care")

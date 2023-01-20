@@ -87,6 +87,16 @@ struct ContentView: View {
                           .padding()
                       Text("Advance Care Planning")
                       }}
+//                NavigationLink(destination: FrailtyView())
+//                  {HStack{
+//                      Image("arm")
+//                          .resizable()
+//                          .aspectRatio(contentMode: .fit)
+//                          .frame(width:80)
+//                          .padding()
+//                      Text("Frailty")
+//                      }}
+                // TODO: Seems max number of views allowed is 10? Need more research to find root issue and solution
                 HStack{
 //                        Image("survey")
 //                        .resizable()
