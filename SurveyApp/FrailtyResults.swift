@@ -2,7 +2,7 @@
 //  FrailtyResultsView.swift
 //  SurveyApp
 //
-//  Created by Ambika Viswanathan on 10/10/20.
+//  Created by Gabriela Lopez on 1/23/23.
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
 
