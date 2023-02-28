@@ -10,20 +10,25 @@ import SwiftUI
 
 struct FrailtyResults: View {
     @Binding var frailty_sum: Int
-    @Binding var cur_weight: Int
-    @Binding var old_weight: Int
+    @Binding var cur_weight: String
+    @Binding var old_weight: String
+    @State private var intcur = 0
+    @State private var intold = 0
+
 
     @State private var isNavigation = false
     
-    func FrailtyResults(sum: Int, cur: Int, old: Int)-> String {
+    func FrailtyResults(sum: Int, cur: String, old: String)-> String {
+        intcur = Int(cur)!
+        intold = Int(old)!
         var final_score = 0
-        let weight_score: Double = (Double(old-cur) / Double(old))*100
+        let weight_score: Double = (Double(intold-intcur) / Double(intold))*100
         if weight_score > 5 {
             final_score = sum + 1
         } else {
             final_score = sum
         }
-        if final_score > 3{
+        if final_score > 7{
             return("Frail. Score of \(final_score)")
         }
         else if final_score > 0 {
@@ -40,7 +45,7 @@ struct FrailtyResults: View {
             Text("Frailty Result").font(.system(size: 60)).fixedSize(horizontal: false, vertical: true)
                 
             Spacer().frame(height: 30)
-             
+            
             Text("\(FrailtyResults(sum: frailty_sum, cur: cur_weight, old: old_weight))").font(.system(size: 36)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
 
             Spacer().frame(height: 30)

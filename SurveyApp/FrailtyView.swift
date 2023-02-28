@@ -7,13 +7,14 @@
 //
 
 import SwiftUI
+import Combine
 
 struct FrailtyView: View {
     @State var Frailty = Bundle.main.decode("Frailty.json")
     @State var FrailtyScore: Array<Int> = Array(repeating: 0, count: 100)
     @State var FrailtySum = 0
-    @State var weightNow: Int = 100
-    @State var weightYear: Int = 100
+    @State var weightNow = ""
+    @State var weightYear = ""
 
     var body: some View {
             List{
@@ -21,17 +22,34 @@ struct FrailtyView: View {
                     QuestionView(fetcher: $Frailty, scores: $FrailtyScore, sum: $FrailtySum)
                 }
                 
-                Section(header: Text("One year ago, how much did you weigh? (lbs)")) {
-                        TextField("", value: $weightYear, formatter: NumberFormatter())
-                            .frame(width: 50)
 
-                }
+                Section(header: Text("One year ago, how much did you weigh? (lbs)")) {
+                        TextField("150", text: $weightYear)
+                            .frame(width: 50)
+                            .keyboardType(.numberPad)
+                            .onReceive(Just(weightYear)) { newValue in
+                                    let filtered = newValue.filter { "0123456789".contains($0) }
+                                    if filtered != newValue {
+                                        self.weightYear = filtered
+                                    }
+                                }
+                            }
+
+                
                 
                 Section(header: Text("How much do you weigh currently? (lbs)")) {
-                    TextField("", value: $weightNow, formatter: NumberFormatter())
+                    TextField("150", value: $weightNow, formatter: NumberFormatter())
                         .frame(width: 50)
+                        .keyboardType(.numberPad)
+                        .onReceive(Just(weightNow)) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    self.weightNow = filtered
+                                }
+                            }
+                        }
                     
-                }
+                
                 
                 Section {
                     NavigationLink(destination: FrailtyResults(frailty_sum: $FrailtySum, cur_weight: $weightNow, old_weight: $weightYear))
