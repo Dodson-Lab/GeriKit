@@ -109,15 +109,15 @@ struct TUGView: View{
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
                     
-                    HStack {
-                        Text("Select Gender:").bold()
-                        Picker("", selection: $selectedGender) {
-                            
-                            ForEach(0..<genders.count) { index in
-                                Text(self.genders[index]).tag(index).font(.title)
-                            }
-                        }.pickerStyle(SegmentedPickerStyle())
-                    }
+//                    HStack {
+//                        Text("Select Gender:").bold()
+//                        Picker("", selection: $selectedGender) {
+//
+//                            ForEach(0..<genders.count) { index in
+//                                Text(self.genders[index]).tag(index).font(.title)
+//                            }
+//                        }.pickerStyle(SegmentedPickerStyle())
+//                    }
                     
                     HStack{
                         Text("Patient age:").bold()
