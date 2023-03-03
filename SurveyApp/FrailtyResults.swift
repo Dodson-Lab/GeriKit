@@ -3,7 +3,7 @@
 //  SurveyApp
 //
 //  Created by Gabriela Lopez on 1/23/23.
-//  Copyright © 2020 Ambika Viswanathan. All rights reserved.
+//  Copyright © 2023 Gabriela Lopez. All rights reserved.
 //
 
 import SwiftUI

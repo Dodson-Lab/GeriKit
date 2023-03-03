@@ -34,7 +34,7 @@ struct ContentView: View {
                             .padding()
                         Text("Depression")
                     }}
-                    NavigationLink(destination: ADLView())
+                    NavigationLink(destination: MobilityChoice())
                     {HStack{
                         Image("elderly")
                             .resizable()

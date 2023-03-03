@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-struct TimerButton: View {
+struct TugTimerButton: View {
     
     let label: String
     let buttonColor: Color
@@ -75,31 +75,31 @@ struct ChairView: View{
                 HStack(alignment: .center){
                     if stopWatchManager.mode == .stopped {
                         Button(action: {self.stopWatchManager.start()}) {
-                            TimerButton(label: "Start", buttonColor: .blue)
+                            TugTimerButton(label: "Start", buttonColor: .blue)
                             }.buttonStyle(PlainButtonStyle()).padding()
 
                         Button(action: {}) {
-                            TimerButton(label: "Pause", buttonColor: .red)
+                            TugTimerButton(label: "Pause", buttonColor: .red)
                             }.buttonStyle(PlainButtonStyle()).padding()
 
                     }
                     if stopWatchManager.mode == .running {
                         Button(action: {}) {
-                            TimerButton(label: "Start", buttonColor: .blue)
+                            TugTimerButton(label: "Start", buttonColor: .blue)
                             }.buttonStyle(PlainButtonStyle()).padding()
 
                         Button(action: {self.stopWatchManager.pause()}) {
-                            TimerButton(label: "Pause", buttonColor: .red)
+                            TugTimerButton(label: "Pause", buttonColor: .red)
                             }.buttonStyle(PlainButtonStyle()).padding()
 
                     }
                     if stopWatchManager.mode == .paused {
                         Button(action: {self.stopWatchManager.start()}) {
-                            TimerButton(label: "Start", buttonColor: .blue)
+                            TugTimerButton(label: "Start", buttonColor: .blue)
                             }.buttonStyle(PlainButtonStyle()).padding()
 
                         Button(action: {self.stopWatchManager.stop()}) {
-                            TimerButton(label: "Reset", buttonColor: .red)
+                            TugTimerButton(label: "Reset", buttonColor: .red)
                             }.buttonStyle(PlainButtonStyle()).padding()
                         }
                     }

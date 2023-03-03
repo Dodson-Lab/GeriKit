@@ -29,7 +29,7 @@ struct PHQ9View: View{
                     VStack {
                         Text("1. Little interest or pleasure in doing things")
                         fourButtonChoices(questionScore: $numPHQ9Yes, isAlert: $redAlert)
-            
+             
                         Text("2. Feeling down, depressed, or hopeless")
                         fourButtonChoices(questionScore: $numPHQ9Yes, isAlert: $redAlert)
 
