@@ -98,7 +98,7 @@ struct ADLResultsView: View {
                     .foregroundColor(Color.white)
                     .cornerRadius(10)
                 }
-                
+            //FIXME: "Resources" button does nothing due to no "next steps" section - maybe change to header?
                 Button(action: {
                     self.isNavigation = false
                     },label: {Text("Resources")}).frame(maxWidth: .infinity)

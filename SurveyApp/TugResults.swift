@@ -30,7 +30,7 @@ struct TUGResults: View {
             
             HStack{
 
-                
+                //FIXME: another non-button button
                 Button(action: {
                     },label: {Text("Resources")}).frame(maxWidth: .infinity)
                     .padding(10)

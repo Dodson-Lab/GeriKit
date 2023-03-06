@@ -32,7 +32,7 @@ struct FallResults: View {
             Text(fallResults(numberFalls: numberFallYes)).font(.system(size: 36)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
 
             Spacer().frame(height: 30)
-            
+            //FIXME: "next steps" button doesnt show up, making "resources" a useless non-button
             HStack{
                 if numberFallYes > 0{
                 Button(action: {

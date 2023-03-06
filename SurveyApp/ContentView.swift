@@ -139,6 +139,8 @@ struct ContentView: View {
         }
     }
 
+//FIXME: "About" section doesn't appear until scrolling about halfway down main page
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

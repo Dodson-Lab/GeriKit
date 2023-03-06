@@ -48,7 +48,7 @@ struct ChairResults: View {
                     .cornerRadius(10)
             }
             
-            
+            //FIXME: this note has no context on what it has to do with the view it directs user to
             if(isNavigation){
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){

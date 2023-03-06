@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E6A95CE29B5D27F0081F948 /* Frailty.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E6A95CC29B5D27F0081F948 /* Frailty.json */; };
+		9E6A95CF29B5D27F0081F948 /* FrailtyResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A95CD29B5D27F0081F948 /* FrailtyResults.swift */; };
+		9E6A95D329B5E8EE0081F948 /* MobilityChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A95D229B5E8EE0081F948 /* MobilityChoice.swift */; };
+		9E6A95D529B5E9460081F948 /* GaitChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A95D429B5E9460081F948 /* GaitChoice.swift */; };
+		9E6A95DD29B5EC560081F948 /* TugLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A95DC29B5EC560081F948 /* TugLogic.swift */; };
+		9E6A95DF29B5EC5E0081F948 /* TugResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A95DE29B5EC5E0081F948 /* TugResults.swift */; };
+		9E6A95E129B5EC630081F948 /* TugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A95E029B5EC630081F948 /* TugView.swift */; };
 		A5B05A92297E6AF50019A322 /* FrailtyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B05A91297E6AF50019A322 /* FrailtyView.swift */; };
 		D5165A3024D041A6007474A1 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5165A2F24D041A6007474A1 /* StopWatchManager.swift */; };
 		D534D3B12535349A0008713F /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534D3B02535349A0008713F /* Bundle-Decodable.swift */; };
@@ -48,6 +55,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E6A95CC29B5D27F0081F948 /* Frailty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Frailty.json; sourceTree = "<group>"; };
+		9E6A95CD29B5D27F0081F948 /* FrailtyResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrailtyResults.swift; sourceTree = "<group>"; };
+		9E6A95D229B5E8EE0081F948 /* MobilityChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilityChoice.swift; sourceTree = "<group>"; };
+		9E6A95D429B5E9460081F948 /* GaitChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaitChoice.swift; sourceTree = "<group>"; };
+		9E6A95DC29B5EC560081F948 /* TugLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TugLogic.swift; sourceTree = "<group>"; };
+		9E6A95DE29B5EC5E0081F948 /* TugResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TugResults.swift; sourceTree = "<group>"; };
+		9E6A95E029B5EC630081F948 /* TugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TugView.swift; sourceTree = "<group>"; };
 		A5B05A91297E6AF50019A322 /* FrailtyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyView.swift; sourceTree = "<group>"; };
 		D5165A2F24D041A6007474A1 /* StopWatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchManager.swift; sourceTree = "<group>"; };
 		D534D3B02535349A0008713F /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -134,10 +148,14 @@
 				D5DB59A324BDF8B700559C30 /* YesNo2.swift */,
 				D5165A2F24D041A6007474A1 /* StopWatchManager.swift */,
 				D573B9D025327B7500516542 /* CognitionChoice.swift */,
+				9E6A95D229B5E8EE0081F948 /* MobilityChoice.swift */,
+				9E6A95D429B5E9460081F948 /* GaitChoice.swift */,
 				D5803FDE2528CD8100E6A8E4 /* MiniCogView.swift */,
 				D5891AB0258184890019FD20 /* MiniCogResults.swift */,
 				D5803FE02528D23900E6A8E4 /* AD8View.swift */,
 				D573B9B4253276F300516542 /* AD8ResultsView.swift */,
+				9E6A95CC29B5D27F0081F948 /* Frailty.json */,
+				9E6A95CD29B5D27F0081F948 /* FrailtyResults.swift */,
 				D573B9B62532774F00516542 /* PHQ2View.swift */,
 				D573B9BA253277FC00516542 /* PHQ2Results.swift */,
 				D5AF53872583004B0004F2F1 /* AdvancedCareView.swift */,
@@ -147,8 +165,11 @@
 				D573B9BE2532789E00516542 /* ADLView.swift */,
 				D573B9C0253278C600516542 /* ADLResultsView.swift */,
 				D573B9C22532793F00516542 /* ChairView.swift */,
+				9E6A95E029B5EC630081F948 /* TugView.swift */,
 				D573B9C425327A2100516542 /* ChairResults.swift */,
+				9E6A95DE29B5EC5E0081F948 /* TugResults.swift */,
 				D5E016442585D64100E81E8E /* ChairLogic.swift */,
+				9E6A95DC29B5EC560081F948 /* TugLogic.swift */,
 				D573B9C625327A5A00516542 /* FallView.swift */,
 				D573B9C825327A7B00516542 /* FallResults.swift */,
 				D573B9CA25327ABB00516542 /* NutritionView.swift */,
@@ -230,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D586EAFD24AA289500572834 /* LaunchScreen.storyboard in Resources */,
+				9E6A95CE29B5D27F0081F948 /* Frailty.json in Resources */,
 				D58A87DA25834C0D005E96F4 /* PHQ9.json in Resources */,
 				D586EAFA24AA289500572834 /* Preview Assets.xcassets in Resources */,
 				D5D462DA2533F467001EEBA7 /* MiniNutritional.json in Resources */,
@@ -246,10 +268,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D573B9BD2532785500516542 /* PHQ9Results.swift in Sources */,
+				9E6A95D329B5E8EE0081F948 /* MobilityChoice.swift in Sources */,
 				D5803FE12528D23900E6A8E4 /* AD8View.swift in Sources */,
 				A5B05A92297E6AF50019A322 /* FrailtyView.swift in Sources */,
 				D573B9B5253276F300516542 /* AD8ResultsView.swift in Sources */,
 				D573B9BB253277FC00516542 /* PHQ2Results.swift in Sources */,
+				9E6A95CF29B5D27F0081F948 /* FrailtyResults.swift in Sources */,
 				D534D3B12535349A0008713F /* Bundle-Decodable.swift in Sources */,
 				D573B9CF25327B3200516542 /* MedicineView.swift in Sources */,
 				D5DB1BC424DAFF0C0016EA1A /* AboutView.swift in Sources */,
@@ -262,6 +286,8 @@
 				D5E016452585D64100E81E8E /* ChairLogic.swift in Sources */,
 				D573B9C32532793F00516542 /* ChairView.swift in Sources */,
 				D573B9D125327B7500516542 /* CognitionChoice.swift in Sources */,
+				9E6A95E129B5EC630081F948 /* TugView.swift in Sources */,
+				9E6A95DD29B5EC560081F948 /* TugLogic.swift in Sources */,
 				D5DB59A224BD550B00559C30 /* fourButtonChoices.swift in Sources */,
 				D586EAF124AA289000572834 /* AppDelegate.swift in Sources */,
 				D5803FDF2528CD8100E6A8E4 /* MiniCogView.swift in Sources */,
@@ -273,8 +299,10 @@
 				D54483F42585A1D900214D93 /* AdaptsToKeyboard.swift in Sources */,
 				D586EAF324AA289000572834 /* SceneDelegate.swift in Sources */,
 				D5AF53882583004B0004F2F1 /* AdvancedCareView.swift in Sources */,
+				9E6A95DF29B5EC5E0081F948 /* TugResults.swift in Sources */,
 				D573B9CB25327ABB00516542 /* NutritionView.swift in Sources */,
 				D586EAF524AA289000572834 /* ContentView.swift in Sources */,
+				9E6A95D529B5E9460081F948 /* GaitChoice.swift in Sources */,
 				D5DB59A424BDF8B800559C30 /* YesNo2.swift in Sources */,
 				D573B9C1253278C600516542 /* ADLResultsView.swift in Sources */,
 			);
