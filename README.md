@@ -13,6 +13,6 @@ This application is intended to facilitate discussion between patients and healt
 This app is developed using Swift. 
 
 ### Support 
-For application questions or issues, contact annaskiefer@yahoo.com.
+For application questions or issues, contact aviswanath4@gmail.com.
 
 © Ambika Viswanathan, NYU Grossman School of Medicine, 2020
