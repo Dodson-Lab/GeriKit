@@ -3,6 +3,7 @@
 //  SurveyApp
 //
 //  Created by Ambika Viswanathan on 10/10/20.
+//  Updated 4/18/24
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
 
@@ -98,7 +99,7 @@ struct ADLResultsView: View {
                     .foregroundColor(Color.white)
                     .cornerRadius(10)
                 }
-            //FIXME: "Resources" button does nothing due to no "next steps" section - maybe change to header?
+                
                 Button(action: {
                     self.isNavigation = false
                     },label: {Text("Resources")}).frame(maxWidth: .infinity)
