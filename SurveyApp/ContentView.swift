@@ -88,15 +88,15 @@ struct ContentView: View {
                       Text("Medications")
                       }}
 
-//                NavigationLink(destination: FrailtyChoice())
-//                  {HStack{
-//                      Image("walker")
-//                          .resizable()
-//                          .aspectRatio(contentMode: .fit)
-//                          .frame(width:80)
-//                          .padding()
-//                      Text("Frailty")
-//                      }}
+                NavigationLink(destination: FrailtyChoice())
+                  {HStack{
+                      Image("walker")
+                          .resizable()
+                          .aspectRatio(contentMode: .fit)
+                          .frame(width:80)
+                          .padding()
+                      Text("Frailty")
+                      }}
 //                NavigationLink(destination: HearingView())
 //                  {HStack{
 //                      Image("hearing")

@@ -1,18 +1,21 @@
 //
-//  MobilityChoice.swift
+//  FrailtyChoice.swift
 //  SurveyApp
 //
-//  Created by Ambika Viswanathan on 10/10/20.
-//  Copyright © 2020 Ambika Viswanathan. All rights reserved.
+//  Created by Ambika Viswanathan on 12/19/23.
+//  Updated 4/18/24
+//  Copyright © 2023 Ambika Viswanathan. All rights reserved.
 //
+
+import Foundation
 
 import SwiftUI
 
-struct MobilityChoice: View{
+struct FrailtyChoice: View{
     var body: some View{
         VStack(alignment: .center){
-            NavigationLink(destination: ADLView()){
-            Text("ADL Assessment")
+            NavigationLink(destination: FrailScaleView()){
+            Text("Click here if in ambulatory setting")
                 .padding(10)
                 .background(Color.blue)
                 .foregroundColor(Color.white)
@@ -22,9 +25,9 @@ struct MobilityChoice: View{
             }
 
             Spacer().frame(height:20)
-            NavigationLink(destination: GaitChoice()){
-            Text("GAIT Assessment")
-                .padding(10)
+            NavigationLink(destination: ClinFrailtyView()){
+            Text("Click here if in inpatient setting")
+                .padding(24)
                 .background(Color.blue)
                 .foregroundColor(Color.white)
                 .cornerRadius(10)
@@ -36,8 +39,8 @@ struct MobilityChoice: View{
     }
 }
 
-struct MobilityChoice_Previews: PreviewProvider {
+struct FrailtyChoice_Previews: PreviewProvider {
     static var previews: some View {
-        MobilityChoice()
+        FrailtyChoice()
     }
 }

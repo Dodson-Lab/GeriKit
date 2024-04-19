@@ -1,0 +1,34 @@
+[
+    {
+    "id": 0,
+    "text": "A. How much of the time during the past 4 weeks did you feel tired?",
+    "answers":
+        [
+            { "id": 0, "score": 1, "text": "All" },
+            { "id": 1, "score": 1, "text": "Most" },
+            { "id": 2, "score": 0, "text": "Some" },
+            { "id": 3, "score": 0, "text": "A little" },
+            { "id": 4, "score": 0, "text": "Not at all" }
+
+        ]
+    },
+    {
+        "id": 1,
+        "text": "B. By yourself and not using aids, do you have any difficulty walking up 10 steps without resting?",
+            "answers":
+                [
+                    { "id": 0, "score": 1, "text": "Yes" },
+                    { "id": 1, "score": 0, "text": "No" }
+                ]
+    },
+    {
+        "id": 2,
+        "text": "C. By yourself and not using aids, do you have any difficulty walking a couple of blocks (e.g. several hundred yards)?",
+            "answers":
+                [
+                    { "id": 0, "score": 1, "text": "Yes" },
+                    { "id": 1, "score": 0, "text": "No" }
+                ]
+    },
+]
+
