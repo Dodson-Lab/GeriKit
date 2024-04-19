@@ -3,6 +3,7 @@
 //  SurveyApp
 //
 //  Created by Ambika Viswanathan on 10/10/20.
+//  Updated 4/18/24
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
 
@@ -32,7 +33,7 @@ struct FallResults: View {
             Text(fallResults(numberFalls: numberFallYes)).font(.system(size: 36)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
 
             Spacer().frame(height: 30)
-            //FIXME: "next steps" button doesnt show up, making "resources" a useless non-button
+            
             HStack{
                 if numberFallYes > 0{
                 Button(action: {
@@ -57,12 +58,12 @@ struct FallResults: View {
             if(isNavigation){
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    //"Consider"
-                    Text("1. Orthostatic blood pressure measurement").multilineTextAlignment(.leading)
+                    Text("Consider for your patient: ").frame(maxWidth: .infinity, alignment: .leading)
+                    Text("1. Orthostatic blood pressure measurement")
                     Text("2. Physical therapy referral")
-                    Text("3. Consider a cane or walker")
+                    Text("3. A cane or walker")
                     Text("4. Home safety evaluation")
-                    Text("4. Consider screening for low vision")
+                    Text("5. Screening for low vision")
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -110,6 +111,8 @@ struct FallResults: View {
                 
             }
             Spacer()
+//            Text("\nAdapted from CDC’s STEADI tools and resources that can help you screen, assess, and intervene to reduce your patient’s fall risk.").font(.footnote)
+               
 
         }.padding()
         }

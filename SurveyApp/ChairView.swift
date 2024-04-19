@@ -3,13 +3,14 @@
 //  SurveyApp
 //
 //  Created by Ambika Viswanathan on 10/10/20.
+//  Updated 4/18/24
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
 
 import SwiftUI
 import Combine
 
-struct TugTimerButton: View {
+struct TimerButton: View {
     
     let label: String
     let buttonColor: Color
@@ -34,7 +35,10 @@ struct ChairView: View{
     let genders = ["Male", "Female"]
     
     @State private var enableLogging = false
-    @ObservedObject var stopWatchManager = StopWatchManager()
+    //@ObservedObject var stopWatchManager = StopWatchManager()
+    @ObservedObject var timerManager = TimerManager()
+
+    
 
     var body: some View {
                    
@@ -65,41 +69,41 @@ struct ChairView: View{
                 //Text("Timer:").font(.title)
                 VStack{
                 Text("\n")
-                Text("\(String(format: "%.1f", stopWatchManager.secondsElapsed as Double))")
+                Text("\(String(format: "%.1f", timerManager.timeRemaining as Double))")
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color.green)
                     .cornerRadius(20)
-                    .onAppear{self.stopWatchManager.stop()}
+                    .onAppear{timerManager.stopTimer()}
                 
-                HStack(alignment: .center){
-                    if stopWatchManager.mode == .stopped {
-                        Button(action: {self.stopWatchManager.start()}) {
-                            TugTimerButton(label: "Start", buttonColor: .blue)
+                    HStack(alignment: .center){
+                        if timerManager.mode == .stopped {
+                            Button(action: {self.timerManager.startTimer()}) {
+                                TimerButton(label: "Start", buttonColor: .blue)
                             }.buttonStyle(PlainButtonStyle()).padding()
-
-                        Button(action: {}) {
-                            TugTimerButton(label: "Pause", buttonColor: .red)
+                            
+                            Button(action: {}) {
+                                TimerButton(label: "Pause", buttonColor: .red)
                             }.buttonStyle(PlainButtonStyle()).padding()
-
-                    }
-                    if stopWatchManager.mode == .running {
-                        Button(action: {}) {
-                            TugTimerButton(label: "Start", buttonColor: .blue)
+                            
+                        }
+                        if timerManager.mode == .running {
+                            Button(action: {}) {
+                                TimerButton(label: "Start", buttonColor: .blue)
                             }.buttonStyle(PlainButtonStyle()).padding()
-
-                        Button(action: {self.stopWatchManager.pause()}) {
-                            TugTimerButton(label: "Pause", buttonColor: .red)
+                            
+                            Button(action: {self.timerManager.pauseTimer()}) {
+                                TimerButton(label: "Pause", buttonColor: .red)
                             }.buttonStyle(PlainButtonStyle()).padding()
-
-                    }
-                    if stopWatchManager.mode == .paused {
-                        Button(action: {self.stopWatchManager.start()}) {
-                            TugTimerButton(label: "Start", buttonColor: .blue)
+                            
+                        }
+                        if timerManager.mode == .paused {
+                            Button(action: {self.timerManager.startTimer()}) {
+                                TimerButton(label: "Start", buttonColor: .blue)
                             }.buttonStyle(PlainButtonStyle()).padding()
-
-                        Button(action: {self.stopWatchManager.stop()}) {
-                            TugTimerButton(label: "Reset", buttonColor: .red)
+                            
+                            Button(action: {self.timerManager.stopTimer()}) {
+                                TimerButton(label: "Reset", buttonColor: .red)
                             }.buttonStyle(PlainButtonStyle()).padding()
                         }
                     }

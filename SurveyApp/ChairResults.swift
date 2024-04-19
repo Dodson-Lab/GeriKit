@@ -3,6 +3,7 @@
 //  SurveyApp
 //
 //  Created by Ambika Viswanathan on 10/10/20.
+//  Updated 4/18/24
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
 
@@ -48,11 +49,14 @@ struct ChairResults: View {
                     .cornerRadius(10)
             }
             
-            //FIXME: this note has no context on what it has to do with the view it directs user to
+            
             if(isNavigation){
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    Text("Refer to GeriKit's Fall Screener for more information").multilineTextAlignment(.leading)
+                    NavigationLink(destination: FallChoice())
+                    {
+                    Text("Click here for GeriKit's Fall Screener for more information").multilineTextAlignment(.leading)
+                          }
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -76,7 +80,8 @@ struct ChairResults: View {
                 .cornerRadius(10)
                 }
         Spacer()
-            
+//            Text("\nAdapted from CDC’s STEADI tools and resources that can help you screen, assess, and intervene to reduce your patient’s fall risk.").font(.footnote)
+//
     }.padding().onAppear(perform:{
             self.intAge = 0
             self.intStands = 0
