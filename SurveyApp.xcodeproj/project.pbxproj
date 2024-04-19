@@ -7,14 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E6A95CE29B5D27F0081F948 /* Frailty.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E6A95CC29B5D27F0081F948 /* Frailty.json */; };
-		9E6A95CF29B5D27F0081F948 /* FrailtyResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A95CD29B5D27F0081F948 /* FrailtyResults.swift */; };
-		9E6A95D329B5E8EE0081F948 /* MobilityChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A95D229B5E8EE0081F948 /* MobilityChoice.swift */; };
-		9E6A95D529B5E9460081F948 /* GaitChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A95D429B5E9460081F948 /* GaitChoice.swift */; };
-		9E6A95DD29B5EC560081F948 /* TugLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A95DC29B5EC560081F948 /* TugLogic.swift */; };
-		9E6A95DF29B5EC5E0081F948 /* TugResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A95DE29B5EC5E0081F948 /* TugResults.swift */; };
-		9E6A95E129B5EC630081F948 /* TugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A95E029B5EC630081F948 /* TugView.swift */; };
-		A5B05A92297E6AF50019A322 /* FrailtyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B05A91297E6AF50019A322 /* FrailtyView.swift */; };
+		9E6A95CE29B5D27F0081F948 /* FrailScale.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E6A95CC29B5D27F0081F948 /* FrailScale.json */; };
 		D5165A3024D041A6007474A1 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5165A2F24D041A6007474A1 /* StopWatchManager.swift */; };
 		D534D3B12535349A0008713F /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534D3B02535349A0008713F /* Bundle-Decodable.swift */; };
 		D54483F42585A1D900214D93 /* AdaptsToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54483F32585A1D900214D93 /* AdaptsToKeyboard.swift */; };
@@ -52,17 +45,26 @@
 		D5DB59A224BD550B00559C30 /* fourButtonChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB59A124BD550B00559C30 /* fourButtonChoices.swift */; };
 		D5DB59A424BDF8B800559C30 /* YesNo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB59A324BDF8B700559C30 /* YesNo2.swift */; };
 		D5E016452585D64100E81E8E /* ChairLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E016442585D64100E81E8E /* ChairLogic.swift */; };
+		D5F6D8E22BD214F900B62CE8 /* UBCamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8E12BD214F900B62CE8 /* UBCamView.swift */; };
+		D5F6D8E42BD2151900B62CE8 /* UBCamResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8E32BD2151900B62CE8 /* UBCamResultsView.swift */; };
+		D5F6D8E62BD2153700B62CE8 /* 3DCamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8E52BD2153700B62CE8 /* 3DCamView.swift */; };
+		D5F6D8E82BD2154D00B62CE8 /* 3DCamView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8E72BD2154D00B62CE8 /* 3DCamView2.swift */; };
+		D5F6D8EA2BD21A2700B62CE8 /* TimerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8E92BD21A2700B62CE8 /* TimerTest.swift */; };
+		D5F6D8EC2BD21A7100B62CE8 /* FallChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8EB2BD21A7100B62CE8 /* FallChoice.swift */; };
+		D5F6D8EE2BD21A9800B62CE8 /* TUGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8ED2BD21A9800B62CE8 /* TUGView.swift */; };
+		D5F6D8F02BD21AB200B62CE8 /* TUGResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8EF2BD21AB200B62CE8 /* TUGResults.swift */; };
+		D5F6D8F22BD21C8600B62CE8 /* FrailtyChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8F12BD21C8600B62CE8 /* FrailtyChoice.swift */; };
+		D5F6D8F42BD21CB100B62CE8 /* FrailScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8F32BD21CB100B62CE8 /* FrailScaleView.swift */; };
+		D5F6D8F62BD21CD200B62CE8 /* FrailScaleResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8F52BD21CD200B62CE8 /* FrailScaleResultsView.swift */; };
+		D5F6D8F82BD21D1000B62CE8 /* ClinFrailtyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8F72BD21D1000B62CE8 /* ClinFrailtyView.swift */; };
+		D5F6D8FA2BD21E0800B62CE8 /* HearingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8F92BD21E0800B62CE8 /* HearingView.swift */; };
+		D5F6D8FC2BD21E4900B62CE8 /* Hearing.json in Resources */ = {isa = PBXBuildFile; fileRef = D5F6D8FB2BD21E4900B62CE8 /* Hearing.json */; };
+		D5F6D8FE2BD21E6D00B62CE8 /* HearingResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8FD2BD21E6D00B62CE8 /* HearingResultsView.swift */; };
+		D5F6D9002BD21F1800B62CE8 /* 5MSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6D8FF2BD21F1800B62CE8 /* 5MSView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9E6A95CC29B5D27F0081F948 /* Frailty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Frailty.json; sourceTree = "<group>"; };
-		9E6A95CD29B5D27F0081F948 /* FrailtyResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrailtyResults.swift; sourceTree = "<group>"; };
-		9E6A95D229B5E8EE0081F948 /* MobilityChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilityChoice.swift; sourceTree = "<group>"; };
-		9E6A95D429B5E9460081F948 /* GaitChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaitChoice.swift; sourceTree = "<group>"; };
-		9E6A95DC29B5EC560081F948 /* TugLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TugLogic.swift; sourceTree = "<group>"; };
-		9E6A95DE29B5EC5E0081F948 /* TugResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TugResults.swift; sourceTree = "<group>"; };
-		9E6A95E029B5EC630081F948 /* TugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TugView.swift; sourceTree = "<group>"; };
-		A5B05A91297E6AF50019A322 /* FrailtyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyView.swift; sourceTree = "<group>"; };
+		9E6A95CC29B5D27F0081F948 /* FrailScale.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FrailScale.json; sourceTree = "<group>"; };
 		D5165A2F24D041A6007474A1 /* StopWatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchManager.swift; sourceTree = "<group>"; };
 		D534D3B02535349A0008713F /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		D54483F32585A1D900214D93 /* AdaptsToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptsToKeyboard.swift; sourceTree = "<group>"; };
@@ -102,6 +104,22 @@
 		D5DB59A124BD550B00559C30 /* fourButtonChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourButtonChoices.swift; sourceTree = "<group>"; };
 		D5DB59A324BDF8B700559C30 /* YesNo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesNo2.swift; sourceTree = "<group>"; };
 		D5E016442585D64100E81E8E /* ChairLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChairLogic.swift; sourceTree = "<group>"; };
+		D5F6D8E12BD214F900B62CE8 /* UBCamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBCamView.swift; sourceTree = "<group>"; };
+		D5F6D8E32BD2151900B62CE8 /* UBCamResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBCamResultsView.swift; sourceTree = "<group>"; };
+		D5F6D8E52BD2153700B62CE8 /* 3DCamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3DCamView.swift; sourceTree = "<group>"; };
+		D5F6D8E72BD2154D00B62CE8 /* 3DCamView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3DCamView2.swift; sourceTree = "<group>"; };
+		D5F6D8E92BD21A2700B62CE8 /* TimerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTest.swift; sourceTree = "<group>"; };
+		D5F6D8EB2BD21A7100B62CE8 /* FallChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallChoice.swift; sourceTree = "<group>"; };
+		D5F6D8ED2BD21A9800B62CE8 /* TUGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUGView.swift; sourceTree = "<group>"; };
+		D5F6D8EF2BD21AB200B62CE8 /* TUGResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUGResults.swift; sourceTree = "<group>"; };
+		D5F6D8F12BD21C8600B62CE8 /* FrailtyChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailtyChoice.swift; sourceTree = "<group>"; };
+		D5F6D8F32BD21CB100B62CE8 /* FrailScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailScaleView.swift; sourceTree = "<group>"; };
+		D5F6D8F52BD21CD200B62CE8 /* FrailScaleResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrailScaleResultsView.swift; sourceTree = "<group>"; };
+		D5F6D8F72BD21D1000B62CE8 /* ClinFrailtyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinFrailtyView.swift; sourceTree = "<group>"; };
+		D5F6D8F92BD21E0800B62CE8 /* HearingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearingView.swift; sourceTree = "<group>"; };
+		D5F6D8FB2BD21E4900B62CE8 /* Hearing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Hearing.json; sourceTree = "<group>"; };
+		D5F6D8FD2BD21E6D00B62CE8 /* HearingResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearingResultsView.swift; sourceTree = "<group>"; };
+		D5F6D8FF2BD21F1800B62CE8 /* 5MSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5MSView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +157,15 @@
 				D586EAF224AA289000572834 /* SceneDelegate.swift */,
 				D54483F32585A1D900214D93 /* AdaptsToKeyboard.swift */,
 				D586EAF424AA289000572834 /* ContentView.swift */,
+				D5F6D8FF2BD21F1800B62CE8 /* 5MSView.swift */,
+				D5F6D8F92BD21E0800B62CE8 /* HearingView.swift */,
+				D5F6D8FD2BD21E6D00B62CE8 /* HearingResultsView.swift */,
+				D5F6D8EB2BD21A7100B62CE8 /* FallChoice.swift */,
+				D5F6D8ED2BD21A9800B62CE8 /* TUGView.swift */,
+				D5F6D8EF2BD21AB200B62CE8 /* TUGResults.swift */,
+				D5F6D8E12BD214F900B62CE8 /* UBCamView.swift */,
+				D5F6D8E32BD2151900B62CE8 /* UBCamResultsView.swift */,
+				D5F6D8E52BD2153700B62CE8 /* 3DCamView.swift */,
 				D586EAF624AA289500572834 /* Assets.xcassets */,
 				D586EAFB24AA289500572834 /* LaunchScreen.storyboard */,
 				D586EAFE24AA289500572834 /* Info.plist */,
@@ -147,29 +174,27 @@
 				D5DB59A124BD550B00559C30 /* fourButtonChoices.swift */,
 				D5DB59A324BDF8B700559C30 /* YesNo2.swift */,
 				D5165A2F24D041A6007474A1 /* StopWatchManager.swift */,
+				D5F6D8E92BD21A2700B62CE8 /* TimerTest.swift */,
 				D573B9D025327B7500516542 /* CognitionChoice.swift */,
-				9E6A95D229B5E8EE0081F948 /* MobilityChoice.swift */,
-				9E6A95D429B5E9460081F948 /* GaitChoice.swift */,
 				D5803FDE2528CD8100E6A8E4 /* MiniCogView.swift */,
 				D5891AB0258184890019FD20 /* MiniCogResults.swift */,
 				D5803FE02528D23900E6A8E4 /* AD8View.swift */,
 				D573B9B4253276F300516542 /* AD8ResultsView.swift */,
-				9E6A95CC29B5D27F0081F948 /* Frailty.json */,
-				9E6A95CD29B5D27F0081F948 /* FrailtyResults.swift */,
+				9E6A95CC29B5D27F0081F948 /* FrailScale.json */,
+				D5F6D8F72BD21D1000B62CE8 /* ClinFrailtyView.swift */,
+				D5F6D8F12BD21C8600B62CE8 /* FrailtyChoice.swift */,
+				D5F6D8F32BD21CB100B62CE8 /* FrailScaleView.swift */,
+				D5F6D8F52BD21CD200B62CE8 /* FrailScaleResultsView.swift */,
 				D573B9B62532774F00516542 /* PHQ2View.swift */,
 				D573B9BA253277FC00516542 /* PHQ2Results.swift */,
 				D5AF53872583004B0004F2F1 /* AdvancedCareView.swift */,
-				A5B05A91297E6AF50019A322 /* FrailtyView.swift */,
 				D573B9B8253277AE00516542 /* PHQ9View.swift */,
 				D573B9BC2532785500516542 /* PHQ9Results.swift */,
 				D573B9BE2532789E00516542 /* ADLView.swift */,
 				D573B9C0253278C600516542 /* ADLResultsView.swift */,
 				D573B9C22532793F00516542 /* ChairView.swift */,
-				9E6A95E029B5EC630081F948 /* TugView.swift */,
 				D573B9C425327A2100516542 /* ChairResults.swift */,
-				9E6A95DE29B5EC5E0081F948 /* TugResults.swift */,
 				D5E016442585D64100E81E8E /* ChairLogic.swift */,
-				9E6A95DC29B5EC560081F948 /* TugLogic.swift */,
 				D573B9C625327A5A00516542 /* FallView.swift */,
 				D573B9C825327A7B00516542 /* FallResults.swift */,
 				D573B9CA25327ABB00516542 /* NutritionView.swift */,
@@ -180,6 +205,8 @@
 				D5D462D92533F467001EEBA7 /* MiniNutritional.json */,
 				D58A87D725834981005E96F4 /* PHQ2.json */,
 				D58A87D925834C0D005E96F4 /* PHQ9.json */,
+				D5F6D8FB2BD21E4900B62CE8 /* Hearing.json */,
+				D5F6D8E72BD2154D00B62CE8 /* 3DCamView2.swift */,
 			);
 			path = SurveyApp;
 			sourceTree = "<group>";
@@ -251,7 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D586EAFD24AA289500572834 /* LaunchScreen.storyboard in Resources */,
-				9E6A95CE29B5D27F0081F948 /* Frailty.json in Resources */,
+				9E6A95CE29B5D27F0081F948 /* FrailScale.json in Resources */,
+				D5F6D8FC2BD21E4900B62CE8 /* Hearing.json in Resources */,
 				D58A87DA25834C0D005E96F4 /* PHQ9.json in Resources */,
 				D586EAFA24AA289500572834 /* Preview Assets.xcassets in Resources */,
 				D5D462DA2533F467001EEBA7 /* MiniNutritional.json in Resources */,
@@ -268,41 +296,49 @@
 			buildActionMask = 2147483647;
 			files = (
 				D573B9BD2532785500516542 /* PHQ9Results.swift in Sources */,
-				9E6A95D329B5E8EE0081F948 /* MobilityChoice.swift in Sources */,
 				D5803FE12528D23900E6A8E4 /* AD8View.swift in Sources */,
-				A5B05A92297E6AF50019A322 /* FrailtyView.swift in Sources */,
 				D573B9B5253276F300516542 /* AD8ResultsView.swift in Sources */,
 				D573B9BB253277FC00516542 /* PHQ2Results.swift in Sources */,
-				9E6A95CF29B5D27F0081F948 /* FrailtyResults.swift in Sources */,
 				D534D3B12535349A0008713F /* Bundle-Decodable.swift in Sources */,
 				D573B9CF25327B3200516542 /* MedicineView.swift in Sources */,
 				D5DB1BC424DAFF0C0016EA1A /* AboutView.swift in Sources */,
 				D573B9C525327A2100516542 /* ChairResults.swift in Sources */,
+				D5F6D8E62BD2153700B62CE8 /* 3DCamView.swift in Sources */,
 				D5DB59A024BD544700559C30 /* YesNo.swift in Sources */,
 				D573B9B72532774F00516542 /* PHQ2View.swift in Sources */,
+				D5F6D8E22BD214F900B62CE8 /* UBCamView.swift in Sources */,
 				D573B9C925327A7B00516542 /* FallResults.swift in Sources */,
 				D5891AB1258184890019FD20 /* MiniCogResults.swift in Sources */,
+				D5F6D9002BD21F1800B62CE8 /* 5MSView.swift in Sources */,
+				D5F6D8EA2BD21A2700B62CE8 /* TimerTest.swift in Sources */,
 				D573B9B9253277AE00516542 /* PHQ9View.swift in Sources */,
 				D5E016452585D64100E81E8E /* ChairLogic.swift in Sources */,
+				D5F6D8F02BD21AB200B62CE8 /* TUGResults.swift in Sources */,
+				D5F6D8FA2BD21E0800B62CE8 /* HearingView.swift in Sources */,
 				D573B9C32532793F00516542 /* ChairView.swift in Sources */,
+				D5F6D8E82BD2154D00B62CE8 /* 3DCamView2.swift in Sources */,
 				D573B9D125327B7500516542 /* CognitionChoice.swift in Sources */,
-				9E6A95E129B5EC630081F948 /* TugView.swift in Sources */,
-				9E6A95DD29B5EC560081F948 /* TugLogic.swift in Sources */,
 				D5DB59A224BD550B00559C30 /* fourButtonChoices.swift in Sources */,
+				D5F6D8FE2BD21E6D00B62CE8 /* HearingResultsView.swift in Sources */,
 				D586EAF124AA289000572834 /* AppDelegate.swift in Sources */,
+				D5F6D8F42BD21CB100B62CE8 /* FrailScaleView.swift in Sources */,
 				D5803FDF2528CD8100E6A8E4 /* MiniCogView.swift in Sources */,
 				D573B9CD25327B0200516542 /* NutritionResults.swift in Sources */,
 				D573B9C725327A5A00516542 /* FallView.swift in Sources */,
+				D5F6D8F82BD21D1000B62CE8 /* ClinFrailtyView.swift in Sources */,
 				D573B9BF2532789E00516542 /* ADLView.swift in Sources */,
 				D5165A3024D041A6007474A1 /* StopWatchManager.swift in Sources */,
 				D5C2202325357F3F00427AE1 /* Question.swift in Sources */,
 				D54483F42585A1D900214D93 /* AdaptsToKeyboard.swift in Sources */,
 				D586EAF324AA289000572834 /* SceneDelegate.swift in Sources */,
 				D5AF53882583004B0004F2F1 /* AdvancedCareView.swift in Sources */,
-				9E6A95DF29B5EC5E0081F948 /* TugResults.swift in Sources */,
 				D573B9CB25327ABB00516542 /* NutritionView.swift in Sources */,
+				D5F6D8E42BD2151900B62CE8 /* UBCamResultsView.swift in Sources */,
 				D586EAF524AA289000572834 /* ContentView.swift in Sources */,
-				9E6A95D529B5E9460081F948 /* GaitChoice.swift in Sources */,
+				D5F6D8EE2BD21A9800B62CE8 /* TUGView.swift in Sources */,
+				D5F6D8F22BD21C8600B62CE8 /* FrailtyChoice.swift in Sources */,
+				D5F6D8EC2BD21A7100B62CE8 /* FallChoice.swift in Sources */,
+				D5F6D8F62BD21CD200B62CE8 /* FrailScaleResultsView.swift in Sources */,
 				D5DB59A424BDF8B800559C30 /* YesNo2.swift in Sources */,
 				D573B9C1253278C600516542 /* ADLResultsView.swift in Sources */,
 			);

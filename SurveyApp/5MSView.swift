@@ -15,16 +15,19 @@ struct FiveMSView: View {
     var body: some View {
 
         ScrollView{
-            Section {
+            VStack(alignment: .leading){
                 VStack{
                     Spacer()
-                    Text("Geriatrics providers focus on 5 key areas, known as the Geriatric 5Ms*. The “Ms” stand for the targets that are important to care for us all as we age.").fontWeight(.semibold)
+                    Text("Geriatrics providers focus on 5 key areas, known as the Geriatric 5Ms. The “Ms” stand for the targets that are important to care for us all as we age.").fontWeight(.semibold)
+                    
+                    Spacer()
                     Spacer()
                     
                     Text("The 5Ms are described below and link to the corresponding screeners in GeriKit when applicable ").font(.subheadline)
                 }
                 
                 //MULTICOMPLEXITY
+                Divider()
 
                 HStack{
                     Image("game")
@@ -41,6 +44,7 @@ struct FiveMSView: View {
                     }
                 }
                 //MIND
+                Divider()
                 HStack {
                     Image("brain")
                         .resizable()
@@ -50,6 +54,7 @@ struct FiveMSView: View {
                     VStack{
                         VStack(alignment: .leading){
                             Text("Mind").font(.headline)
+                            Spacer()
                             HStack{
                                 Text("•")
                                 NavigationLink(destination: CognitionChoice())
@@ -57,6 +62,7 @@ struct FiveMSView: View {
                                     Text("Dementia").foregroundColor(.blue)
                                 }
                             }
+                            Spacer()
                             HStack{
                                 Text("•")
                                 NavigationLink(destination: UBCamView())
@@ -64,6 +70,7 @@ struct FiveMSView: View {
                                     Text("Delirium").foregroundColor(.blue)
                                 }
                             }
+                            Spacer()
                             HStack{
                                 Text("•")
                                 NavigationLink(destination: PHQ2View())
@@ -71,7 +78,7 @@ struct FiveMSView: View {
                                     Text("Depression").foregroundColor(.blue)
                                 }
                             }
-                            Spacer(minLength: 0.5)
+                            Spacer()
                             HStack{
                                 Text("•")
                                 Text("Mentation")
@@ -81,7 +88,7 @@ struct FiveMSView: View {
                         }
                     }
                 }
-                
+                Divider()
                 //MOBILITY
                 HStack {
                     Image("elderly")
@@ -91,6 +98,7 @@ struct FiveMSView: View {
                         .padding()
                     VStack(alignment: .leading){
                         Text("Mobility").font(.headline)
+                        Spacer()
                         HStack{
                             Text("•")
                             NavigationLink(destination: ADLView())
@@ -98,6 +106,7 @@ struct FiveMSView: View {
                                 Text("Amount of Mobility/Function").foregroundColor(.blue)
                             }
                         }
+                        Spacer()
                         HStack{
                             Text("•")
                             NavigationLink(destination: FallChoice())
@@ -119,7 +128,7 @@ struct FiveMSView: View {
 //                                Text("Frailty").foregroundColor(.blue)
 //                            }
 //                        }
-                        Spacer(minLength: 0.5)
+                        Spacer()
                         HStack{
                             Text("•")
                             Text("Impaired gait and balance")
@@ -127,7 +136,7 @@ struct FiveMSView: View {
                         Spacer()
                     }
                 }
-                
+                Divider()
                 //MEDICATION
                 HStack {
                     Image("drugs")
@@ -137,6 +146,7 @@ struct FiveMSView: View {
                         .padding()
                     VStack(alignment: .leading){
                         Text("Medications").font(.headline)
+                        Spacer()
                         HStack{
                             Text("•")
                             NavigationLink(destination: MedicineView())
@@ -144,13 +154,13 @@ struct FiveMSView: View {
                                 Text("Polypharmacy; deprescribing").foregroundColor(.blue)
                             }
                         }
-                        Spacer(minLength: 0.5)
+                        Spacer()
                         HStack{
                             Text("•")
                             Text("Optimal prescribing")
                         }
                         
-                        Spacer(minLength: 0.5)
+                        Spacer()
                         HStack{
                             Text("•")
                             Text("Adverse medication effects and medication burden")
@@ -161,6 +171,7 @@ struct FiveMSView: View {
                 }
                 
                 //Matters
+                Divider()
                 HStack {
                     Image("plan")
                         .resizable()
@@ -169,6 +180,7 @@ struct FiveMSView: View {
                         .padding()
                     VStack(alignment: .leading){
                         Text("What matters most?").font(.headline)
+                        //Spacer()
                         HStack{
                             Text("•")
                             NavigationLink(destination: MedicineView())
@@ -180,9 +192,10 @@ struct FiveMSView: View {
                         
                     }
                 }
+                Divider()
                 VStack(alignment: .leading){
                     Text("Resources:").font(.headline)
-                    Spacer(minLength: 0.5)
+                    Spacer()
                     HStack{ Text("•")
                     VStack(alignment: .leading){
                         Text("HealtinAging 5Ms Tip Sheet")
@@ -194,7 +207,7 @@ struct FiveMSView: View {
                                 UIApplication.shared.open(mURL)}
                     }
                 }
-                    Spacer(minLength: 0.5)
+                    Spacer()
                     HStack{ Text("•")
                         VStack(alignment: .leading){
                             Text("HealtinAging 5Ms Resources")
@@ -207,13 +220,14 @@ struct FiveMSView: View {
                         }
                     }
                     Spacer()
-                    Text("\nAdapted from Healthin Aging 5Ms by the American Geriatrics Soceity (AGS)").font(.footnote)
-                    Spacer()
-                    Text("© Frank Molnar & Allen Huang, University of Ottawa; Mary Tinetti, Yale University").font(.footnote)
+                    Text("\nCopyright © Frank Molnar, Allen Huang, Mary Tinetti. 2017. The Geriatric 5Ms™ may be used for educational purpose.").font(.footnote)
+//                    Text("\nAdapted from Healthin Aging 5Ms by the American Geriatrics Soceity (AGS)")                    Spacer()
+//                    Text("© Frank Molnar & Allen Huang, University of Ottawa; Mary Tinetti, Yale University").font(.footnote)
                 }
                 
-            }
+            }.padding()
         }
+        .padding()
         .navigationBarTitle("The 5Ms of Geriatrics")
     }
 }
