@@ -3,6 +3,7 @@
 //  SurveyApp
 //
 //  Created by Ambika Viswanathan on 10/10/20.
+//  Updated 4/18/24
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
 
@@ -20,8 +21,6 @@ struct MedicineView: View{
                         Stepper(value: $quantity, in: 0...30, label: { Text("\(quantity)")})
                     }
                 }
-                //TODO: Create a version of this comment for quant < 4, this tab is not clear w/ no instructions or context
-                //TODO: Create resources header that shows up regardless of quant, like the links do. Remove the resources text in this note
                 if quantity > 4{
                 Section {
                     Text("The patient has screened positive for polypharmacy. Consider reducing the number of pills or frequency of pills. Refer to the following resources:")
