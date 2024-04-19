@@ -138,16 +138,8 @@ struct ContentView: View {
                             UIApplication.shared.open(survey)}
                     
                     }
-                HStack{
-                        Text("© NYU Grossman School of Medicine 2024")
-                          .frame(maxWidth: .infinity, alignment: .center)
-                        // .foregroundColor(.blue)
-                        // .onTapGesture {
-                        //     let url = URL.init(string: "https://unc.az1.qualtrics.com/jfe/form/SV_0PScJUobnquCRa5")
-                        //     guard let survey = url, UIApplication.shared.canOpenURL(survey) else { return }
-                        //     UIApplication.shared.open(survey)}
+                Text("© NYU Grossman School of Medicine 2024").font(.subheadline)
                     
-                    }
             }.navigationBarTitle("GeriKit", displayMode: .automatic)
             .navigationBarItems(trailing:
                 HStack {
