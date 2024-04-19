@@ -1,0 +1,106 @@
+[
+    {
+    "id": 0,
+    "text": "1. Does a hearing problem cause you to feel embarrassed when meeting new people?",
+    "answers":
+        [
+            { "id": 0, "score": 4, "text": "Yes" },
+            { "id": 1, "score": 2, "text": "Sometimes" },
+            { "id": 2, "score": 0, "text": "No" },
+        ]
+    },
+    {
+    "id": 1,
+    "text": "2. Does a hearing problem cause you to feel frustrated when talking to members of your family?",
+    "answers":
+        [
+            { "id": 0, "score": 4, "text": "Yes" },
+            { "id": 1, "score": 2, "text": "Sometimes" },
+            { "id": 2, "score": 0, "text": "No" },
+        ]
+    },
+    {
+    "id": 2,
+    "text": "3. Do you have difficulty hearing when someone speaks in a whisper?",
+    "answers":
+        [
+            { "id": 0, "score": 4, "text": "Yes" },
+            { "id": 1, "score": 2, "text": "Sometimes" },
+            { "id": 2, "score": 0, "text": "No" },
+        ]
+    },
+    {
+    "id": 3,
+    "text": "4. Do you feel handicapped by a hearing problem?",
+    "answers":
+        [
+            { "id": 0, "score": 4, "text": "Yes" },
+            { "id": 1, "score": 2, "text": "Sometimes" },
+            { "id": 2, "score": 0, "text": "No" },
+        ]
+    },
+    {
+    "id": 4,
+    "text": "5. Does a hearing problem cause you difficulty when visiting friends, relatives, or neighbors?",
+    "answers":
+        [
+            { "id": 0, "score": 4, "text": "Yes" },
+            { "id": 1, "score": 2, "text": "Sometimes" },
+            { "id": 2, "score": 0, "text": "No" },
+        ]
+    },
+    {
+    "id": 5,
+    "text": "6. Does a hearing problem cause you to attend religious services less often than you would like?",
+    "answers":
+        [
+            { "id": 0, "score": 4, "text": "Yes" },
+            { "id": 1, "score": 2, "text": "Sometimes" },
+            { "id": 2, "score": 0, "text": "No" },
+        ]
+    },
+    {
+    "id": 6,
+    "text": "7. Does a hearing problem cause you difficulty when listening to TV or radio",
+    "answers":
+        [
+            { "id": 0, "score": 4, "text": "Yes" },
+            { "id": 1, "score": 2, "text": "Sometimes" },
+            { "id": 2, "score": 0, "text": "No" },
+        ]
+    },
+    {
+    "id": 7,
+    "text": "8. Does a hearing problem cause you to have arguments with family members?",
+    "answers":
+        [
+            { "id": 0, "score": 4, "text": "Yes" },
+            { "id": 1, "score": 2, "text": "Sometimes" },
+            { "id": 2, "score": 0, "text": "No" },
+        ]
+    },
+    {
+    "id": 8,
+    "text": "9. Do you feel that any difficulty with your hearing limits or hampers your personal or social life?",
+    "answers":
+        [
+            { "id": 0, "score": 4, "text": "Yes" },
+            { "id": 1, "score": 2, "text": "Sometimes" },
+            { "id": 2, "score": 0, "text": "No" },
+        ]
+    },
+    {
+    "id": 9,
+    "text": "10. Does a hearing problem cause you difficulty when in a restaurant with relatives or friends?",
+    "answers":
+        [
+            { "id": 0, "score": 4, "text": "Yes" },
+            { "id": 1, "score": 2, "text": "Sometimes" },
+            { "id": 2, "score": 0, "text": "No" },
+        ]
+    },
+
+]
+
+ 
+ 

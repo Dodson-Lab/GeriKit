@@ -97,33 +97,33 @@ struct ContentView: View {
                           .padding()
                       Text("Frailty")
                       }}
-//                NavigationLink(destination: HearingView())
-//                  {HStack{
-//                      Image("hearing")
-//                          .resizable()
-//                          .aspectRatio(contentMode: .fit)
-//                          .frame(width:80)
-//                          .padding()
-//                      Text("Hearing")
-//                      }}
-//                NavigationLink(destination: AdvancedCareView())
-//                  {HStack{
-//                      Image("plan")
-//                          .resizable()
-//                          .aspectRatio(contentMode: .fit)
-//                          .frame(width:80)
-//                          .padding()
-//                      Text("Advance Care Planning")
-//                      }}
-//                NavigationLink(destination: FiveMSView())
-//                  {HStack{
-//                      Image("5Ms")
-//                          .resizable()
-//                          .aspectRatio(contentMode: .fit)
-//                          .frame(width:100)
-//                          .padding()
-//                      Text("The 5Ms of Geriatrics")
-//                      }}
+                NavigationLink(destination: HearingView())
+                  {HStack{
+                      Image("hearing")
+                          .resizable()
+                          .aspectRatio(contentMode: .fit)
+                          .frame(width:80)
+                          .padding()
+                      Text("Hearing")
+                      }}
+                NavigationLink(destination: AdvancedCareView())
+                  {HStack{
+                      Image("plan")
+                          .resizable()
+                          .aspectRatio(contentMode: .fit)
+                          .frame(width:80)
+                          .padding()
+                      Text("Advance Care Planning")
+                      }}
+                NavigationLink(destination: FiveMSView())
+                  {HStack{
+                      Image("5Ms")
+                          .resizable()
+                          .aspectRatio(contentMode: .fit)
+                          .frame(width:100)
+                          .padding()
+                      Text("The 5Ms of Geriatrics")
+                      }}
                 HStack{
 //                        Image("survey")
 //                        .resizable()
