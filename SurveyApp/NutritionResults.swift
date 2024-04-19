@@ -84,7 +84,7 @@ struct NutritionResults: View {
             }
             Spacer().frame(height: 30)
             Image("nestle")
-            Text("® Société des Produits Nestlé SA, Trademark Owners.")
+            Text("® Société des Produits Nestlé SA, Trademark Owners.").font(.footnote)
 
         }.padding()
     }

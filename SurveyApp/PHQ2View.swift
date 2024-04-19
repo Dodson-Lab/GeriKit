@@ -3,6 +3,7 @@
 //  SurveyApp
 //
 //  Created by Ambika Viswanathan on 10/10/20.
+//  Updated 4/18/2024
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
 
@@ -13,11 +14,12 @@ struct PHQ2View: View{
         @State var PHQ2 = Bundle.main.decode("PHQ2.json")
         @State var PHQ2Score: Array<Int> = Array(repeating: 0, count: 100)
         @State var PHQ2Sum = 0
+        @State var PHQ2Selected: Array<Int> = Array(repeating: 0, count: 100)
 
         var body: some View {
             List{
                 Section(header: Text("Ask the patient: how often have they been bothered by the following over the past 2 weeks?")) {
-                    QuestionView(fetcher: $PHQ2, scores: $PHQ2Score, sum: $PHQ2Sum)
+                    QuestionView(fetcher: $PHQ2, scores: $PHQ2Score, sum: $PHQ2Sum, selected:$PHQ2Selected)
                 }
                 Section {
                     NavigationLink(destination: PHQ2Results(numberPHQ2Yes: $PHQ2Sum)){

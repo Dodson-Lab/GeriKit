@@ -23,8 +23,8 @@ struct QuestionView: View {
     @Binding var fetcher: [Question]
     @Binding var scores: [Int]
     @Binding var sum: Int
+    @Binding var selected: [Int]
     @State var isPressed: Array<Array<Bool>> = Array(repeating: Array(repeating: false, count: 10), count: 10)
-
 
 
     var body: some View {
@@ -34,9 +34,11 @@ struct QuestionView: View {
                     .padding(10)
                 ForEach(question.answers, id: \.id) {result in
                     Button(action: {
-                        if(result.score == 0 || result.score != self.scores[question.id]){
-                            self.isPressed[question.id][self.scores[question.id]] = false
+                        if(result.id == 0 || result.id != self.selected[question.id]){
+                            self.isPressed[question.id][self.selected[question.id]] = false
+                            
                             self.scores[question.id] = result.score
+                            self.selected[question.id] = result.id
                             self.isPressed[question.id][result.id] = true
                             self.sum = (self.scores.reduce(0, +))
                             }

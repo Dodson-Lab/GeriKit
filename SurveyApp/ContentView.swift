@@ -92,17 +92,6 @@ struct ContentView: View {
                     }
                     }
                     Group {
-                        NavigationLink(destination: FrailtyView())
-                        {HStack{
-                            Image("arm")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width:80)
-                                .padding()
-                            Text("Frailty")
-                        }}
-                    }
-                    Group {
                         HStack{
                             //                        Image("survey")
                             //                        .resizable()

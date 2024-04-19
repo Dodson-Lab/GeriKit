@@ -3,6 +3,7 @@
 //  SurveyApp
 //
 //  Created by Ambika Viswanathan on 10/10/20.
+//  Updated 4/18/2024
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
 
@@ -57,9 +58,8 @@ struct PHQ2Results: View {
         .padding()
         .background(Color(.systemGray6))
         .cornerRadius(10)
-        .padding()
         
-        Text("PHQ2 Copyright © Pfizer Inc. All rights reserved.")
+        Text("PHQ2 Copyright © Pfizer Inc. All rights reserved.").font(.footnote)
         }.padding()
 
         //.navigationBarTitle(("PHQ2 Results"))

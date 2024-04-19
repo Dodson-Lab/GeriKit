@@ -113,7 +113,7 @@ struct PHQ9Results: View {
                 }
             }
         Spacer()
-        Text("PHQ9 Copyright © Pfizer Inc. All rights reserved.")
+            Text("PHQ9 Copyright © Pfizer Inc. All rights reserved.").font(.footnote)
         }.padding()
     }
     }
