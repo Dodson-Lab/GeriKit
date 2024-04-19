@@ -3,6 +3,7 @@
 //  SurveyApp
 //
 //  Created by Ambika Viswanathan on 10/3/20.
+//  Updated 4/18/2024
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
 import SwiftUI
@@ -14,12 +15,10 @@ struct MiniCogView: View {
     @State private var name2: String = ""
     @State private var list: String = ""
 
-    
-
-
     @State private var numWordsCorrect: Int = 0
     @State private var value: CGFloat = 0
-
+    var colors = ["1", "2", "3", "4"]
+    @State private var selectedColor = "Red"
 
     
     var body: some View {
@@ -28,7 +27,7 @@ struct MiniCogView: View {
             Text("Part 1: Three Word Recognition").font(.system(size: 20)).bold().foregroundColor(.red)
             Divider().frame(height: 3).background(Color.red)
             Group{
-                Text("Look directly at person and say, “Please listen carefully. I am going to say three words that I want you to repeat back to me now and try to remember. The words are [select a list of words from the versions below]. Please say them for me now.” If the person is unable to repeat the words after three attempts, move on to Step 2 (clock drawing). \n\nThe following and other word lists have been used in one or more clinical studies. For repeated administrations, use of an alternative word list is recommended.\n")
+                Text("Look directly at person and say, “Please listen carefully. I am going to say three words that I want you to repeat back to me now and try to remember. The words are [select a list of words from the versions below]. Please say them for me now.” If the person is unable to repeat the words after three attempts, move on to Step 2 (clock drawing), and make sure to still score Part 1. \n\nThe following and other word lists have been used in one or more clinical studies. For repeated administrations, use of an alternative word list is recommended.\n")
                 HStack(){
                     VStack{
                         Text("Version 1").bold()
@@ -68,10 +67,18 @@ struct MiniCogView: View {
 //            }
             VStack{
                 HStack{
-                Text("Word List Version: ")
-                TextField("Word List Version", text: $list)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)}
+                    
+                    //Text("Word List Version: ")
+                    Picker("Word List Version:", selection: $selectedColor) {
+                        ForEach(colors, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    
+                    //TextField("Word List Version", text: $list)
+                    //.textFieldStyle(RoundedBorderTextFieldStyle())
+                    //   .keyboardType(.numberPad)
+                }
                 HStack{
                 Text("Word 1:")
                 TextField("Word 1", text: $name)

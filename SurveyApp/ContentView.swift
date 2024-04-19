@@ -43,15 +43,6 @@ struct ContentView: View {
                             .padding()
                         Text("Function")
                     }}
-//                    NavigationLink(destination: ChairView())
-//                    {HStack{
-//                        Image("chair")
-//                            .resizable()
-//                            .aspectRatio(contentMode: .fit)
-//                            .frame(width:80)
-//                            .padding()
-//                        Text("Strength")
-//                    }}
                 }
                 Group {
                     NavigationLink(destination: FallView())

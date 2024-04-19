@@ -3,6 +3,7 @@
 //  SurveyApp
 //
 //  Created by Ambika Viswanathan on 10/10/20.
+//  Upated 4/18/24
 //  Copyright © 2020 Ambika Viswanathan. All rights reserved.
 //
 
@@ -91,7 +92,7 @@ struct AD8ResultsView: View {
                 .cornerRadius(10)
             }
             Spacer()
-            Text("\nCopyright © 2005 Washington University, St. Louis, Missouri. All Rights Reserved")
+            Text("\nCopyright © 2005 Washington University, St. Louis, Missouri. All Rights Reserved").font(.footnote)
         }.padding()
     }
     }

@@ -11,16 +11,6 @@ import SwiftUI
 struct GaitChoice: View{
     var body: some View{
         VStack(alignment: .center){
-            NavigationLink(destination: TUGView()){
-            Text("Click here if you have a hallway available")
-                .padding(10)
-                .background(Color.blue)
-                .foregroundColor(Color.white)
-                .cornerRadius(10)
-                .font(.system(size: 36))
-                .multilineTextAlignment(.center)
-            }
-
             Spacer().frame(height:20)
             NavigationLink(destination: ChairView()){
             Text("Click here if you do not have a hallway available")
@@ -31,7 +21,6 @@ struct GaitChoice: View{
                 .font(.system(size: 36))
                 .multilineTextAlignment(.center)
             }
-
         }
     }
 }
