@@ -16,15 +16,11 @@ struct FiveMSView: View {
 
         ScrollView{
             VStack(alignment: .leading){
-                VStack{
-                    Spacer()
-                    Text("Geriatrics providers focus on 5 key areas, known as the Geriatric 5Ms. The “Ms” stand for the targets that are important to care for us all as we age.").fontWeight(.semibold)
-                    
-                    Spacer()
-                    Spacer()
-                    
-                    Text("The 5Ms are described below and link to the corresponding screeners in GeriKit when applicable ").font(.subheadline)
-                }
+                Text("Geriatrics providers focus on 5 key areas, known as the Geriatric 5Ms™. The “Ms” stand for the targets that are important to care for us all as we age.").fontWeight(.semibold)        .padding(.horizontal)
+
+                                        
+                    Text("The Geriatric 5Ms™ are described below and link to the corresponding screeners in GeriKit when applicable ").font(.subheadline).padding()
+                
                 
                 //MULTICOMPLEXITY
                 Divider()
@@ -39,10 +35,11 @@ struct FiveMSView: View {
                         Text("Multicomplexity").font(.headline)
                         HStack{
                             Text(" ")
-                            Text("As stated by AGS: 'Multicomplexity describes the whole person, typically an older adult, living with multiple chronic conditions, advanced illness, and/or with complicated biopsychosocial needs.'")
+                            Text("As stated by the 5Ms™: 'Multicomplexity describes the whole person, typically an older adult, living with multiple chronic conditions, advanced illness, and/or with complicated biopsychosocial needs.'")
                         }
                     }
-                }
+                }.padding()
+                
                 //MIND
                 Divider()
                 HStack {
@@ -87,7 +84,7 @@ struct FiveMSView: View {
                             
                         }
                     }
-                }
+                }.padding()
                 Divider()
                 //MOBILITY
                 HStack {
@@ -135,7 +132,7 @@ struct FiveMSView: View {
                         }
                         Spacer()
                     }
-                }
+                }.padding()
                 Divider()
                 //MEDICATION
                 HStack {
@@ -168,7 +165,7 @@ struct FiveMSView: View {
                         Spacer()
                         
                     }
-                }
+                }.padding()
                 
                 //Matters
                 Divider()
@@ -191,14 +188,14 @@ struct FiveMSView: View {
                         Spacer()
                         
                     }
-                }
+                }.padding()
                 Divider()
                 VStack(alignment: .leading){
                     Text("Resources:").font(.headline)
                     Spacer()
                     HStack{ Text("•")
                     VStack(alignment: .leading){
-                        Text("HealtinAging 5Ms Tip Sheet")
+                        Text("Geriatric 5Ms™ Tip Sheet")
                             .foregroundColor(.blue)
                             .underline()
                             .onTapGesture {
@@ -210,7 +207,7 @@ struct FiveMSView: View {
                     Spacer()
                     HStack{ Text("•")
                         VStack(alignment: .leading){
-                            Text("HealtinAging 5Ms Resources")
+                            Text("Geriatric 5Ms™ Resources")
                                 .foregroundColor(.blue)
                                 .underline()
                                 .onTapGesture {
@@ -220,15 +217,14 @@ struct FiveMSView: View {
                         }
                     }
                     Spacer()
-                    Text("\nCopyright © Frank Molnar, Allen Huang, Mary Tinetti. 2017. The Geriatric 5Ms™ may be used for educational purpose.").font(.footnote)
+                    Text("\nCopyright © 2017 Frank Molnar, Allen Huang, Mary Tinetti. 2017. The Geriatric 5Ms™ may be used for educational purposes with full attribution and no alterations. This work is bound by the Creative Commons TM license CC-BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/  ).").font(.footnote)
 //                    Text("\nAdapted from Healthin Aging 5Ms by the American Geriatrics Soceity (AGS)")                    Spacer()
 //                    Text("© Frank Molnar & Allen Huang, University of Ottawa; Mary Tinetti, Yale University").font(.footnote)
-                }
+                }.padding()
                 
             }.padding()
         }
-        .padding()
-        .navigationBarTitle("The 5Ms of Geriatrics")
+        .navigationBarTitle("The Geriatric 5Ms™")
     }
 }
 

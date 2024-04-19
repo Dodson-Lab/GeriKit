@@ -120,9 +120,9 @@ struct ContentView: View {
                       Image("5Ms")
                           .resizable()
                           .aspectRatio(contentMode: .fit)
-                          .frame(width:100)
+                          .frame(width:90)
                           .padding()
-                      Text("The 5Ms of Geriatrics")
+                      Text("The Geriatric 5Ms™")
                       }}
                 HStack{
 //                        Image("survey")

@@ -83,6 +83,8 @@ struct HearingResultsView: View {
                 .background(Color(.systemGray6))
                 .cornerRadius(10)
             }
+            
+            //POTENTIALLY COULD BE CHANGED 
             Text("T Ventry, I, Weinstein B. (1983). Identification of elderly people with hearing problems. ©American Speech-Language-Hearing Association, July, 37-42. Reprinted with permission.").font(.footnote)
 
         }.padding()
