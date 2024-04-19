@@ -25,6 +25,15 @@ struct ContentView: View {
                             .padding()
                         Text("Cognition")
                     }}
+                    NavigationLink(destination: UBCamView())
+                      {HStack{
+                          Image("amnesia")
+                              .resizable()
+                              .aspectRatio(contentMode: .fit)
+                              .frame(width:80)
+                              .padding()
+                          Text("Delirium")
+                          }}
                     NavigationLink(destination: PHQ2View())
                     {HStack{
                         Image("emotion")
