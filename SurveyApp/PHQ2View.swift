@@ -18,7 +18,7 @@ struct PHQ2View: View{
 
         var body: some View {
             List{
-                Section(header: Text("Ask the patient: how often have they been bothered by the following over the past 2 weeks?")) {
+                Section(header: Text("Ask the patient: how often have they been bothered by the following over the past 2 weeks?").foregroundColor(.black).font(.subheadline)) {
                     QuestionView(fetcher: $PHQ2, scores: $PHQ2Score, sum: $PHQ2Sum, selected:$PHQ2Selected)
                 }
                 Section {

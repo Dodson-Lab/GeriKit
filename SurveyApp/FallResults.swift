@@ -30,7 +30,7 @@ struct FallResults: View {
             Spacer().frame(height: 30)
 
             //
-            Text(fallResults(numberFalls: numberFallYes)).font(.system(size: 36)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+            Text(fallResults(numberFalls: numberFallYes)).font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
 
             Spacer().frame(height: 30)
             
@@ -58,12 +58,27 @@ struct FallResults: View {
             if(isNavigation){
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    Text("Consider for your patient: ").frame(maxWidth: .infinity, alignment: .leading)
-                    Text("1. Orthostatic blood pressure measurement")
-                    Text("2. Physical therapy referral")
-                    Text("3. A cane or walker")
-                    Text("4. Home safety evaluation")
-                    Text("5. Screening for low vision")
+                    Text("Consider for your patient: ")
+                    HStack{
+                        Text("•")
+                        Text("Orthostatic blood pressure measurement")
+                    }
+                    HStack{
+                        Text("•")
+                        Text("Physical therapy referral")
+                    }
+                    HStack{
+                        Text("•")
+                        Text("A cane or walker")
+                    }
+                    HStack{
+                        Text("•")
+                        Text("Home safety evaluation")
+                    }
+                    HStack{
+                        Text("•")
+                        Text("Screening for low vision")
+                    }
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -74,35 +89,43 @@ struct FallResults: View {
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
                     //LINK TO SOMETHING ON ORTHOSTATIC VITALS
-                    Text("1. Orthostatic vital signs measurement")
-                    .foregroundColor(.blue)
-                    .underline()
-                    .onTapGesture {
-                        let url = URL.init(string: "https://www.cdc.gov/steadi/pdf/STEADI-Assessment-MeasuringBP-508.pdf")
-                        guard let orthoStat = url, UIApplication.shared.canOpenURL(orthoStat) else { return }
-                        UIApplication.shared.open(orthoStat)}
+                    HStack{
+                        Text("•")
+                        Text("Orthostatic vital signs measurement")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url = URL.init(string: "https://www.cdc.gov/steadi/pdf/STEADI-Assessment-MeasuringBP-508.pdf")
+                                guard let orthoStat = url, UIApplication.shared.canOpenURL(orthoStat) else { return }
+                                UIApplication.shared.open(orthoStat)}
+                    }
 
                     Spacer().frame(height: 10)
 
                     //LINK TO FALL MEDICATION LIST, BEER'S LIST!!!!!
-                    Text("2. Medications associated with falls")
-                        .foregroundColor(.blue)
-                        .underline()
-                        .onTapGesture {
-                            let url2 = URL.init(string: "https://www.guidelinecentral.com/summaries/american-geriatrics-society-2015-updated-beers-criteria-for-potentially-inappropriate-medication-use-in-older-adults/#section-society")
-                            guard let beersList = url2, UIApplication.shared.canOpenURL(beersList) else { return }
-                            UIApplication.shared.open(beersList)}.multilineTextAlignment(.leading)
-                    
+                    HStack{
+                        Text("•")
+                        Text("Medications associated with falls")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url2 = URL.init(string: "https://www.guidelinecentral.com/summaries/american-geriatrics-society-2015-updated-beers-criteria-for-potentially-inappropriate-medication-use-in-older-adults/#section-society")
+                                guard let beersList = url2, UIApplication.shared.canOpenURL(beersList) else { return }
+                                UIApplication.shared.open(beersList)}.multilineTextAlignment(.leading)
+                    }
                     Spacer().frame(height: 10)
                     
                     //LINK CDC
-                    Text("3. CDC Fall Screener")
-                    .foregroundColor(.blue)
-                    .underline()
-                    .onTapGesture {
-                        let url = URL.init(string: "https://www.cdc.gov/steadi/pdf/STEADI-Algorithm-508.pdf")
-                        guard let fallURL = url, UIApplication.shared.canOpenURL(fallURL) else { return }
-                        UIApplication.shared.open(fallURL)}
+                    HStack{
+                        Text("•")
+                        Text("CDC Fall Screener")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url = URL.init(string: "https://www.cdc.gov/steadi/pdf/STEADI-Algorithm-508.pdf")
+                                guard let fallURL = url, UIApplication.shared.canOpenURL(fallURL) else { return }
+                                UIApplication.shared.open(fallURL)}
+                    }
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)

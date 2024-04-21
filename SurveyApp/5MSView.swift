@@ -62,7 +62,7 @@ struct FiveMSView: View {
                             Spacer()
                             HStack{
                                 Text("•")
-                                NavigationLink(destination: UBCamView())
+                                NavigationLink(destination: CAMLethargy())
                                 {
                                     Text("Delirium").foregroundColor(.blue)
                                 }
@@ -180,7 +180,7 @@ struct FiveMSView: View {
                         //Spacer()
                         HStack{
                             Text("•")
-                            NavigationLink(destination: MedicineView())
+                            NavigationLink(destination: AdvancedCareView())
                             {
                                 Text("Advance care planning").foregroundColor(.blue)
                             }
@@ -204,7 +204,7 @@ struct FiveMSView: View {
                                 UIApplication.shared.open(mURL)}
                     }
                 }
-                    Spacer()
+                    Spacer().frame(height: 10)
                     HStack{ Text("•")
                         VStack(alignment: .leading){
                             Text("Geriatric 5Ms™ Resources")

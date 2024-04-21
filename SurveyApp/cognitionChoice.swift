@@ -13,7 +13,7 @@ struct CognitionChoice: View{
     var body: some View{
         VStack(alignment: .center){
             NavigationLink(destination: MiniCogView()){
-            Text("Click here for MiniCog \n (Patient answers)")
+            Text("Click here for Mini-Cog© \n (Patient answers)")
                 .padding(10)
                 .background(Color.blue)
                 .foregroundColor(Color.white)
@@ -27,7 +27,7 @@ struct CognitionChoice: View{
             Spacer().frame(height:20)
             
             NavigationLink(destination: AD8View()){
-            Text("Click here for AD8 \n (Caregiver answers)")
+            Text("Click here for AD8® \n (Caregiver answers)")
                 .padding(10)
                 .background(Color.blue)
                 .foregroundColor(Color.white)

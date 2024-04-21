@@ -39,14 +39,14 @@ struct FrailScaleResultsView: View {
         }
 
         if finalScore >= 3 {
-            return("the patient is Frail given their sccore of \(finalScore)")
+            return("the patient is frail given their sccore of \(finalScore)")
         }
         else if (finalScore > 0 && finalScore < 3) {
-            return("the patient is Pre-Frail given their score of \(finalScore)")
+            return("the patient is pre-frail given their score of \(finalScore)")
         }
         else
         {
-            return("the patient has a Robust Health Status given their score of \(finalScore)")
+            return("the patient has a robust health status given their score of \(finalScore)")
         }
     }
        var body: some View {
@@ -56,7 +56,7 @@ struct FrailScaleResultsView: View {
                 
             Spacer().frame(height: 30)
             
-            Text("The Frail Scale suggests that \(FrailtyResults(sum: frailtySum, cur: intCur, old: intOld, arr:selDx))").font(.system(size: 36)).fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.center)
+            Text("The Frail Scale suggests that \(FrailtyResults(sum: frailtySum, cur: intCur, old: intOld, arr:selDx))").font(.system(size: 30)).fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.center)
 
             Spacer().frame(height: 30)
             
@@ -93,29 +93,40 @@ struct FrailScaleResultsView: View {
 //            else{
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    Text("1. Frail Scale Detail")
-                    .foregroundColor(.blue)
-                    .underline()
-                    .onTapGesture {
-                        let url = URL.init(string: "https://www.mass.gov/doc/frail-scale-screening-tool/download")
-                        guard let frailurl = url, UIApplication.shared.canOpenURL(frailurl) else { return }
-                        UIApplication.shared.open(frailurl)}
-                    
-                    Text("2. Frail Scale Primary Paper")
-                    .foregroundColor(.blue)
-                    .underline()
-                    .onTapGesture {
-                        let url = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/22836700/")
-                        guard let frailurl2 = url, UIApplication.shared.canOpenURL(frailurl2) else { return }
-                        UIApplication.shared.open(frailurl2)}
-                    Text("3. Understanding Frailty Interventions ")
-                    .foregroundColor(.blue)
-                    .underline()
-                    .onTapGesture {
-                        let url = URL.init(string: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5726589/")
-                        guard let frailurl3 = url, UIApplication.shared.canOpenURL(frailurl3) else { return }
-                        UIApplication.shared.open(frailurl3)}
+                    HStack{
+                        Text("•")
+                        Text("Frail Scale Detail")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url = URL.init(string: "https://www.mass.gov/doc/frail-scale-screening-tool/download")
+                                guard let frailurl = url, UIApplication.shared.canOpenURL(frailurl) else { return }
+                                UIApplication.shared.open(frailurl)}
+                    }
+                    Spacer().frame(height: 10)
+                    HStack{
+                        Text("•")
+                        Text("Frail Scale Primary Paper")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/22836700/")
+                                guard let frailurl2 = url, UIApplication.shared.canOpenURL(frailurl2) else { return }
+                                UIApplication.shared.open(frailurl2)}
+                    }                    
+                    Spacer().frame(height: 10)
+                    HStack{
+                        Text("•")
+                        Text("Understanding Frailty Interventions ")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url = URL.init(string: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5726589/")
+                                guard let frailurl3 = url, UIApplication.shared.canOpenURL(frailurl3) else { return }
+                                UIApplication.shared.open(frailurl3)}
+                    }
                 }
+                .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color(.systemGray6))
                 .cornerRadius(10)

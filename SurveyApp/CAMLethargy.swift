@@ -38,7 +38,7 @@ struct CAMLethargy: View{
             }
             else{
                 Section{
-                    Text("Severe lethary or severe altred level of consciousness has been evaluated as present. Terminate assessment and ratings.")
+                    Text("Severe lethargy or severe altered level of consciousness has been evaluated as present. Terminate assessment and ratings.")
                     Text("Patient is considered DELIRIOUS.").font(.headline)
                     
                 }
@@ -72,7 +72,7 @@ struct CAMLethargy: View{
                                 .foregroundColor(.blue)
                                 .underline()
                                 .onTapGesture {
-                                    let url = URL.init(string: "https://www.cdc.gov/steadi/pdf/TUG_test-print.pdf")
+                                    let url = URL.init(string: "https://www.nejm.org/doi/full/10.1056/NEJMcp1605501")
                                     guard let tugURL = url, UIApplication.shared.canOpenURL(tugURL) else { return }
                                     UIApplication.shared.open(tugURL)}
                             //

@@ -33,7 +33,7 @@ struct ADLView: View {
 
     var body: some View {
             List{
-                Section(header: Text("Activities of Daily Living (ADL)")) {
+                Section(header: Text("Activities of Daily Living (ADL)").foregroundColor(.black)) {
                 Text("Does the patient require help with...")
                 HStack {Text("Bathing")
                     Spacer()
@@ -68,7 +68,7 @@ struct ADLView: View {
                 }
                 
                 
-                Section(header: Text("Independent Activities of Daily Living (IADL)")) {
+                Section(header: Text("Independent Activities of Daily Living (IADL)").foregroundColor(.black)) {
                     Text("Does the patient require help with...")
                     HStack {Text("Using the telephone")
                          Spacer()

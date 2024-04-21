@@ -64,6 +64,7 @@ struct NutritionResults: View {
                 VStack(alignment: .leading){
                     Text("\(nutritionResults(number: score).0)").multilineTextAlignment(.leading)
                 }
+                .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color(.systemGray6))
                 .cornerRadius(10)
@@ -71,14 +72,18 @@ struct NutritionResults: View {
             else{
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    Text("1. MNA® ")
-                    .foregroundColor(.blue)
-                    .underline()
-                    .onTapGesture {
-                        let url = URL.init(string: "https://www.mna-elderly.com/forms/mini/mna_mini_english.pdf")
-                        guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
-                        UIApplication.shared.open(phq9URL)}
+                    HStack{
+                        Text("•")
+                        Text("MNA® ")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url = URL.init(string: "https://www.mna-elderly.com/forms/mini/mna_mini_english.pdf")
+                                guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
+                                UIApplication.shared.open(phq9URL)}
+                    }
                 }
+                .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color(.systemGray6))
                 .cornerRadius(10)

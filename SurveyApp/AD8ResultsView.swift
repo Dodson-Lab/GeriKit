@@ -26,10 +26,10 @@ struct AD8ResultsView: View {
         ScrollView{
         VStack(alignment: .center){
             Text("AD8® Result").font(.system(size: 60)).fixedSize(horizontal: false, vertical: true)
-                
+            //Divider()
             Spacer().frame(height: 30)
              
-            Text("The score of \(numberAD8Yes)/8 \(ad8Results(number: numberAD8Yes))").font(.system(size: 36)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+            Text("The score of \(numberAD8Yes)/8 \(ad8Results(number: numberAD8Yes))").font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
 
             Spacer().frame(height: 30)
             
@@ -57,8 +57,14 @@ struct AD8ResultsView: View {
             if(isNavigation){
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    Text("1. Check for reversible causes of cognitive impairment\n").multilineTextAlignment(.leading)
-                    Text("2. Consider further neuropsychological testing")
+                    HStack{
+                        Text("•")
+                        Text("Check for reversible causes of cognitive impairment").multilineTextAlignment(.leading)
+                    }
+                    HStack{
+                        Text("•")
+                        Text("Consider further neuropsychological testing")
+                    }
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -68,23 +74,28 @@ struct AD8ResultsView: View {
             else{
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    Text("1. AD8 Detail")
-                    .foregroundColor(.blue)
-                    .underline()
-                    .onTapGesture {
-                        let url = URL.init(string: "https://www.alz.org/media/Documents/ad8-dementia-screening.pdf")
-                        guard let ad8URL = url, UIApplication.shared.canOpenURL(ad8URL) else { return }
-                        UIApplication.shared.open(ad8URL)}
-
+                    HStack{
+                        Text("•")
+                        Text("AD8 Detail")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url = URL.init(string: "https://www.alz.org/media/Documents/ad8-dementia-screening.pdf")
+                                guard let ad8URL = url, UIApplication.shared.canOpenURL(ad8URL) else { return }
+                                UIApplication.shared.open(ad8URL)}
+                        
+                    }
                     Spacer().frame(height: 10)
-
-                    Text("2. AD8 Original Manuscript")
-                        .foregroundColor(.blue)
-                        .underline()
-                        .onTapGesture {
-                            let url2 = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/16116116/")
-                            guard let ad8URL2 = url2, UIApplication.shared.canOpenURL(ad8URL2) else { return }
-                            UIApplication.shared.open(ad8URL2)}.multilineTextAlignment(.leading)
+                    HStack{
+                        Text("•")
+                        Text("AD8 Original Manuscript")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url2 = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/16116116/")
+                                guard let ad8URL2 = url2, UIApplication.shared.canOpenURL(ad8URL2) else { return }
+                                UIApplication.shared.open(ad8URL2)}.multilineTextAlignment(.leading)
+                    }
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -101,8 +112,8 @@ struct AD8ResultsView: View {
 
 
 
-struct AD8ResultsView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
-}
+//struct AD8ResultsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+//    }
+//}

@@ -155,7 +155,7 @@ struct ThreeDCamView2: View{
             }
 
         })
-    .navigationBarTitle(("3D-CAM"))
+    .navigationBarTitle(("3D-CAM: Interviewer Ratings"))
     }
 }
 

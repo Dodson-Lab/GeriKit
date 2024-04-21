@@ -31,34 +31,44 @@ struct MiniCogResults: View {
                 }
              }
          }
-        Section(footer: Text("A cut off point of <3 on the Mini-CogTM has been validated for dementia screening, but many individuals with clinically meaningful cognitive impairment will score higher. When greater sensitivity is desired, a cut point of <4 is recommended as it may indicate a need for further evaluation of cognitive status.").foregroundColor(.black)){
+        Section(footer: Text("A cut off point of <3 on the Mini-Cog© has been validated for dementia screening, but many individuals with clinically meaningful cognitive impairment will score higher. When greater sensitivity is desired, a cut point of <4 is recommended as it may indicate a need for further evaluation of cognitive status.").foregroundColor(.black)){
             Text("Total Score: \(self.numberOfWords + self.clock)").bold()
         }
         
            Section{
                Text("If a patient scores < 3: ").font(.headline)
                VStack(alignment: .leading){
-                   Text("1. Check for reversible causes of cognitive impairment\n").multilineTextAlignment(.leading)
-                   Text("2. Consider further neuropsychological testing")
+                   HStack{
+                       Text("•")
+                       Text("Check for reversible causes of cognitive impairment").multilineTextAlignment(.leading)
+                   }
+                   Spacer()
+                   HStack{
+                       Text("•")
+                       Text("Consider further neuropsychological testing")
+                   }
                    
                }
                .cornerRadius(10)
                Text("Resources:").font(.headline)
                VStack(alignment: .leading){
-                   Text("1. MiniCogⒸ")
-                       .foregroundColor(.blue)
-                       .underline()
-                       .onTapGesture {
-                           let url = URL.init(string: "https://mini-cog.com/wp-content/uploads/2022/04/Standardized-English-Mini-Cog-1-19-16-EN_v1-low-1-2.pdf")
-                           guard let ad8URL = url, UIApplication.shared.canOpenURL(ad8URL) else { return }
-                           UIApplication.shared.open(ad8URL)}
-                                      
+                   HStack{
+                       Text("•")
+                       Text("Mini-CogⒸ")
+                           .foregroundColor(.blue)
+                           .underline()
+                           .onTapGesture {
+                               let url = URL.init(string: "https://mini-cog.com/wp-content/uploads/2022/04/Standardized-English-Mini-Cog-1-19-16-EN_v1-low-1-2.pdf")
+                               guard let ad8URL = url, UIApplication.shared.canOpenURL(ad8URL) else { return }
+                               UIApplication.shared.open(ad8URL)}
+                       
+                   }
                }
-               Text("Mini-Cog © S. Borson. All rights reserved.").font(.footnote)
+               Text("Mini-Cog© S. Borson. All rights reserved.").font(.footnote)
            }
 
        }.padding()
-        .navigationBarTitle("MiniCogⒸ Scoring")
+        .navigationBarTitle("Mini-CogⒸ Scoring")
 
     }
 }

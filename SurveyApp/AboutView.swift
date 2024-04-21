@@ -25,9 +25,9 @@ struct AboutView: View {
                     .foregroundColor(.blue)
                     .underline()
                     .onTapGesture {
-                        let url = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/11556941/")
-                        guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
-                        UIApplication.shared.open(phq9URL)}
+                        let url = URL.init(string: "https://nyulangone.org/doctors/1902033137/nina-blachman")
+                        guard let ninaURL = url, UIApplication.shared.canOpenURL(ninaURL) else { return }
+                        UIApplication.shared.open(ninaURL)}
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .cornerRadius(10)
@@ -36,9 +36,9 @@ struct AboutView: View {
                     .foregroundColor(.blue)
                     .underline()
                     .onTapGesture {
-                        let url = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/11556941/")
-                        guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
-                        UIApplication.shared.open(phq9URL)}
+                        let url = URL.init(string: "https://nyulangone.org/doctors/1366634644/john-a-dodson")
+                        guard let johnURL = url, UIApplication.shared.canOpenURL(johnURL) else { return }
+                        UIApplication.shared.open(johnURL)}
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .cornerRadius(10)
@@ -56,7 +56,7 @@ struct AboutView: View {
                 }
             }
             Section(header: Text("Icons")){
-                Text("Icon made by Freepik from www.flaticon.com")
+                Text("Icons made by Freepik from www.flaticon.com")
                // .foregroundColor(.blue)
                 .underline()
                 .onTapGesture {

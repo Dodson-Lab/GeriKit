@@ -14,7 +14,7 @@ struct ChairResults: View {
     @Binding var patAge: String
     @Binding var numStands: String
     @Binding var gender: Int
-    @State private var isNavigation = true
+    @State private var isNavigation = false
     @State private var intAge = 0
     @State private var intStands = 0
 
@@ -24,30 +24,42 @@ struct ChairResults: View {
             Text("30-Second Chair Stand Results").font(.system(size: 60)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             
             Spacer().frame(height: 30)
-            
-            Text("The patient is \(self.intAge) years old and completed \(self.intStands) chair stands. \(chairLogic(age: intAge, stands: intStands, gen: self.gender))").font(.system(size: 36)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
-            
-           Spacer().frame(height: 30)
-            
-            HStack{
-                Button(action: {
-                    self.isNavigation = true
-                    }, label: {Text("Next Steps")}).frame(maxWidth: .infinity)
-                    .padding(10)
-                    .buttonStyle(BorderlessButtonStyle())
-                    .background(isNavigation ? Color.blue : Color.gray)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                
-                Button(action: {
-                    self.isNavigation = false
-                    },label: {Text("Resources")}).frame(maxWidth: .infinity)
-                    .padding(10)
-                    .buttonStyle(BorderlessButtonStyle())
-                    .background(isNavigation ? Color.gray : Color.blue)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
+            if (self.patAge == "" && self.numStands == ""){
+                Text("Please input the patient's age and number of chair stands completed on the previous screen.").font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true).padding()
             }
+            else if (self.numStands == ""){
+                    Text("Please input the number of chair stands completed on the previous screen.").font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true).padding()
+            }
+            else if (self.patAge == ""){
+                Text("Please input the patient's age on the previous screen.").font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true).padding()
+            }
+            else {
+                    
+                    Text("The patient is \(self.intAge) years old and completed \(self.intStands) chair stands. \(chairLogic(age: intAge, stands: intStands, gen: self.gender))").font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+                    
+                    Spacer().frame(height: 30)
+                    
+                    HStack{
+                        Button(action: {
+                            self.isNavigation = true
+                        }, label: {Text("Next Steps")}).frame(maxWidth: .infinity)
+                            .padding(10)
+                            .buttonStyle(BorderlessButtonStyle())
+                            .background(isNavigation ? Color.blue : Color.gray)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(10)
+                        
+                        Button(action: {
+                            self.isNavigation = false
+                        },label: {Text("Resources")}).frame(maxWidth: .infinity)
+                            .padding(10)
+                            .buttonStyle(BorderlessButtonStyle())
+                            .background(isNavigation ? Color.gray : Color.blue)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(10)
+                    
+                        }
+                }
             
             
             if(isNavigation){
@@ -66,13 +78,16 @@ struct ChairResults: View {
             else{
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    Text("1. 30-Second Chair Stands Detail")
-                    .foregroundColor(.blue)
-                    .underline()
-                    .onTapGesture {
-                        let url = URL.init(string: "https://www.cdc.gov/steadi/pdf/STEADI-Assessment-30Sec-508.pdf")
-                        guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
-                        UIApplication.shared.open(phq9URL)}
+                    HStack{
+                        Text("•")
+                        Text("30-Second Chair Stands Detail")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url = URL.init(string: "https://www.cdc.gov/steadi/pdf/STEADI-Assessment-30Sec-508.pdf")
+                                guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
+                                UIApplication.shared.open(phq9URL)}
+                    }
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)

@@ -32,7 +32,7 @@ struct HearingResultsView: View {
     }
        var body: some View {
         ScrollView{
-            Text("Hearing Handicap Inventory for the Elderly Screening (HHIE-S) Results").font(.system(size: 40)).multilineTextAlignment(.center)
+            Text("HHIE-S Results").font(.system(size: 60)).multilineTextAlignment(.center)
             Spacer().frame(height: 30).fixedSize(horizontal: false, vertical: true)
 
             Text("The score of \(score) suggests the patient \(hearingResults(number: score).1)").font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
@@ -71,13 +71,16 @@ struct HearingResultsView: View {
             else{
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    Text("1. HHIE-S detail ")
-                    .foregroundColor(.blue)
-                    .underline()
-                    .onTapGesture {
-                        let url = URL.init(string: "https://hign.org/sites/default/files/2020-06/Try_This_General_Assessment_12.pdf")
-                        guard let hhies_url = url, UIApplication.shared.canOpenURL(hhies_url) else { return }
-                        UIApplication.shared.open(hhies_url)}
+                    HStack{                        
+                        Text("•")
+                        Text("HHIE-S detail ")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url = URL.init(string: "https://hign.org/sites/default/files/2020-06/Try_This_General_Assessment_12.pdf")
+                                guard let hhies_url = url, UIApplication.shared.canOpenURL(hhies_url) else { return }
+                                UIApplication.shared.open(hhies_url)}
+                    }
                 }.padding()
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color(.systemGray6))
@@ -85,7 +88,7 @@ struct HearingResultsView: View {
             }
             
             //POTENTIALLY COULD BE CHANGED 
-            Text("T Ventry, I, Weinstein B. (1983). Identification of elderly people with hearing problems. ©American Speech-Language-Hearing Association, July, 37-42. Reprinted with permission.").font(.footnote)
+            Text("\nT Ventry, I, Weinstein B. (1983). Identification of elderly people with hearing problems. ©American Speech-Language-Hearing Association, July, 37-42. Reprinted with permission.").font(.footnote)
 
         }.padding()
 

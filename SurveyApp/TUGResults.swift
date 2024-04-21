@@ -35,12 +35,12 @@ struct TUGResults: View {
                 Spacer().frame(height: 30)
                 
                 if (self.timeTug == ""){
-                    Text("Please input the number of seconds to complete the TUG on the previous screen.").font(.system(size: 36)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true).padding()
+                    Text("Please input the number of seconds to complete the TUG on the previous screen.").font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true).padding()
 
                 }
                 else {
                         Text("The patient took \(timeTug) seconds to complete the TUG. \(tugResults(number: intTime))")
-                            .font(.system(size: 36)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true).padding()
+                            .font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true).padding()
                         
                         Spacer().frame(height: 30)
                         
@@ -69,32 +69,49 @@ struct TUGResults: View {
                 if(isNavigation){
                     Spacer().frame(height: 10)
                     VStack(alignment: .leading){
-                        Text("Consider for your patient: ").frame(maxWidth: .infinity, alignment: .leading)
-                        Text("\t1. Physical therapy referral")
-                        Text("\t3. A cane or walker")
-                        Text("\t4. Home safety evaluation")
+                        Text("Consider for your patient: ")
+                        HStack{
+                            Text("•")
+                            Text("Physical therapy referral")
+                        }
+                        HStack{
+                            Text("•")
+                            Text("A cane or walker")
+                        }
+                        HStack{
+                            Text("•")
+                            Text("Home safety evaluation")
+                        }
                     }
                     .padding()
+                    .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color(.systemGray6))
                     .cornerRadius(10)
                 }
                 else{
                     Spacer().frame(height: 10)
                     VStack(alignment: .leading){
-                        Text("1. Timed Up & Go (TUG) Detail")
-                            .foregroundColor(.blue)
-                            .underline()
-                            .onTapGesture {
-                                let url = URL.init(string: "https://www.cdc.gov/steadi/pdf/TUG_test-print.pdf")
-                                guard let tugURL = url, UIApplication.shared.canOpenURL(tugURL) else { return }
-                                UIApplication.shared.open(tugURL)}
-                        Text("2. CDC STEADI Information")
-                            .foregroundColor(.blue)
-                            .underline()
-                            .onTapGesture {
-                                let url = URL.init(string: "https://www.cdc.gov/steadi/index.html")
-                                guard let cdcURL = url, UIApplication.shared.canOpenURL(cdcURL) else { return }
-                                UIApplication.shared.open(cdcURL)}
+                        HStack{
+                            Text("•")
+                            Text("Timed Up & Go (TUG) Detail")
+                                .foregroundColor(.blue)
+                                .underline()
+                                .onTapGesture {
+                                    let url = URL.init(string: "https://www.cdc.gov/steadi/pdf/TUG_test-print.pdf")
+                                    guard let tugURL = url, UIApplication.shared.canOpenURL(tugURL) else { return }
+                                    UIApplication.shared.open(tugURL)}
+                        }
+                        Spacer().frame(height: 10)
+                        HStack{
+                            Text("•")
+                            Text("CDC STEADI Information")
+                                .foregroundColor(.blue)
+                                .underline()
+                                .onTapGesture {
+                                    let url = URL.init(string: "https://www.cdc.gov/steadi/index.html")
+                                    guard let cdcURL = url, UIApplication.shared.canOpenURL(cdcURL) else { return }
+                                    UIApplication.shared.open(cdcURL)}
+                        }
                     }
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .center)

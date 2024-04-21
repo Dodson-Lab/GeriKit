@@ -19,7 +19,7 @@ struct AdvancedCareView: View {
                 HStack{
                     Text("•")
                     VStack(alignment: .leading){
-                        Text("PrepareⒸ for your care")
+                        Text("PREPARE™ for your care")
                             .foregroundColor(.blue)
                             .underline()
                             .onTapGesture {
@@ -71,7 +71,7 @@ struct AdvancedCareView: View {
                 HStack{
                     Text("•")
                     VStack(alignment: .leading){
-                        Text("CaringInfo: Find your State or Territories' Advance Directive Form")
+                        Text("CaringInfo: Find Your State or Territories' Advance Directive Form")
                             .foregroundColor(.blue)
                             .underline()
                             .onTapGesture {

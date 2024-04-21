@@ -17,7 +17,7 @@ struct FallView: View{
 
     var body: some View {
             List{
-                Section(header: Text("Ask the patient...")) {
+                Section(header: Text("Ask the patient...").foregroundColor(.black)) {
                     HStack {
                         Text("Do you feel unsteady when standing or walking?")
                         Spacer()

@@ -47,10 +47,10 @@ struct ThreeDCamResultsView: View {
         if (q6) {feature4 = true}
         
         if(feature1 && feature2 && ((feature3 == true) || (feature4 == true))){
-            return("The patient has screened positive for delirium)")
+            return("The patient meets the CAM criteria for delirium")
         }
         else {
-            return("The patient has not screened positive for delirium")
+            return("The patient does not meet the CAM criteria for delirium")
             }
         }
     
@@ -62,7 +62,7 @@ struct ThreeDCamResultsView: View {
                 Spacer().frame(height: 30)
 
                 Text("\(camResults(q2: q2, q3: q3, q4: q4, q5: q5, q6: q6, q7: q7, q8: q8, q9: q9))")
-                    .font(.system(size: 36)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true).padding()
+                    .font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true).padding()
                 Spacer().frame(height: 30)
                 
                 HStack{
@@ -96,7 +96,7 @@ struct ThreeDCamResultsView: View {
                             .foregroundColor(.blue)
                             .underline()
                             .onTapGesture {
-                                let url = URL.init(string: "https://www.cdc.gov/steadi/pdf/TUG_test-print.pdf")
+                                let url = URL.init(string: "https://www.nejm.org/doi/full/10.1056/NEJMcp1605501")
                                 guard let tugURL = url, UIApplication.shared.canOpenURL(tugURL) else { return }
                                 UIApplication.shared.open(tugURL)}
                         //
@@ -120,7 +120,7 @@ struct ThreeDCamResultsView: View {
                                 guard let camURL = url, UIApplication.shared.canOpenURL(camURL) else { return }
                                 UIApplication.shared.open(camURL)}
                     }
-                    Spacer()
+                    Spacer().frame(height: 10)
                     HStack{
                         Text("•")
                         Text("UB-CAM Training Manual")
@@ -138,7 +138,7 @@ struct ThreeDCamResultsView: View {
                 .cornerRadius(10)
             }
             Spacer()
-            //                Text("\nAdapted from CDC’s STEADI tools and resources that can help you screen, assess, and intervene to reduce your patient’s fall risk.").font(.footnote)
+            Text("Ultra-Brief CAM Copyright © Edward R. Marcantonio, M.D., SM, Donna M. Fick, RN, PhD, Richard N. Jones, ScD, and Sharon K. Inouye, M.D., MPH. All rights reserved.").font(.footnote)
             
         }.padding()
         

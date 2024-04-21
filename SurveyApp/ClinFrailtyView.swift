@@ -39,7 +39,7 @@ struct ClinFrailtyView: View {
                             UIApplication.shared.open(clinUrl)}
                 }
                 
-                Spacer()
+                Spacer().frame(height: 10)
                 HStack{
                     Text("•")
                     Text("Clinical Frailty Scale Scoring Information")
@@ -50,6 +50,18 @@ struct ClinFrailtyView: View {
                             guard let clinUrls = urls, UIApplication.shared.canOpenURL(clinUrls) else { return }
                             UIApplication.shared.open(clinUrls)}
                 }
+                Spacer().frame(height: 10)
+                HStack{
+                    Text("•")
+                    Text("Understanding Frailty Interventions ")
+                        .foregroundColor(.blue)
+                        .underline()
+                        .onTapGesture {
+                            let url = URL.init(string: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5726589/")
+                            guard let frailurl3 = url, UIApplication.shared.canOpenURL(frailurl3) else { return }
+                            UIApplication.shared.open(frailurl3)}
+                }
+
                 Text("\nClinical Frailty Scale ©2005-2020 Rockwood, Version 2.0 (EN). All rights reserved.").font(.footnote)
 
             }.padding()

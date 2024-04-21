@@ -33,11 +33,11 @@ struct UBCamView: View{
                 }
                 Section {
                     NavigationLink(destination: UBCamResultsView(isQ: $isQ))
-                            {Text("Click here for Ultra-Brief CAM result:").bold()
+                            {Text("Click here for UB-2 Screener result:").bold()
                             }.foregroundColor(.blue)
                     }
             }
-            .navigationBarTitle(("Ultra-Brief CAM"))
+            .navigationBarTitle(("UB-2 Screener"))
     }
     
 }

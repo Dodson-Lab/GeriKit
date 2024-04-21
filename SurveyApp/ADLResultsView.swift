@@ -63,22 +63,23 @@ struct ADLResultsView: View {
 
             if(arrayADL.count == 0 && arrayIADL.count == 0){
                 Text("The patient did not meet screening criteria for functional impairment.")
-                .font(.system(size: 24)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+                .font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             }
             else{
             Text("The patient answered that they require help with:").font(.system(size: 24)).multilineTextAlignment(.leading)
             VStack(alignment: .leading) {
             if(arrayADL.count != 0){
+                Spacer().frame(height:10)
                 Text("ADLs: \(printArray(array: arrayADL))").font(.system(size: 24))                //.frame(minWidth: 0, maxWidth: .infinity)
                 }
             if(arrayIADL.count != 0){
-                Spacer().frame(height:20)
+                Spacer().frame(height:10)
                 Text("IADLs: \(printArray(array: arrayIADL))").font(.system(size: 24))                //.frame(minWidth: 0, maxWidth: .infinity)
                 }
             }.frame(minWidth: 0, maxWidth: .infinity)
-            .padding()
+                    .padding(.horizontal)
             
-            Spacer().frame(height: 10)
+            Spacer().frame(height: 20)
                 Text(adlResults(numberOfADL: numberADLYes, numberOfIADL: numberIADLYes).0).font(.system(size: 24)).multilineTextAlignment(.center)
             }
 
@@ -125,23 +126,27 @@ struct ADLResultsView: View {
             else{
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    Text("1. Initial manuscript about ADLs")
-                    .foregroundColor(.blue)
-                    .underline()
-                    .onTapGesture {
-                        let url = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/6418786/")
-                        guard let adlURL = url, UIApplication.shared.canOpenURL(adlURL) else { return }
-                        UIApplication.shared.open(adlURL)}
-
+                    HStack{
+                        Text("•")
+                        Text("Initial manuscript about ADLs")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/6418786/")
+                                guard let adlURL = url, UIApplication.shared.canOpenURL(adlURL) else { return }
+                                UIApplication.shared.open(adlURL)}
+                    }
                     Spacer().frame(height: 10)
-
-                    Text("2. Initial manuscript about IADLs ")
-                    .foregroundColor(.blue)
-                    .underline()
-                    .onTapGesture {
-                        let url2 = URL.init(string: "https://psycnet.apa.org/record/2011-21299-001")
-                        guard let iadlURL = url2, UIApplication.shared.canOpenURL(iadlURL) else { return }
-                        UIApplication.shared.open(iadlURL)}
+                    HStack{
+                        Text("•")
+                        Text("Initial manuscript about IADLs ")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url2 = URL.init(string: "https://psycnet.apa.org/record/2011-21299-001")
+                                guard let iadlURL = url2, UIApplication.shared.canOpenURL(iadlURL) else { return }
+                                UIApplication.shared.open(iadlURL)}
+                    }
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)

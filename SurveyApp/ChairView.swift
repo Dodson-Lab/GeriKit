@@ -54,7 +54,7 @@ struct ChairView: View{
                 Section(header: Text("2) On the word \"go\", begin timing.")
                     .font(.headline)
                     .foregroundColor(.black)) {
-                Text("If the patient must use his/her arms to stand, stop the test. Record \"0\" for the number and score.").padding()
+                Text("If the patient must use their arms to stand, stop the test. Record \"0\" for the number and score.").padding()
                 }
                 Section(header: Text("3) Count the number of times the patient comes to a full standing position in 30 seconds.")
                     .font(.headline)

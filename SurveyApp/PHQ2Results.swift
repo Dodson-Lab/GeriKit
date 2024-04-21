@@ -26,11 +26,10 @@ struct PHQ2Results: View {
         
         VStack(alignment: .center){
             Text("PHQ2 Results").font(.system(size: 60))
-                
             Spacer().frame(height: 30)
-             
-            Text("The patient's score of \(numberPHQ2Yes) suggests \(PHQ2Results(number:numberPHQ2Yes))").bold().font(.system(size: 30)).multilineTextAlignment(.center)
-           
+
+            Text("The patient's score of \(numberPHQ2Yes) suggests \(PHQ2Results(number:numberPHQ2Yes))")
+                .font(.system(size: 30)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             Spacer().frame(height: 30)
 
             if(self.numberPHQ2Yes > 2) {
@@ -41,19 +40,23 @@ struct PHQ2Results: View {
                     .cornerRadius(10)
                     .font(.system(size: 36))
                     .multilineTextAlignment(.center)
+                Spacer()
+
 
 
             }
-        Spacer()
-        VStack(alignment: .leading){
-            Text("PHQ2 Detail")
-            .foregroundColor(.blue)
-            .underline()
-            .onTapGesture {
-                let url = URL.init(string: "https://www.apa.org/pi/about/publications/caregivers/practice-settings/assessment/tools/patient-health")
-                guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
-                UIApplication.shared.open(phq9URL)}
-        }
+            VStack(alignment: .leading){
+                HStack{
+                    Text("•")
+                    Text("PHQ2 Detail")
+                        .foregroundColor(.blue)
+                        .underline()
+                        .onTapGesture {
+                            let url = URL.init(string: "https://www.apa.org/pi/about/publications/caregivers/practice-settings/assessment/tools/patient-health")
+                            guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
+                            UIApplication.shared.open(phq9URL)}
+                }
+            }
         .frame(maxWidth: .infinity, alignment: .center)
         .padding()
         .background(Color(.systemGray6))

@@ -18,7 +18,7 @@ struct MiniCogView: View {
     @State private var numWordsCorrect: Int = 0
     @State private var value: CGFloat = 0
     var colors = ["1", "2", "3", "4"]
-    @State private var selectedColor = "Red"
+    @State private var selectedColor = "1"
 
     
     var body: some View {
@@ -30,20 +30,20 @@ struct MiniCogView: View {
                 Text("Look directly at person and say, “Please listen carefully. I am going to say three words that I want you to repeat back to me now and try to remember. The words are [select a list of words from the versions below]. Please say them for me now.” If the person is unable to repeat the words after three attempts, move on to Step 2 (clock drawing), and make sure to still score Part 1. \n\nThe following and other word lists have been used in one or more clinical studies. For repeated administrations, use of an alternative word list is recommended.\n")
                 HStack(){
                     VStack{
-                        Text("Version 1").bold()
-                        Text("Banana\nSunrise\nChair")
+                        Text("Version 1").fontWeight(.semibold).font(.callout)
+                        Text("Banana\nSunrise\nChair").font(.callout)
                     }
                     VStack{
-                        Text("Version 2").bold()
-                        Text("Leader\nSeason\nTable")
+                        Text("Version 2").fontWeight(.semibold).font(.callout)
+                        Text("Leader\nSeason\nTable").font(.callout)
                     }
                     VStack{
-                        Text("Version 3").bold()
-                        Text("Village\nKitchen\nBaby")
+                        Text("Version 3").fontWeight(.semibold).font(.callout)
+                        Text("Village\nKitchen\nBaby").font(.callout)
                     }
                     VStack{
-                        Text("Version 4").bold()
-                        Text("River\nNation\nFinger")
+                        Text("Version 4").fontWeight(.semibold).font(.callout)
+                        Text("River\nNation\nFinger").font(.callout)
                     }
                 }
             }
@@ -100,10 +100,10 @@ struct MiniCogView: View {
 
             
             NavigationLink(destination: MiniCogResults())
-            {Text("Click here for MiniCogⒸ result").bold()}.foregroundColor(.blue)
+            {Text("Click here for Mini-CogⒸ result").bold()}.foregroundColor(.blue)
             
-            }.padding()
-        .navigationBarTitle("MiniCogⒸ")
+            }
+        .navigationBarTitle("Mini-CogⒸ")
         . modifier(AdaptsToKeyboard())
 
     }

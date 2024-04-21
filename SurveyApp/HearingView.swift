@@ -32,7 +32,7 @@ struct HearingView: View {
     var body: some View{
         List{
             Section{
-                Text("Please check “yes,” “no,” or “sometimes” in response to each of the following items. Do not skip a question if you avoid a situation because of a hearing problem. If you use a hearing aid, please answer the way you hear without the aid.").font(.subheadline)
+                Text("Tell the patient: Please check “yes,” “no,” or “sometimes” in response to each of the following items. Do not skip a question if you avoid a situation because of a hearing problem. If you use a hearing aid, please answer the way you hear without the aid.").font(.subheadline)
                 QuestionView(fetcher: $Hear, scores: $hearScore, sum: $hearSum, selected: $hearSelected)
                 
                 Section {

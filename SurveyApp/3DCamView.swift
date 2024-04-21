@@ -25,10 +25,10 @@ struct ThreeDCamView: View{
                 //LOCK ON TOP OF SCREEN
                 
                 // To administer the CAM you will interview your patient as you normally would. Some of the answers are obtained through the history. Other questions provided below are direct questions to ask the patient.
-                
-                Text("A positive sign for delirium is any incorrect, don't know, non-response, or non-sensical response.").font(.subheadline).bold()
-                
-                Text("CAM respones are based on history taking as well as direct questions below.")
+                VStack{
+                    Text("A positive sign for delirium is any incorrect, don't know, non-response, or non-sensical response.").font(.subheadline).bold()
+                    Text("\nCAM respones are based on history taking as well as direct questions below.").font(.subheadline)
+                }
                 
                 //SECTION 3
                 VStack{
@@ -141,11 +141,11 @@ struct ThreeDCamView: View{
             Section {
                 
                 NavigationLink(destination: ThreeDCamView2(q2: $q2, q3_ans: $q3_ans, q4_ans: $q4_ans, q5_ans: $q5_ans))
-                        {Text("Next").bold()
+                        {Text("Click here for 3D-CAM Part 2").bold()
                         }.foregroundColor(.blue)
                 }
         }
-    .navigationBarTitle(("3D-CAM"))
+    .navigationBarTitle(("3D-CAM: Patient Assessment"))
     }
 }
 

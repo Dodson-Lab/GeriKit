@@ -61,7 +61,7 @@ struct PHQ9Results: View {
                 }.background(Color.red).font(.system(size: 36)).multilineTextAlignment(.center)
             }
             else{
-            Text("The score of \(numberPHQ9Yes) suggests the patient has \(phq9Results(number: numberPHQ9Yes).0)").font(.system(size: 36)).multilineTextAlignment(.center)
+            Text("The score of \(numberPHQ9Yes) suggests the patient has \(phq9Results(number: numberPHQ9Yes).0)").font(.system(size: 30)).multilineTextAlignment(.center)
              
             Spacer().frame(height: 30)
             
@@ -99,13 +99,16 @@ struct PHQ9Results: View {
             else{
                 Spacer().frame(height: 10)
                 VStack(alignment: .leading){
-                    Text("1. PHQ9 Original Manuscript")
-                    .foregroundColor(.blue)
-                    .underline()
-                    .onTapGesture {
-                        let url = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/11556941/")
-                        guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
-                        UIApplication.shared.open(phq9URL)}
+                    HStack{
+                        Text("•")
+                        Text("PHQ9 Original Manuscript")
+                            .foregroundColor(.blue)
+                            .underline()
+                            .onTapGesture {
+                                let url = URL.init(string: "https://pubmed.ncbi.nlm.nih.gov/11556941/")
+                                guard let phq9URL = url, UIApplication.shared.canOpenURL(phq9URL) else { return }
+                                UIApplication.shared.open(phq9URL)}
+                    }
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
