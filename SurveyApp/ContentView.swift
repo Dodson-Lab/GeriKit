@@ -24,7 +24,7 @@ struct ContentView: View {
                         .padding()
                     Text("Cognition")
                     }}
-                NavigationLink(destination: UBCamView())
+                NavigationLink(destination: CAMLethargy())
                   {HStack{
                       Image("amnesia")
                           .resizable()

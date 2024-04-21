@@ -10,11 +10,10 @@ import Foundation
 import SwiftUI
 
 struct UBCamResultsView: View {
-    @Binding var quest1: Bool
-    @Binding var quest2: Bool
+    @Binding var isQ: [Bool]
 
-    func UBCamResults(val1: Bool, val2:Bool)-> String{
-        if (val1 == true || val2 == true){
+    func UBCamResults(vals: [Bool])-> String{
+        if (vals[0] == true || vals[1] == true){
             return("The patient scored positive on the Ultra-Brief CAM. They should be further evaluated with the longer 3D-CAM")
         }
         else {
@@ -30,20 +29,21 @@ struct UBCamResultsView: View {
                 
             Spacer().frame(height: 30)
              
-            Text("\(UBCamResults(val1:quest1, val2:quest2))").bold().font(.system(size: 30)).multilineTextAlignment(.center)
+            Text("\(UBCamResults(vals: isQ))").bold().font(.system(size: 30)).multilineTextAlignment(.center)
            
             Spacer().frame(height: 30)
 
-            if(quest1 == true || quest2 == true) {
-                NavigationLink(destination: ThreeDCamView()) {Text("Click here for the 3D CAM")}
-                    .padding(10)
-                    .background(Color.blue)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    .font(.system(size: 36))
-                    .multilineTextAlignment(.center)
-
-
+            if(isQ[0] || isQ[1]) {
+                HStack{
+                    Text("•")
+                    NavigationLink(destination: ThreeDCamView(q2: $isQ)) {Text("Click here for the 3D-CAM")}
+                        .padding(10)
+                        .background(Color.blue)
+                        .foregroundColor(Color.white)
+                        .cornerRadius(10)
+                        .font(.system(size: 36))
+                        .multilineTextAlignment(.center)
+                }
             }
         Spacer()
         VStack(alignment: .leading){
@@ -64,7 +64,7 @@ struct UBCamResultsView: View {
             Text("Ultra-Brief CAM Copyright © Edward R. Marcantonio, M.D., SM, Donna M. Fick, RN, PhD, Richard N. Jones, ScD, and Sharon K. Inouye, M.D., MPH. All rights reserved.").font(.footnote)
         }.padding()
 
-    }
+        }
     }
 }
 

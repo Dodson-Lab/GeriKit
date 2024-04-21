@@ -12,8 +12,8 @@ import SwiftUI
 //View for PHQ-2 MEntal Health Exam
 struct UBCamView: View{
 //code for just yes/no phq2
-    @State var q1 = false
-    @State var q2 = false
+    @State var isQ: Array<Bool> = Array(repeating: false, count: 2)
+
     var body: some View {
             List{
                 Section {
@@ -24,21 +24,22 @@ struct UBCamView: View{
                         Text("Click if sign positive").italic().font(.footnote)
                     }
                     HStack {
-                        Toggle("1. Please tell me the day of the week.", isOn: $q1)
+                        Toggle("1. Please tell me the day of the week.", isOn: $isQ[0])
                         }
                         
                     HStack{
-                        Toggle("2. Please tell me the months of the year backwards, say 'December' as your fist month ", isOn: $q2)
+                        Toggle("2. Please tell me the months of the year backwards, say 'December' as your fist month ", isOn: $isQ[1])
                     }
                 }
                 Section {
-                    NavigationLink(destination: UBCamResultsView(quest1: $q1, quest2:$q2))
+                    NavigationLink(destination: UBCamResultsView(isQ: $isQ))
                             {Text("Click here for Ultra-Brief CAM result:").bold()
                             }.foregroundColor(.blue)
                     }
             }
             .navigationBarTitle(("Ultra-Brief CAM"))
     }
+    
 }
 
 struct UBCamView_Previews: PreviewProvider {

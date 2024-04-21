@@ -12,17 +12,19 @@ import SwiftUI
 //View for PHQ-2 MEntal Health Exam
 struct ThreeDCamView2: View{
 //code for just yes/no phq2
-    @State var q41 = false
-    @State var q42 = false
-    @State var q43 = false
-    @State var q44 = false
-    @State var q45 = false
-    @State var q46 = false
-    @State var q47 = false
-    @State var q48 = false
-    @State var q49 = false
-    @State var q50 = false
+    @Binding var q2: [Bool]
+    @Binding var q3_ans: [Bool]
+    @Binding var q4_ans: [Bool]
+    @Binding var q5_ans: [Bool]
 
+    @State var q3 = false
+    @State var q4 = false
+    @State var q5 = false
+    
+    @State var q6_ans: Array<Bool> = Array(repeating: false, count: 2)
+    @State var q7_ans: Array<Bool> = Array(repeating: false, count: 3)
+    @State var q8_ans: Array<Bool> = Array(repeating: false, count: 2)
+    @State var q9_ans: Array<Bool> = Array(repeating: false, count: 3)
 
     var body: some View {
         List{
@@ -38,10 +40,13 @@ struct ThreeDCamView2: View{
                     Text("Click if sign positive").italic().font(.footnote)
                 }
                 HStack {
-                    Toggle("Was the patient sleepy during the interview? (Requires that they actually fall asleep)", isOn: $q41)
+                    Toggle("Was the patient sleepy during the interview? (Requires that they actually fall asleep)", isOn: $q6_ans[0])
+                    
                 }
                 HStack {
-                    Toggle("Did the patient show hypervigilance?", isOn: $q42).disabled(q41 == true)
+                    Toggle("Did the patient show hypervigilance?", isOn: $q6_ans[1])
+                        .disabled(q6_ans[0])
+                        .foregroundColor(q6_ans[0] ? .gray : .primary)
                 }
                 
                 //SECTION 7
@@ -49,6 +54,7 @@ struct ThreeDCamView2: View{
                 VStack{
                     Text("7. Ratings for Disorganized Thinking ").bold()
                     Text("Stop, and go to section 8 after the positive sign of Disorganized Thinking is noted.").font(.subheadline)
+                    
 }
                 HStack{
                     Spacer()
@@ -56,14 +62,19 @@ struct ThreeDCamView2: View{
                 }
                 
                 HStack {
-                    Toggle("Was the patient's flow of ideas unclear or illogical", isOn: $q43)
+                    Toggle("Was the patient's flow of ideas unclear or illogical", isOn: $q7_ans[0])
                 }
                 
                 HStack {
-                    Toggle("Was the patient's conversation rambling, inappropriately verbose, or tangential", isOn: $q44).disabled(q43 == true)
+                    Toggle("Was the patient's conversation rambling, inappropriately verbose, or tangential", isOn: $q7_ans[1])
+                        .disabled(q7_ans[0])
+                        .foregroundColor(q7_ans[0] ? .gray : .primary)
                 }
                 HStack {
-                    Toggle("Was the patient's speech unusually limited or sparse?", isOn: $q45).disabled(q44 == true || q43 == true)
+                    Toggle("Was the patient's speech unusually limited or sparse?", isOn: $q7_ans[2])
+                        .disabled(q7_ans[0] || q7_ans[1])
+                        .foregroundColor((q7_ans[0] || q7_ans[1]) ? .gray : .primary)
+                    
                 }
 
                 Spacer()
@@ -78,10 +89,12 @@ struct ThreeDCamView2: View{
                     Text("Click if sign positive").italic().font(.footnote)
                 }
                 HStack {
-                    Toggle("Does the patient have trouble keeping track of what was said or following directions?", isOn: $q46)
+                    Toggle("Does the patient have trouble keeping track of what was said or following directions?", isOn: $q8_ans[0])
                 }
                 HStack {
-                    Toggle("Does the patient seem inappropriately distracted by external stimuli?", isOn: $q47).disabled(q46 == true)
+                    Toggle("Does the patient seem inappropriately distracted by external stimuli?", isOn: $q8_ans[1])
+                        .disabled(q8_ans[0] == true)
+                        .foregroundColor(q8_ans[0] ? .gray : .primary)
                 }
 
                 Spacer()
@@ -97,29 +110,57 @@ struct ThreeDCamView2: View{
                     Text("Click if sign positive").italic().font(.footnote)
                 }
                 HStack {
-                    Toggle("Did the patient's level of consciousness, level of attention or speech/thinking fluctuate during the interview?", isOn: $q48)
+                    Toggle("Did the patient's level of consciousness, level of attention or speech/thinking fluctuate during the interview?", isOn: $q9_ans[0])
                 }
                 
                 HStack {
-                    Toggle("If no prior assessments, is there evidence an acute change in memory or thinking according to records, or informant?", isOn: $q49).disabled(q48 == true)
+                    Toggle("If no prior assessments, is there evidence an acute change in memory or thinking according to records, or informant?", isOn: $q9_ans[1])
+                        .disabled(q9_ans[0])
+                        .foregroundColor(q9_ans[0] ? .gray : .primary)
+
                 }
                 HStack {
-                    Toggle("If prior assessments, are there any new signs of delirium based on above questions (new errors, positive ratings)?", isOn: $q50).disabled(q49 == false)
+                    Toggle("If prior assessments, are there any new signs of delirium based on above questions (new errors, positive ratings)?", isOn: $q9_ans[2])
+                        .disabled(q9_ans[0] || q9_ans[1])
+                        .foregroundColor((q9_ans[0] || q9_ans[1]) ? .gray : .primary)
                 }
                 
             }
             Section {
-                NavigationLink(destination: ThreeDCamView2())
+                NavigationLink(destination: ThreeDCamResultsView(q2: $q2, q3: $q3, q4:$q4, q5:$q5, q6_ans: $q6_ans, q7_ans: $q7_ans, q8_ans: $q8_ans, q9_ans: $q9_ans))
                         {Text("Click here for 3D-CAM result:").bold()
                         }.foregroundColor(.blue)
                 }
         }
-    .navigationBarTitle(("3D CAM"))
+        .onAppear(perform:{
+            for answer in self.q3_ans {
+                if answer {
+                    self.q3 = true
+                    break // Exit the loop once q5s is set to true
+                }
+            }
+            
+            for answer in self.q4_ans {
+                if answer {
+                    self.q4 = true
+                    break // Exit the loop once q5 is set to true
+                }
+            }
+            
+            for answer in self.q5_ans {
+                if answer {
+                    self.q5 = true
+                    break // Exit the loop once q5 is set to true
+                }
+            }
+
+        })
+    .navigationBarTitle(("3D-CAM"))
     }
 }
 
-struct ThreeDCamView2_Previews: PreviewProvider {
-    static var previews: some View {
-        ThreeDCamView2()
-    }
-}
+//struct ThreeDCamView2_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ThreeDCamView2()
+//    }
+//}
